@@ -1,5 +1,5 @@
 import { Product, ProductImage } from ".";
-import ProductMeta from "./ProductMeta";
+import ProductMeta from "./ProductMeta"; b
 
 
 export default function singleProducts({product, matches}) {
