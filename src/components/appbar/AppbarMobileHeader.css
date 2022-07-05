@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-bottom: 2px solid whitesmoke;
     height: 60px;
     background-color: whitesmoke;
@@ -15,7 +15,6 @@
 
 
 .header__left > .MuiSvgIcon-root {
-    margin-left: auto; 
-    margin-right: 30px;
-    color: #722f37;
+    
+    /*color: #722f37;*/
 }

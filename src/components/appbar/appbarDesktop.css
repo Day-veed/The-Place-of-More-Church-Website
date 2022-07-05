@@ -2,7 +2,7 @@
     display: flex;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: auto;
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 2px solid whitesmoke;
@@ -15,15 +15,15 @@
 .header__left {
     flex: 0.25;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    padding-right: 300px;
+    
     color: #722f37;
 }
 
 .header__left > .MuiSvgIcon-root {
     margin-left: auto; 
-    margin-right: 30px; 
+    
     justify-content: space-evenly;  
 }
 
@@ -31,8 +31,8 @@
     display: flex;
     flex: 0.6;
     align-items: center;
-    padding-right: 140px;
-    justify-content: end;
+    
+    justify-content: center;
     border-radius: 5px;
     font-size: 20px;
     font-family: '"Montez", "cursive"';
@@ -42,8 +42,8 @@
 
 .header__right {
     display: flex;
-    flex: 0.05;
-    justify-content: end;
+    flex: 0.15;
+    justify-content: center;
     padding-right: 50px;
     color: #722f37;
 }

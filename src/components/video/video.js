@@ -12,8 +12,8 @@ export default function Video() {
             
             <VideoContainer>
                 <ReactPlayer 
-                    width='1580px' 
-                    height='240' 
+                    width='850px' 
+                    height='70' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -27,17 +27,19 @@ export default function Video() {
     );
 }
 
-const T = styled.div`    
+const T = styled.div`  
+    //display: block;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    color: #722f37;
     > h1 {
-        margin-left: 135px;
-        width: 1200;
-        @media (max-width: 600) {
-        margin-left: 40px;
-        }
+       
     }
 `
 
 const VideoContainer = styled.div`
     display: flex;
-    margin-left: 10px;
+    justify-content: center;
 `

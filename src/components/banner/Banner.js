@@ -15,7 +15,7 @@ function AppbarMobileBanner() {
             <Desc>Our aim is to Inspire and Empower people towards advancing the Kingdom of God</Desc>
         </BannerContent>
 
-      </Banner>
+    </Banner>
   )
 }
 
@@ -24,7 +24,6 @@ export default AppbarMobileBanner
 const Banner = styled.div`
     display: flex;
     justify-content: center;
-    padding: '0px 0px';
     border: 3px solid;
     border-color: whitesmoke;
     
@@ -32,7 +31,6 @@ const Banner = styled.div`
 const Image = styled.div`
     > img {
         margin-top: 83px;
-        
     }
     
 `
@@ -44,9 +42,7 @@ const BannerContent = styled.div`
     position: relative;
     margin-right: 20px;
     margin-top: 95px;
-    padding-left: 30px;
     height: 190px;
-    
 `
 
 const Training = styled.div`
