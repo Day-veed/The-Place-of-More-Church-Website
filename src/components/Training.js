@@ -7,12 +7,13 @@ import Promotions from './promotions/messages'
 import Images from './images/Images'
 import Footer from './footer/Footer'
 import AppDrawer from './drawer/AppDrawer'
+import Navbar from './Navbar'
 
 function Training() {
 
   return (
     <div>
-        <Appbar />
+        <Navbar />
         <CarouselContainer />
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
