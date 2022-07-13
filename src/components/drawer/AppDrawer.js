@@ -18,12 +18,12 @@ function AppDrawer() {
     {draweropen && <DrawerCloseButton onClick={() => setDraweropen(false)}>
         <CloseIcon 
             sx={{
-                fontSize: '2.5rem',
-                color: lighten(0.99, Colors.secondary)
+                fontSize: '2rem',
+                color: Colors.white
             }}
         />
     </DrawerCloseButton> }
-    <Drawer open={false}>
+    <Drawer open={draweropen}>
         <List>
             <ListItemButton>
                 <ListItemText>Home</ListItemText>

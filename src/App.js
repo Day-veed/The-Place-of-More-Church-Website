@@ -7,6 +7,13 @@ import { ThemeProvider } from '@mui/system';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
 import { UIProvider } from './context/ui';
+import Video from './components/video/video'
+import CarouselContainer from './components/carousel/CarouselContainer'
+import AppbarMobileBanner from './components/banner/Banner'
+import Promotions from './components/promotions/messages'
+import Images from './components/images/Images'
+import Footer from './components/footer/Footer'
+import AppDrawer from './components/drawer/AppDrawer'
 
 function App() {
 
@@ -15,19 +22,22 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <Container 
-      maxWidth='xl'
-      sx={{
-        background: '#fff'
-      }}>
+      
         <UIProvider>
-         <Training />
+        <Appbar />
+        <CarouselContainer />
+        {/*<AppbarMobileBanner />*/}
+        <Promotions /> 
+        <Video />
+        <Footer />
+        <AppDrawer />
+         {/*<Training />*/}
         </UIProvider>
         {
           
           
         }
-      </Container>
+      
     </ThemeProvider>
   );
 }

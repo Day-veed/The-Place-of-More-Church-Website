@@ -3,12 +3,16 @@ import "./AppbarMobileHeader.css"
 import { IconButton } from '@mui/material'
 import MenuIcon from "@mui/icons-material/Menu";
 import styled, { useThem } from "styled-components"
+import { useUIContext } from '../../context/ui';
 
 function AppbarMobileHeader() {
+
+  const {setDraweropen} = useUIContext()
+
   return (
     <div className='header'>
       <HeaderLeft>
-        <IconButton>
+        <IconButton onClick={() => setDraweropen(true)}>
             <MenuIcon />
         </IconButton>
       </HeaderLeft>

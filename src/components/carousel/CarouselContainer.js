@@ -7,9 +7,11 @@
   import img5 from '../Image/img5.jpg';
   import img6 from '../Image/img6.jpg';
   import img7 from '../Image/img7.jpg';
+  import "./CarouselContainer.css"
   
   function carouselContainer() {
     return (
+        <div className='img'>
         <Carousel controls={false} fade={true} pause={false}>
             <Carousel.Item interval={4000}>
                 <img
@@ -89,6 +91,7 @@
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        </div>
     )
   }
   
