@@ -1,13 +1,14 @@
 import styled from "styled-components"
 import ReactPlayer from 'react-player'
 import vid from './vid.mp4'
+import { motion } from 'framer-motion'
 
 export default function Video() {
 
     return (
         <div>
             <T>
-            <h1>Training Experience</h1>
+            <motion.h1 transition={{ delay: 0.2 }}>Training Experience</motion.h1>
             </T>
             
             <VideoContainer>
