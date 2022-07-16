@@ -8,7 +8,7 @@ export default function Video() {
     return (
         <div>
             <T>
-            <motion.h1 transition={{ delay: 0.2 }}>Training Experience</motion.h1>
+            <motion.h1 initial={{ y: -35 }} animate={{ y: -10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>Training Experience</motion.h1>
             </T>
             
             <VideoContainer>
