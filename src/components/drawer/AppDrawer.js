@@ -15,14 +15,14 @@ function AppDrawer() {
     const {draweropen, setDraweropen} = useUIContext();
   return (
     <>
-    {draweropen && <DrawerCloseButton onClick={() => setDraweropen(false)}>
+    {draweropen && (<DrawerCloseButton onClick={() => setDraweropen(false)}>
         <CloseIcon 
             sx={{
                 fontSize: '2rem',
                 color: Colors.white
             }}
         />
-    </DrawerCloseButton> }
+    </DrawerCloseButton> )}
     <Drawer open={draweropen}>
         <List>
             <ListItemButton>

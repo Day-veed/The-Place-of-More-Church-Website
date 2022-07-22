@@ -8,6 +8,7 @@ import Images from './images/Images'
 import Footer from './footer/Footer'
 import AppDrawer from './drawer/AppDrawer'
 import Navbar from './Navbar'
+import HomeBody from './body/HomeBody'
 
 function Training() {
 
@@ -17,6 +18,7 @@ function Training() {
         <CarouselContainer />
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
+        <HomeBody />
         <Video />
         <Footer />
         <AppDrawer />

@@ -1,8 +1,8 @@
-import { Product, ProductImage } from ".";
+import { Product, ProductImage } from "../../styles/Products";
 import ProductMeta from "./ProductMeta"; 
 
 
-export default function singleProducts({product, matches}) {
+export default function singleProduct({product, matches}) {
 
     return(
         <Product>

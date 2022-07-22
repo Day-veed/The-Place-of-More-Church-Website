@@ -14,6 +14,7 @@ import Promotions from './components/promotions/messages'
 import Images from './components/images/Images'
 import Footer from './components/footer/Footer'
 import AppDrawer from './components/drawer/AppDrawer'
+import HomeBody from './components/body/HomeBody';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <CarouselContainer />
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
+        <HomeBody />
         <Video />
         <Footer />
         <AppDrawer />

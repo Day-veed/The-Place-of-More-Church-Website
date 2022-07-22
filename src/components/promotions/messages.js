@@ -57,7 +57,7 @@ const PromotionsContainer = styled.div`
     padding: 20px 0px 20px 0px;
     overflow: hidden;
     background-color: #722f37;
-    margin-bottom: 20px;
+    
     @media (min-width: md) {
         padding: 40px 0px 40px 0px;
     }
