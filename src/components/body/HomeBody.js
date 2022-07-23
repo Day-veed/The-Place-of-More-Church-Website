@@ -28,7 +28,7 @@ const PictureExp = styled.div`
     align-items: center; 
     padding-bottom: 20px;
     > img {
-      width: 50%
+      width: 50%;
     }
     @media (max-width: 1200px) {
       flex-direction: column;
