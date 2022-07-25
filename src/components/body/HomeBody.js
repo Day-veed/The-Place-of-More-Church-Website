@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from "styled-components"
 import ow from './ow.jpg';
+import ow2 from './ow2.jpg';
 import { motion } from 'framer-motion'
+import { Upcoming } from '@mui/icons-material';
 
 function HomeBody() {
   return (
+    <>
     <PictureExp>
       <img src={ow} alt='' />
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
@@ -17,44 +20,234 @@ function HomeBody() {
       </Text>
       </motion.div>
     </PictureExp>
+    <Sections>
+        <ShennyGloryFoundation>
+            <img src={ow2} alt='' />
+            <h2>Shenny Glory Foundation</h2>
+            <h2>(SGF)</h2>
+            <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
+        </ShennyGloryFoundation>
+        <MoreBooksVille>
+        <img src={ow2} alt='' />
+            <h2>More Books Ville</h2>
+            <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
+        </MoreBooksVille>
+        <LeadWithPsg>
+        <img src={ow2} alt='' />
+            <h2>Lead With PSG</h2>
+            <p>Join Pastor Shenny Glory as he educates people on leadership.</p>
+        </LeadWithPsg>
+    </Sections>
+    <UpcomingPrograms>
+        <h2>Upcoming Programs...</h2>
+        <Images>
+        <Img1><img src={ow} alt='' /></Img1>
+        <Img2><img src={ow2} alt='' /></Img2>
+        <Img3><img src={ow} alt='' /></Img3>
+        </Images>
+    </UpcomingPrograms>
+    </>
   )
 }
 
 export default HomeBody
 
+const UpcomingPrograms = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    >h2{
+        font-weight: bold;
+        font-stretch: expanded;
+    }
+
+    @media (max-width: 1000px) {
+    }
+`
+const Images = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
+`
+const Img1 = styled.div`
+    width: 32%;
+    
+    @media (max-width: 750px) {
+        width: 97%;
+    }
+`
+const Img2 = styled.div`
+    width: 32%;
+    padding-left: 20px;
+    @media (max-width: 750px) {
+        width: 97%;
+        padding-left: 0px;
+    }
+`
+const Img3 = styled.div`
+    width: 32%;
+    padding-left: 20px;
+    @media (max-width: 750px) {
+        width: 97%;
+        padding-left: 0px;
+    }
+`
+
 const PictureExp = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center; 
-    padding-bottom: 20px;
+    padding-bottom: 100px;
+    margin-top: 25px;
+    background-color: whitesmoke;
     > img {
-      width: 50%;
+      width: 45%;
+      padding-left: 100px;
+      margin-bottom: 15px;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       > img {
-        width: 50px;
+        width: 80%;
+        padding-left: 0px;
       }
     }
     
 `
 const Text = styled.div`
-  flex-direction: column;
+  padding-left: 20px;
+  width: 70%;
+  
     > h2 {
-      margin-left: 20px;
-      font-style: inherit;
-      font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        font-style: inherit;
+        font-weight: bold;
     }
     > p {
-      margin-left: 20px;
-      width: 95%;
-      font-style: italic;
-      font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 25px;
+        font-weight: bold;
+        font-size: 14px;
     }
-    @media (max-width: 1200px) {
-      > h3 {
-
+    @media (max-width: 1000px) {
+        width: auto;
+      > p {
+        width: 95%;
       }
+    }
+`
+const Sections = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+`
+const ShennyGloryFoundation = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    padding: 7px;
+    margin-left: 15px;
+    
+    >img {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    > h1 {
+        
+    }
+
+    > p {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 1000px) {
+        width: 70%;
+        margin-top: 15px;
+        >p {
+            width: 100%;
+        }
+    }
+`
+const MoreBooksVille = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    padding: 7px;
+    margin-left: 15px;
+    padding-bottom: 30px;
+    >img {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    > p {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    @media (max-width: 1000px) {
+        width: 70%;
+        margin-top: 15px;
+        margin-left: 0px;
+        >p {
+            width: 100%;
+        }
+    }
+`
+const LeadWithPsg = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    margin-left: 15px;
+    >img {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    > p {
+        width: 80%;
+        margin-bottom: 110px;
+    }
+
+    @media (max-width: 9000px) {
+        width: 70%;
+        margin-top: 15px;
+        margin-left: 0px;
+        
+        >h2 {
+            font-stretch: extra-expanded;
+        }
+        >p {
+            width: 90%;
+        }
     }
 `

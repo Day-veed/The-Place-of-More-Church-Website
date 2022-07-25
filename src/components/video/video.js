@@ -6,9 +6,9 @@ import { motion } from 'framer-motion'
 export default function Video() {
 
     return (
-        <div>
+        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
             <T>
-            <motion.h1 initial={{ y: -35 }} animate={{ y: -10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>Training Experience</motion.h1>
+            <h1 >Training Experience</h1>
             </T>
             
             <VideoContainer>
@@ -24,7 +24,7 @@ export default function Video() {
                     onError={() => console.log('onError callback')} 
                 />
             </VideoContainer>    
-        </div>
+        </motion.div>
     );
 }
 
@@ -43,4 +43,5 @@ const T = styled.div`
 const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 `
