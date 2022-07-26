@@ -3,8 +3,8 @@
     position: fixed;
     top: 0;
     width: 100%;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
     border-bottom: 2px solid whitesmoke;
     height: 80px;
     background-color: whitesmoke;

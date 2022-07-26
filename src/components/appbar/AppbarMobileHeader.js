@@ -4,6 +4,7 @@ import { IconButton } from '@mui/material'
 import MenuIcon from "@mui/icons-material/Menu";
 import styled, { useThem } from "styled-components"
 import { useUIContext } from '../../context/ui';
+import logo from './logo.jpg';
 
 function AppbarMobileHeader() {
 
@@ -20,6 +21,10 @@ function AppbarMobileHeader() {
       <HeaderMiddle >
           <h1> TPM</h1>
       </HeaderMiddle >
+
+      {/*<HeaderRight >
+      <img src={logo} alt='' />
+  </HeaderRight >*/}
     </div>
   )
 }
@@ -36,9 +41,8 @@ const HeaderMiddle = styled.div`
   font-family: '"Montez", "cursive"';
   font-style: inherit;
   color: #722f37;
-  padding-right: 70px;
   @media (max-width: 600px) {
-      margin-left: 10px;
+      
   }
 `
 const HeaderLeft = styled.div`
@@ -46,4 +50,17 @@ const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
   padding-left: 20px;
+`
+
+const HeaderRight = styled.div`
+  flex: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: 150px;
+    height: 150px;
+    
+  }
 `

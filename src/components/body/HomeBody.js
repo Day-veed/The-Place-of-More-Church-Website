@@ -2,6 +2,9 @@ import React from 'react'
 import styled from "styled-components"
 import ow from './ow.jpg';
 import ow2 from './ow2.jpg';
+import ow3 from './ow3.jpg';
+import ow4 from './ow4.jpg';
+import ow5 from './ow5.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 
@@ -12,8 +15,8 @@ function HomeBody() {
       <img src={ow} alt='' />
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
       <Text>
-        <h2>Welcome to The Place of More <br/>
-        <h5> (Where Everything Works)</h5></h2>
+        <h2 style={{color: "#722f37"}}>Welcome to The Place of More <br/>
+        <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
         <p>The Place of More was established 1st January 2007 
           with a divine mandate to "Inspire and Empower people to discover theri their purpose to the glory of God and the advancement of His kingdom" 
           Her global headquarters is currently at old chineese bakery Dondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
@@ -23,27 +26,28 @@ function HomeBody() {
     <Sections>
         <ShennyGloryFoundation>
             <img src={ow2} alt='' />
-            <h2>Shenny Glory Foundation</h2>
-            <h2>(SGF)</h2>
+            <h2 style={{color: "#722f37"}}>Shenny Glory Foundation</h2>
+            <h2 style={{color: "#722f37"}}>(SGF)</h2>
             <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
         </ShennyGloryFoundation>
         <MoreBooksVille>
         <img src={ow2} alt='' />
-            <h2>More Books Ville</h2>
+            <h2 style={{color: "#722f37"}}>More Books Ville</h2>
             <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
         <LeadWithPsg>
         <img src={ow2} alt='' />
-            <h2>Lead With PSG</h2>
+            <h2 style={{color: "#722f37"}}>Lead With PSG</h2>
             <p>Join Pastor Shenny Glory as he educates people on leadership.</p>
         </LeadWithPsg>
     </Sections>
     <UpcomingPrograms>
-        <h2>Upcoming Programs...</h2>
+        <h4 style={{color: "#722f37"}}>Upcoming Programs...</h4>
+        <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
         <Images>
-        <Img1><img src={ow} alt='' /></Img1>
-        <Img2><img src={ow2} alt='' /></Img2>
-        <Img3><img src={ow} alt='' /></Img3>
+        <Img1><img src={ow3} alt='' /></Img1>
+        <Img2><img src={ow4} alt='' /></Img2>
+        <Img3><img src={ow5} alt='' /></Img3>
         </Images>
     </UpcomingPrograms>
     </>
@@ -58,9 +62,16 @@ const UpcomingPrograms = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding-bottom: 40px;
+    background-color: whitesmoke;
+
+    > h4 {
+        padding-top: 25px;
+    }
     >h2{
         font-weight: bold;
         font-stretch: expanded;
+        padding-top: 25px;
     }
 
     @media (max-width: 1000px) {
@@ -238,7 +249,7 @@ const LeadWithPsg = styled.div`
         margin-bottom: 110px;
     }
 
-    @media (max-width: 9000px) {
+    @media (max-width: 1000px) {
         width: 70%;
         margin-top: 15px;
         margin-left: 0px;

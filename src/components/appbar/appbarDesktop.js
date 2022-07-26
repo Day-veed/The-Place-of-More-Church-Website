@@ -4,6 +4,8 @@ import "./appbarDesktop.css";
 import { AppbarContainer, AppbarHeader, MyList } from '../../styles/appbar';
 import Actions from '../actions';
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from './logo.jpg';
+import styled, { useThem } from "styled-components"
 
 function AppbarDesktop({ matches }) {
   return (
@@ -22,9 +24,9 @@ function AppbarDesktop({ matches }) {
           </MyList>
       </div>
 
-      <div className='header__right'>
-          <h3>LOGO</h3>
-      </div>
+      <HeaderRight >
+      <img src={logo} alt='' />
+      </HeaderRight >
     </div>
     /**
      * Appbar Container
@@ -64,3 +66,14 @@ function AppbarDesktop({ matches }) {
 }
 
 export default AppbarDesktop
+
+const HeaderRight = styled.div`
+  flex: 0.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    
+  }
+`
