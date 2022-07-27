@@ -32,7 +32,7 @@ function HomeBody() {
             <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
         </ShennyGloryFoundation>
         <MoreBooksVille>
-        <img src={logo} alt='"' />
+        <img src={logo} alt='' />
             <h2 style={{color: "#722f37"}}>More Books Ville</h2>
             <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
