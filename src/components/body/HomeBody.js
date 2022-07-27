@@ -5,6 +5,7 @@ import ow2 from './ow2.jpg';
 import ow3 from './ow3.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
+import logo from './logo.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 
@@ -31,7 +32,7 @@ function HomeBody() {
             <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
         </ShennyGloryFoundation>
         <MoreBooksVille>
-        <img src={ow2} alt='' />
+        <img src={logo} alt='"' />
             <h2 style={{color: "#722f37"}}>More Books Ville</h2>
             <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
