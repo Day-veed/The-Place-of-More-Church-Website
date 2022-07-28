@@ -5,6 +5,7 @@ import { Colors } from '../../styles/theme';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import SendIcon from '@mui/icons-material/Send';
 
 function Footer() {
@@ -23,11 +24,11 @@ function Footer() {
     >
         <Grid container spacing={2} justifyContent='center'>
             <Grid item md={6} lg={4}>
-                <FooterTitle variant='body1'>About us</FooterTitle>
+                <FooterTitle variant='body1'>The Place of More</FooterTitle>
                 <Typography variant='caption2'>
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
+                The Place of More Church, Former Oasis Bakery, Along Gondola Road,
+                Jos, Plateau State, Nigeria <br/>
+                Phone: (+234)8010023222, (+234)8010023222, (+234)8010023222
                 </Typography>
                 <Box
                     sx={{
@@ -37,7 +38,8 @@ function Footer() {
                 >
                     <FacebookIcon sx={{ mr: 1 }} />
                     <TwitterIcon sx={{ mr: 1 }} />
-                    <InstagramIcon />
+                    <InstagramIcon  sx={{ mr: 1 }} />
+                    <YouTubeIcon />
                 </Box>
             </Grid>
             <Grid item md={6} lg={2}>
@@ -78,7 +80,7 @@ function Footer() {
                             My Account
                         </Typography>
                     </ListItemText>
-                    <ListItemText>
+                    {/*<ListItemText>
                         <Typography lineHeight={2} variant="caption2">
                             Administration
                         </Typography>
@@ -87,7 +89,7 @@ function Footer() {
                         <Typography lineHeight={2} variant="caption2">
                             Staff
                         </Typography>
-                    </ListItemText>
+                </ListItemText>*/}
                 </List>
             </Grid>
             <Grid item md={6} lg={4}>
@@ -107,6 +109,7 @@ function Footer() {
                 </Stack>
             </Grid>
         </Grid>
+        <h6>All Rights Reserved</h6>
     </Box>
   )
 }

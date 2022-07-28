@@ -24,13 +24,14 @@ function AppDrawer() {
         />
     </DrawerCloseButton> )}
     <Drawer open={draweropen}>
+    <div className='style' style={{paddingTop:'30px'}}></div>
         <List>
             <ListItemButton>
                 <ListItemText>Home</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
-                <ListItemText>Categories</ListItemText>
+                <ListItemText>About Us</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
@@ -38,7 +39,11 @@ function AppDrawer() {
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
-                <ListItemText>Contact Us</ListItemText>
+                <ListItemText>Give</ListItemText>
+            </ListItemButton>
+            <MiddleDivider />
+            <ListItemButton>
+                <ListItemText>Give</ListItemText>
             </ListItemButton>
         </List>
     </Drawer>
