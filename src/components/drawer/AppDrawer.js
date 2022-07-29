@@ -43,7 +43,7 @@ function AppDrawer() {
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
-                <ListItemText>Give</ListItemText>
+                <ListItemText>Contact Us</ListItemText>
             </ListItemButton>
         </List>
     </Drawer>

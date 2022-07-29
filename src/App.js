@@ -9,6 +9,7 @@ import Appbar from './components/appbar';
 import { UIProvider } from './context/ui';
 import Video from './components/video/video'
 import CarouselContainer from './components/carousel/CarouselContainer'
+import TestimonyContainer from './components/testimony/TestimonyContainer'
 import AppbarMobileBanner from './components/banner/Banner'
 import Promotions from './components/promotions/messages'
 import Images from './components/images/Images'
@@ -31,6 +32,7 @@ function App() {
         <Promotions /> 
         <HomeBody />
         <Video />
+        <TestimonyContainer />
         <Footer />
         <AppDrawer />
          {/*<Training />*/}

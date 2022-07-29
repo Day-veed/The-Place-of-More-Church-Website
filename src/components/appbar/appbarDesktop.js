@@ -18,15 +18,16 @@ function AppbarDesktop({ matches }) {
           
           <MyList type="row">
             <ListItemText primary="Home" />
-            <ListItemText primary="Categories" />
-            <ListItemText primary="Products" />
+            <ListItemText primary="About Us" />
+            <ListItemText primary="Training" />
+            <ListItemText primary="Give" />
             <ListItemText primary="Contact Us" />
           </MyList>
       </div>
 
-      <HeaderRight >
+      {/*<HeaderRight >
       <img src={logo} alt='' />
-      </HeaderRight >
+  </HeaderRight >*/}
     </div>
     /**
      * Appbar Container

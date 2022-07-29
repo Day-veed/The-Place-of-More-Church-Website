@@ -20,13 +20,13 @@ function HomeBody() {
         <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
         <p>The Place of More was established 1st January 2007 
           with a divine mandate to "Inspire and Empower people to discover theri their purpose to the glory of God and the advancement of His kingdom" 
-          Her global headquarters is currently at old chineese bakery Dondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
+          Her global headquarterss is currently at old chineese bakery Gondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
       </Text>
       </motion.div>
     </PictureExp>
     <Sections>
         <ShennyGloryFoundation>
-            <img src={ow2} alt='' />
+            <img src={logo} alt='' />
             <h2 style={{color: "#722f37"}}>Shenny Glory Foundation</h2>
             <h2 style={{color: "#722f37"}}>(SGF)</h2>
             <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
@@ -37,7 +37,7 @@ function HomeBody() {
             <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
         <LeadWithPsg>
-        <img src={ow2} alt='' />
+        <img src={logo} alt='' />
             <h2 style={{color: "#722f37"}}>Lead With PSG</h2>
             <p>Join Pastor Shenny Glory as he educates people on leadership.</p>
         </LeadWithPsg>
@@ -65,6 +65,7 @@ const UpcomingPrograms = styled.div`
     margin-bottom: 50px;
     padding-bottom: 40px;
     background-color: whitesmoke;
+   // background-clip: ;
 
     > h4 {
         padding-top: 25px;
