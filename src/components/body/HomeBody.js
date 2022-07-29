@@ -20,7 +20,7 @@ function HomeBody() {
         <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
         <p>The Place of More was established 1st January 2007 
           with a divine mandate to "Inspire and Empower people to discover theri their purpose to the glory of God and the advancement of His kingdom" 
-          Her global headquarterss is currently at old chineese bakery Gondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
+          Her global headquarters is currently at old chineese bakery Gondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
       </Text>
       </motion.div>
     </PictureExp>
