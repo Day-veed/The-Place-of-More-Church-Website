@@ -13,13 +13,13 @@ function HomeBody() {
   return (
     <>
     <PictureExp>
-      <img src={ow} alt='' />
-      <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
+      <img src={ow4} alt='' />
+      <motion.div initial={{ y: 85 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
       <Text>
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More <br/>
         <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
         <p>The Place of More was established 1st January 2007 
-          with a divine mandate to "Inspire and Empower people to discover theri their purpose to the glory of God and the advancement of His kingdom" 
+          with a divine mandate to "Inspire and Empower people to discover their purpose to the glory of God and the advancement of His kingdom" 
           Her global headquarters is currently at old chineese bakery Gondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
       </Text>
       </motion.div>

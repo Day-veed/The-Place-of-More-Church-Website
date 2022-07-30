@@ -10,6 +10,7 @@ export default function Video() {
 
     return (
         <>
+        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <FeaturedMessages >
         <h2> Featured Messages</h2>
         <Videos>
@@ -96,6 +97,7 @@ export default function Video() {
         </Videos>
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}}>More Messages...</Button>
         </FeaturedMessages>
+        </motion.div>
 
         <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
            {/* <T>
@@ -116,6 +118,7 @@ export default function Video() {
                 />
     </VideoContainer>  */}  
         </motion.div>
+        
         </>
     );
 }
@@ -141,7 +144,7 @@ const FeaturedMessages = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //background-image: url(${ow2});
+    background-image:"https://www.bing.com/images/search?view=detailV2&ccid=DBTYBxbz&id=8FADAEB50FFB677D154CEB3D3B9581D8246EBF6A&thid=OIP.DBTYBxbzVrOaDVu_9RUUvQHaD2&mediaurl=https%3a%2f%2fpng.pngtree.com%2fthumb_back%2ffw800%2fbackground%2f20190221%2fourmid%2fpngtree-tech-cool-particle-background-creative-business-big-data-image_17381.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0c14d80716f356b39a0d5bbff51514bd%3frik%3dar9uJNiBlTs96w%26pid%3dImgRaw%26r%3d0&exph=500&expw=960&q=Cool+Backgrounds+for+a+Business+Website&simid=608014657672408992&FORM=IRPRST&ck=C6A1D134B13D7A9AF58F64D7814C9B3B&selectedIndex=25";
     background-position: center;
     width: auto;
     height: auto;
