@@ -15,6 +15,10 @@ const MiddleDivider = styled((props) => (
 function AppDrawer() {
     const {draweropen, setDraweropen} = useUIContext();
     const navigate = useNavigate();
+
+    const training = () => {
+        navigate('/training')
+    }
   return (
     <>
     {draweropen && (<DrawerCloseButton onClick={() => setDraweropen(false)}>
@@ -36,8 +40,8 @@ function AppDrawer() {
                 <ListItemText>About Us</ListItemText>
             </ListItemButton>
             <MiddleDivider />
-            <ListItemButton>
-                <ListItemText onClick={navigate('/training')}>Training</ListItemText>
+            <ListItemButton onClick={() => navigate('/training')}>
+                <ListItemText>Training</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>

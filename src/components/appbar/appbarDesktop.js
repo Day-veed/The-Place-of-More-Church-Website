@@ -6,8 +6,10 @@ import Actions from '../actions';
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from './logo.jpg';
 import styled, { useThem } from "styled-components"
+import { useNavigate } from 'react-router-dom';
 
 function AppbarDesktop({ matches }) {
+  const navigate = useNavigate();
   return (
     <div className='header'>
       <div className='header__left'>
@@ -19,7 +21,7 @@ function AppbarDesktop({ matches }) {
           <MyList type="row">
             <ListItemText primary="Home" />
             <ListItemText primary="About Us" />
-            <ListItemText primary="Training" />
+            <ListItemText primary="Training" onClick={() => navigate('/training')}/>
             <ListItemText primary="Give" />
             <ListItemText primary="Contact Us" />
           </MyList>

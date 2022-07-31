@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Button, Container } from "@mui/material";
 import { useEffect } from 'react';
-import Training from './components/Training';
+import Training from './components/training/training';
 import { ThemeProvider } from '@mui/system';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
@@ -17,6 +17,7 @@ import Footer from './components/footer/Footer'
 import AppDrawer from './components/drawer/AppDrawer'
 import HomeBody from './components/body/HomeBody';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './components/Home/Home';
 
 function App() {
 
@@ -24,23 +25,27 @@ function App() {
     document.title = "The Place of More - Home";
   }, []);
   return (
+    <Router>
     <ThemeProvider theme={theme}>
-      <Router>
       
         <UIProvider>
         <Appbar />
-        <CarouselContainer />
-        {/*<AppbarMobileBanner />*/}
+        <Home />
+        {/*<CarouselContainer /> 
+        {/*<AppbarMobileBanner />
         <Promotions /> 
         <HomeBody />
         <Video />
         <TestimonyContainer />
         <Footer />
-        <AppDrawer />
+        <AppDrawer />*/}
         <Routes>
-          <Route path='/training' element={<Training />}>
-
-          </Route>
+        <Route path='/training' element={<Training />}>
+              
+              </Route>
+              <Route path='/' element={<App />}> 
+                
+              </Route>
         </Routes>
          {/*<Training />*/}
         </UIProvider>
@@ -48,9 +53,9 @@ function App() {
           
           
         }
-      </Router>
       
     </ThemeProvider>
+    </Router>
   );
 }
 
