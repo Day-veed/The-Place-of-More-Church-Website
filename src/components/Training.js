@@ -15,7 +15,7 @@ function Training() {
   return (
     <div>
         <Appbar />
-        <CarouselContainer />
+        {/*<CarouselContainer />*/}
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
         <HomeBody />

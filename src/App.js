@@ -16,6 +16,7 @@ import Images from './components/images/Images'
 import Footer from './components/footer/Footer'
 import AppDrawer from './components/drawer/AppDrawer'
 import HomeBody from './components/body/HomeBody';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
+      <Router>
       
         <UIProvider>
         <Appbar />
@@ -35,12 +37,18 @@ function App() {
         <TestimonyContainer />
         <Footer />
         <AppDrawer />
+        <Routes>
+          <Route path='/training' element={<Training />}>
+
+          </Route>
+        </Routes>
          {/*<Training />*/}
         </UIProvider>
         {
           
           
         }
+      </Router>
       
     </ThemeProvider>
   );

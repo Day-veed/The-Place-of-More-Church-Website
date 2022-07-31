@@ -25,6 +25,11 @@ function AppbarDesktop({ matches }) {
           </MyList>
       </div>
 
+      <div className='header__right'>
+      <img src={logo} alt='' />
+      
+      </div>
+
       {/*<HeaderRight >
       <img src={logo} alt='' />
   </HeaderRight >*/}

@@ -6,6 +6,7 @@ import { DrawerCloseButton } from '../../styles/appbar';
 import CloseIcon from '@mui/icons-material/Close';
 import { lighten } from "@mui/material/styles";
 import { Colors } from '../../styles/theme';
+import { useNavigate } from 'react-router-dom';
 
 const MiddleDivider = styled((props) => (
     <Divider variants="middle" {...props} />
@@ -13,6 +14,7 @@ const MiddleDivider = styled((props) => (
 
 function AppDrawer() {
     const {draweropen, setDraweropen} = useUIContext();
+    const navigate = useNavigate();
   return (
     <>
     {draweropen && (<DrawerCloseButton onClick={() => setDraweropen(false)}>
@@ -35,7 +37,7 @@ function AppDrawer() {
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
-                <ListItemText>Training</ListItemText>
+                <ListItemText onClick={navigate('/training')}>Training</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
