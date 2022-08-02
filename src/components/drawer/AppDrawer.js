@@ -12,7 +12,7 @@ const MiddleDivider = styled((props) => (
     <Divider variants="middle" {...props} />
     ))``;
 
-function AppDrawer() {
+function AppDrawer() {.
     const {draweropen, setDraweropen} = useUIContext();
     const navigate = useNavigate();
 
