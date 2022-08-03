@@ -17,7 +17,7 @@ function AppDrawer() {
     const navigate = useNavigate();
 
     const training = () => {
-        navigate('/training')
+        navigate('/training.')
     }
   return (
     <>
