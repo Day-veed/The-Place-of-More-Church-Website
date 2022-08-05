@@ -22,9 +22,9 @@ function AppbarMobileHeader() {
           <h1> TPM</h1>
       </HeaderMiddle >
 
-      {/*<HeaderRight >
+      <HeaderRight >
       <img src={logo} alt='' />
-  </HeaderRight >*/}
+  </HeaderRight >
     </div>
   )
 }
@@ -33,7 +33,7 @@ export default AppbarMobileHeader
 
 const HeaderMiddle = styled.div`
   display: flex;
-  flex: 0.95;
+  flex: 0.85;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -41,6 +41,7 @@ const HeaderMiddle = styled.div`
   font-family: '"Montez", "cursive"';
   font-style: inherit;
   color: #722f37;
+  padding-left: 40px;
   @media (max-width: 600px) {
       
   }
@@ -53,14 +54,13 @@ const HeaderLeft = styled.div`
 `
 
 const HeaderRight = styled.div`
-  flex: 0.2;
+  flex: 0.1;
   display: flex;
   justify-content: center;
   align-items: center;
 
   > img {
-    width: 150px;
-    height: 150px;
-    
+    width: 70px;
+    padding-right: 10px;
   }
 `

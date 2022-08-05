@@ -40,10 +40,10 @@ function App() {
         <Footer />
         <AppDrawer />*/}
         <Routes>
-          <Route path='/training' element={<Training />}>
+          {/*<Route path='/training' element={<Training />}>
               
-            </Route>
-            <Route path='/' element={<Home />}> 
+          </Route>*/}
+          <Route path='/' element={<Home />}> 
                 
           </Route>
         </Routes>

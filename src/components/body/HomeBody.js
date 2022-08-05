@@ -6,6 +6,7 @@ import ow3 from './ow3.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
 import logo from './logo.jpg';
+import logo1 from './logo1.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 
@@ -14,22 +15,23 @@ function HomeBody() {
     <>
     <PictureExp>
       <img src={ow4} alt='' />
-      <motion.div initial={{ y: 85 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
+      <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
       <Text>
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More <br/>
         <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
         <p>The Place of More was established 1st January 2007 
           with a divine mandate to "Inspire and Empower people to discover their purpose to the glory of God and the advancement of His kingdom" 
-          Her global headquarters is currently at old chineese bakery Gondola, Jos, Port Harcourt, Plateau State, Nigeria.</p>
+          Her global headquarters is currently at old chineese bakery Gondola, Jos, Plateau State, Nigeria.</p>
       </Text>
       </motion.div>
     </PictureExp>
+    <motion.Motion initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
     <Sections>
         <ShennyGloryFoundation>
-            <img src={logo} alt='' />
-            <h2 style={{color: "#722f37"}}>Shenny Glory Foundation</h2>
-            <h2 style={{color: "#722f37"}}>(SGF)</h2>
-            <p>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</p>
+            <motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo1} alt='' />
+            <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Shenny Glory Foundation</motion.h2>
+            <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }} style={{color: "#722f37"}}>(SGF)</motion.h2>
+            <motion.p initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</motion.p>
         </ShennyGloryFoundation>
         <MoreBooksVille>
         <img src={logo} alt='' />
@@ -37,18 +39,19 @@ function HomeBody() {
             <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
         <LeadWithPsg>
-        <img src={logo} alt='' />
-            <h2 style={{color: "#722f37"}}>Lead With PSG</h2>
-            <p>Join Pastor Shenny Glory as he educates people on leadership.</p>
+            <motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo} alt='' />
+            <motion.h2 initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Lead With PSG</motion.h2>
+            <motion.p initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Join Pastor Shenny Glory as he educates people on leadership.</motion.p>
         </LeadWithPsg>
     </Sections>
+    </motion.Motion>
     <UpcomingPrograms>
         <h4 style={{color: "#722f37"}}>Upcoming Programs...</h4>
         <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
         <Images>
-        <Img1><img src={ow3} alt='' /></Img1>
+        <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow3} alt='' /></Img1>
         <Img2><img src={ow4} alt='' /></Img2>
-        <Img3><img src={ow5} alt='' /></Img3>
+        <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow5} alt='' /></Img3>
         </Images>
     </UpcomingPrograms>
     </>
@@ -57,6 +60,7 @@ function HomeBody() {
 
 export default HomeBody
 
+const Motion = styled.div``
 const UpcomingPrograms = styled.div`
     display: flex;
     flex-direction: column;
@@ -122,7 +126,7 @@ const PictureExp = styled.div`
     background-color: whitesmoke;
     > img {
       width: 45%;
-      padding-left: 100px;
+      padding-left: 200px;
       margin-bottom: 15px;
     }
     @media (max-width: 1000px) {

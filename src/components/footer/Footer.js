@@ -109,7 +109,6 @@ function Footer() {
                 </Stack>
             </Grid>
         </Grid>
-        <h6>All Rights Reserved</h6>
     </Box>
   )
 }
