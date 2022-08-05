@@ -41,7 +41,7 @@ function AppDrawer() {
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton onClick={() => navigate('/training')}>
-                <ListItemText>Trainingh</ListItemText>
+                <ListItemText>Training</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
