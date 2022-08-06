@@ -18,6 +18,7 @@ import AppDrawer from './components/drawer/AppDrawer'
 import HomeBody from './components/body/HomeBody';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './components/Home/Home';
+import Contact from './components/contact/Contact';
 
 function App() {
 
@@ -29,8 +30,12 @@ function App() {
     <ThemeProvider theme={theme}>
       
         <UIProvider>
-        <Appbar />
-        <Home />
+        
+          <Appbar />
+            <Routes>
+              <Route path='/' element={<Contact />} />       
+          </Routes>
+        
         {/*<CarouselContainer /> 
         {/*<AppbarMobileBanner />
         <Promotions /> 
@@ -38,16 +43,15 @@ function App() {
         <Video />
         <TestimonyContainer />
         <Footer />
-        <AppDrawer />*/}
+        <AppDrawer />*
         <Routes>
           {/*<Route path='/training' element={<Training />}>
               
-          </Route>*/}
-          <Route path='/' element={<Home />}> 
-                
-          </Route>
+          </Route>*
+          
         </Routes>
          {/*<Training />*/}
+         
         </UIProvider>
         {
           
@@ -55,6 +59,7 @@ function App() {
         }
       
     </ThemeProvider>
+    
     </Router>
   );
 }
