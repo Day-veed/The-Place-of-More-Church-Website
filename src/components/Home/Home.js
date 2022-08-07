@@ -9,6 +9,7 @@ import Images from '../images/Images'
 import Footer from '../footer/Footer'
 import AppDrawer from '../drawer/AppDrawer'
 import HomeBody from '../body/HomeBody';
+import VideoCarousel from '../carousel/VideoCarousel'
 
 function Home() {
   return (
@@ -16,11 +17,12 @@ function Home() {
         <CarouselContainer /> 
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
+        {/*<VideoCarousel />*/}
         <HomeBody />
         <Video />
         <TestimonyContainer />
-        <Footer />
-        <AppDrawer />
+        
+        
     </div>
   )
 }

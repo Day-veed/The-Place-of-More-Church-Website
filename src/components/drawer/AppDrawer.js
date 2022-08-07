@@ -19,6 +19,9 @@ function AppDrawer() {
     const training = () => {
         navigate('/training')
     }
+    const home = () => {
+        navigate('/')
+    }
   return (
     <>
     {draweropen && (<DrawerCloseButton onClick={() => setDraweropen(false)}>
@@ -33,7 +36,7 @@ function AppDrawer() {
     <div className='style' style={{paddingTop:'30px'}}></div>
         <List>
             <ListItemButton>
-                <ListItemText>Home</ListItemText>
+                <ListItemText onClick={() => home()}>Home</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
@@ -41,7 +44,7 @@ function AppDrawer() {
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>
-                <ListItemText>Training</ListItemText>
+                <ListItemText onClick={() => training()}>Training</ListItemText>
             </ListItemButton>
             <MiddleDivider />
             <ListItemButton>

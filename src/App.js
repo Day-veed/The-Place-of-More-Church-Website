@@ -32,9 +32,12 @@ function App() {
         <UIProvider>
         
           <Appbar />
-            <Routes>
-              <Route path='/' element={<Contact />} />       
+          <AppDrawer />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/training' element={<Training />} />       
           </Routes>
+          <Footer />
         
         {/*<CarouselContainer /> 
         {/*<AppbarMobileBanner />

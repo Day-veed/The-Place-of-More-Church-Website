@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from "styled-components"
-import ow from './ow.jpg';
+import ow1 from './ow1.jpg';
 import ow2 from './ow2.jpg';
 import ow3 from './ow3.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
 import logo from './logo.jpg';
 import logo1 from './logo1.jpg';
+import logo2 from './logo2.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 
@@ -14,7 +15,7 @@ function HomeBody() {
   return (
     <>
     <PictureExp>
-      <img src={ow4} alt='' />
+      <img src={ow1} alt='' />
       <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
       <Text>
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More <br/>
@@ -34,14 +35,14 @@ function HomeBody() {
             <motion.p initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</motion.p>
         </ShennyGloryFoundation>
         <MoreBooksVille>
-        <img src={logo} alt='' />
+        <img src={logo2} alt='' />
             <h2 style={{color: "#722f37"}}>More Books Ville</h2>
-            <p>More Books Ville us the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
+            <p>More Books Ville is the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
         </MoreBooksVille>
         <LeadWithPsg>
             <motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo} alt='' />
-            <motion.h2 initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Lead With PSG</motion.h2>
-            <motion.p initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Join Pastor Shenny Glory as he educates people on leadership.</motion.p>
+            <motion.h2 initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Upper Room</motion.h2>
+            <motion.p initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Upper Room is the Cildren's Ministry of Salvation Ministies that nurtures children spiritually and mentally to grow in Christ.</motion.p>
         </LeadWithPsg>
     </Sections>
     </motion.Motion>
@@ -126,6 +127,7 @@ const PictureExp = styled.div`
     background-color: whitesmoke;
     > img {
       width: 45%;
+      height: 700px;
       padding-left: 200px;
       margin-bottom: 15px;
     }
@@ -198,7 +200,7 @@ const ShennyGloryFoundation = styled.div`
     }
 
     > p {
-        width: 80%;
+        width: 90%;
         margin-bottom: 30px;
     }
 
@@ -221,11 +223,11 @@ const MoreBooksVille = styled.div`
     padding-bottom: 30px;
     >img {
         width: 50%;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     > p {
-        width: 80%;
+        width: 90%;
         margin-bottom: 30px;
     }
     
@@ -251,7 +253,7 @@ const LeadWithPsg = styled.div`
     }
 
     > p {
-        width: 80%;
+        width: 100%;
         margin-bottom: 110px;
     }
 
