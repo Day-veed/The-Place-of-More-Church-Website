@@ -23,7 +23,7 @@ function AppbarMobileHeader() {
       </HeaderMiddle >
 
       <HeaderRight >
-      <img src={logo} alt='' />
+      
   </HeaderRight >
     </div>
   )

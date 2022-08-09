@@ -22,13 +22,13 @@ function AppbarDesktop({ matches }) {
             <ListItemText primary="Home" />
             <ListItemText primary="About Us" />
             <ListItemText primary="Training" onClick={() => navigate('/training')}/>
-            <ListItemText primary="Give" />
+            <ListItemText primary="Partnership" />
             <ListItemText primary="Contact Us" />
           </MyList>
       </div>
 
       <div className='header__right'>
-      <img src={logo} alt='' />
+      
       
       </div>
 
