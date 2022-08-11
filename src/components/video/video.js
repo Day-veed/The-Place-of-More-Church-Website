@@ -16,8 +16,8 @@ export default function Video() {
         <Videos>
         <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -29,8 +29,8 @@ export default function Video() {
             </VideoContainers>  
             <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -42,8 +42,8 @@ export default function Video() {
             </VideoContainers>  
             <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -57,8 +57,8 @@ export default function Video() {
         <Videos>
         <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -70,8 +70,8 @@ export default function Video() {
             </VideoContainers>  
             <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -83,8 +83,8 @@ export default function Video() {
             </VideoContainers>  
             <VideoContainers>
                 <ReactPlayer 
-                    width='80%' 
-                    height='70' 
+                    width='90%' 
+                    height='60' 
                     controls 
                     url={vid}
                     onReady={() => console.log('onready callback')}
@@ -127,6 +127,7 @@ const Videos = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 75%;
 
     @media (max-width: 1000px) {
         flex-direction: column;

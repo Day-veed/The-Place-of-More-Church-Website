@@ -46,6 +46,7 @@ function HomeBody() {
         </LeadWithPsg>
     </Sections>
     </motion.Motion>
+    <Set>
     <UpcomingPrograms>
         <h4 style={{color: "#722f37"}}>Upcoming Programs...</h4>
         <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
@@ -55,6 +56,7 @@ function HomeBody() {
         <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow5} alt='' /></Img3>
         </Images>
     </UpcomingPrograms>
+    </Set>
     </>
   )
 }
@@ -62,6 +64,18 @@ function HomeBody() {
 export default HomeBody
 
 const Motion = styled.div``
+
+const Set = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
+`
+
 const UpcomingPrograms = styled.div`
     display: flex;
     flex-direction: column;
@@ -70,6 +84,7 @@ const UpcomingPrograms = styled.div`
     margin-bottom: 50px;
     padding-bottom: 40px;
     background-color: whitesmoke;
+    width: 85%;
    // background-clip: ;
 
     > h4 {
@@ -82,6 +97,8 @@ const UpcomingPrograms = styled.div`
     }
 
     @media (max-width: 1000px) {
+        width: auto;
+        height: auto;
     }
 `
 const Images = styled.div`
@@ -89,20 +106,26 @@ const Images = styled.div`
     justify-content: center;
     align-items: center;
     width: 95%;
+    
 
     @media (max-width: 750px) {
         flex-direction: column;
+        width: auto;
+        height: 70%;
     }
 `
 const Img1 = styled.div`
     width: 32%;
+    height: 400px;
     
     @media (max-width: 750px) {
         width: 97%;
+        height: 400px;
     }
 `
 const Img2 = styled.div`
     width: 32%;
+    height: 400px;
     padding-left: 20px;
     @media (max-width: 750px) {
         width: 97%;
@@ -111,6 +134,7 @@ const Img2 = styled.div`
 `
 const Img3 = styled.div`
     width: 32%;
+    height: 400px;
     padding-left: 20px;
     @media (max-width: 750px) {
         width: 97%;
@@ -126,9 +150,9 @@ const PictureExp = styled.div`
     margin-top: 25px;
     background-color: whitesmoke;
     > img {
-      width: 45%;
-      height: 700px;
-      padding-left: 200px;
+      width: 55%;
+      height: 400px;
+      padding-left: 150px;
       margin-bottom: 15px;
     }
     @media (max-width: 1000px) {

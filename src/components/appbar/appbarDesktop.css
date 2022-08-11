@@ -1,15 +1,19 @@
 .header {
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: auto;
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid whitesmoke;
     height: auto;
-    background-color: whitesmoke;
+    font-size: 1.2rem;
+    background: transparent;
     padding: 10px 0;
     z-index: 999;
+}
+
+.header.active {
+    background: linear-gradient(90deg, rgb(66, 2, 194) 0%, rgb(0, 78, 194) 100%);
 }
 
 .header__left {
