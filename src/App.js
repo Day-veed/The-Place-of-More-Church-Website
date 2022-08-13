@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 //import './App.css';
 import { Button, Container } from "@mui/material";
 import { useEffect } from 'react';
@@ -13,7 +13,7 @@ import TestimonyContainer from './components/testimony/TestimonyContainer'
 import AppbarMobileBanner from './components/banner/Banner'
 import Promotions from './components/promotions/messages'
 import Images from './components/images/Images'
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/index'
 import AppDrawer from './components/drawer/AppDrawer'
 import HomeBody from './components/body/HomeBody';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -25,6 +25,11 @@ import Partnership from './components/Pages/partnership/Partnership';
 import Sidebar from './components/Sidebar';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   useEffect(() => {
     document.title = "The Place of More - Home";
@@ -34,9 +39,9 @@ function App() {
     <ThemeProvider theme={theme}>
       
         <UIProvider>
-          <Navbar />
+          <Sidebar isOpen={isOpen} toggle={toggle}/>
+          <Navbar toggle={toggle} />
           {/*<Appbar />*/}
-          <Sidebar />
           <AppDrawer />
           <Routes>
             <Route path='/' element={<Home />} />

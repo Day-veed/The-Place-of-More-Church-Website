@@ -108,7 +108,7 @@ export const NavIconOptions = styled.div`
 
     &:hover {
         transition: all 0.3 ease-in-out;
-        color: black;
+        color: gold;
     }
 `
 export const NavOptionTitle = styled.div`

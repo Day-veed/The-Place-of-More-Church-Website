@@ -8,7 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import NavIconOption from './NavIconOption';
 
-function Navbar() {
+function Navbar({ toggle }) {
 
     const navigate = useNavigate();
 
@@ -36,8 +36,8 @@ function Navbar() {
     <>
     <Nav>
         <NavbarContainer>
-            <NavLogo onClick={() => home()}>dolla</NavLogo>
-            <MobileIcon>
+            <NavLogo onClick={() => home()}>TPM</NavLogo>
+            <MobileIcon onClick={toggle}>
                 <FaBars />
             </MobileIcon>
             <NavMenu>

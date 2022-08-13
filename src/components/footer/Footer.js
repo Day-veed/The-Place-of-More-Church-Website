@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { Box, Button, colors, Grid, List, ListItemText, Stack, Typography } from "@mui/material";
 import { FooterTitle, SubscribeTf } from '.';
 import { Colors } from '../../styles/theme';
@@ -89,7 +89,7 @@ function Footer() {
                         <Typography lineHeight={2} variant="caption2">
                             Staff
                         </Typography>
-                </ListItemText>*/}
+                </ListItemText>*
                 </List>
             </Grid>
             <Grid item md={6} lg={4}>
@@ -113,4 +113,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer*/

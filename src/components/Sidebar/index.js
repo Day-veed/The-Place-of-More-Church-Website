@@ -8,7 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-function Sidebar() {
+function Sidebar({ isOpen, toggle }) {
 
     const navigate = useNavigate();
 
@@ -33,25 +33,25 @@ function Sidebar() {
     }
 
   return (
-    <SidebarContainer>
-        <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>
         <SidebarWrapper>
             <SidebarMenu>
-                <SidebarLink onClick={() => home()}>
+                <SidebarLink onClick={() => home()} >
                     Home
                 </SidebarLink>
-                <SidebarLink onClick={() => aboutUs()}>
+                <SidebarLink onClick={() => aboutUs()} >
                     About Us
                 </SidebarLink>
-                <SidebarLink onClick={() => partnership()}>
+                <SidebarLink onClick={() => partnership()} >
                     Partnership
                 </SidebarLink>
                 <SidebarLink onClick={() => Training()}>
                     Training
                 </SidebarLink>
-                <SidebarLink onClick={() => ContactUs()}>
+                <SidebarLink onClick={() => ContactUs()} >
                     Contact Us
                 </SidebarLink>
             </SidebarMenu>

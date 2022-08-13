@@ -10,11 +10,14 @@ import Footer from '../../footer/Footer'
 import AppDrawer from '../../drawer/AppDrawer'
 import HomeBody from '../../body/HomeBody';
 import VideoCarousel from '../../carousel/VideoCarousel'
+import HeroSection from '../../HeroSection/index'
 
 function Home() {
   return (
     <div>
-        <CarouselContainer /> 
+      <HeroSection />
+
+        {/*<CarouselContainer />*/} 
         {/*<AppbarMobileBanner />*/}
         <Promotions /> 
         {/*<VideoCarousel />*/}

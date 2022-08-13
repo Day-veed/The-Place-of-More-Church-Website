@@ -10,6 +10,7 @@ import logo1 from './logo1.jpg';
 import logo2 from './logo2.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
+import Services from '../Services';
 
 function HomeBody() {
   return (
@@ -26,8 +27,9 @@ function HomeBody() {
       </Text>
       </motion.div>
     </PictureExp>
+    <Services />
     <motion.Motion initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
-    <Sections>
+    {/*<Sections>
         <ShennyGloryFoundation>
             <motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo1} alt='' />
             <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Shenny Glory Foundation</motion.h2>
@@ -44,7 +46,7 @@ function HomeBody() {
             <motion.h2 initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Upper Room</motion.h2>
             <motion.p initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Upper Room is the Cildren's Ministry of Salvation Ministies that nurtures children spiritually and mentally to grow in Christ.</motion.p>
         </LeadWithPsg>
-    </Sections>
+  </Sections>*/}
     </motion.Motion>
     <Set>
     <UpcomingPrograms>
@@ -83,7 +85,7 @@ const UpcomingPrograms = styled.div`
     align-items: center;
     margin-bottom: 50px;
     padding-bottom: 40px;
-    background-color: whitesmoke;
+    background-color: white;
     width: 85%;
    // background-clip: ;
 
