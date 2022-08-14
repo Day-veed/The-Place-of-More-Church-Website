@@ -11,13 +11,13 @@ function Services() {
         <ServicesWrapper>
           <ServicesCard>
             <ServicesIcon src={Logo}/>
-            <ServicesH2>Reduce Expenses</ServicesH2>
-            <ServicesP>We help reduce your fees and increase your overall revenue.</ServicesP>
+            <ServicesH2>MINISTRIES</ServicesH2>
+            <ServicesP>A List of ministries and their functions.</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Logo1}/>
-            <ServicesH2>Virtual Offices</ServicesH2>
-            <ServicesP>You can access our platform online anywhere in the world.</ServicesP>
+            <ServicesH2>RESOURCES</ServicesH2>
+            <ServicesP>A List of our Ministry Books, Videos and Audios here.</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Logo2}/>

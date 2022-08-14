@@ -19,11 +19,11 @@ function HomeBody() {
       <img src={ow1} alt='' />
       <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
       <Text>
-        <h2 style={{color: "#722f37"}}>Welcome to The Place of More <br/>
+        <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
         <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
-        <p>The Place of More was established 1st January 2007 
-          with a divine mandate to "Inspire and Empower people to discover their purpose to the glory of God and the advancement of His kingdom" 
-          Her global headquarters is currently at old chineese bakery Gondola, Jos, Plateau State, Nigeria.</p>
+        <p>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.</p>
+        <div></div>
+        <p>We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
       </motion.div>
     </PictureExp>
@@ -148,14 +148,13 @@ const PictureExp = styled.div`
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding-bottom: 100px;
     margin-top: 25px;
     background-color: whitesmoke;
     > img {
       width: 55%;
       height: 400px;
       padding-left: 150px;
-      margin-bottom: 15px;
+      
     }
     @media (max-width: 1000px) {
       flex-direction: column;
@@ -187,8 +186,7 @@ const Text = styled.div`
         justify-content: center;
         align-items: center;
         padding-left: 25px;
-        font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
     }
     @media (max-width: 1000px) {
         width: auto;
