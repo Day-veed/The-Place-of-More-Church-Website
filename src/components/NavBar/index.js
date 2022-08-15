@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, IconBtn} from './NavBarElements'
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -9,6 +9,20 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import NavIconOption from './NavIconOption';
 
 function Navbar({ toggle }) {
+
+    const [scrollNav, setScrollNav] = useState(false)
+
+    const changeNav = ()=> {
+        if(window.scrollY >= 80) {
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, [])
 
     const navigate = useNavigate();
 
@@ -34,7 +48,7 @@ function Navbar({ toggle }) {
 
   return (
     <>
-    <Nav>
+    <Nav scrollNav={scrollNav}>
         <NavbarContainer>
             <NavLogo onClick={() => home()}>TPM</NavLogo>
             <MobileIcon onClick={toggle}>

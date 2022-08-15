@@ -7,7 +7,7 @@ import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesI
 function Services() {
   return (
     <ServicesContainer>
-        <ServicesH1>Our Services</ServicesH1>
+        {/*<ServicesH1>Our Services</ServicesH1>*/}
         <ServicesWrapper>
           <ServicesCard>
             <ServicesIcon src={Logo}/>
@@ -21,8 +21,8 @@ function Services() {
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Logo2}/>
-            <ServicesH2>Premium Benefits</ServicesH2>
-            <ServicesP>unlock our special membership card that returns 5% cash back.</ServicesP>
+            <ServicesH2>Upper Room</ServicesH2>
+            <ServicesP>Upper Room is the Children's Ministry of The Place of More.</ServicesP>
           </ServicesCard>
         </ServicesWrapper>
     </ServicesContainer>

@@ -71,6 +71,7 @@ const Di = styled.div`
     justify-content: center;
     align-items: center;
     width: 70%;
+    padding-top: 50px;
 
     >h2 {
         padding-top: 30px;

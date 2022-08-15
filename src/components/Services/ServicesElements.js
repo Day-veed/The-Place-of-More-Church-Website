@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ServicesContainer = styled.div`
-    height: 800px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,8 +9,14 @@ export const ServicesContainer = styled.div`
     background: whitesmoke;
     padding-bottom: 90px;
 
+    @media screen and (max-width: 1000px){
+        padding-top: 0px;
+    }
+    
+
     @media screen and (max-width: 768px){
         height: 1100px;
+        padding-top: 120px;
     }
 
     @media screen and (max-width: 480px){
@@ -25,12 +31,13 @@ export const ServicesWrapper = styled.div`
     align-items: center;
     grid-gap: 16px;
     padding: 0 50px;
+    padding-top: 100px;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }

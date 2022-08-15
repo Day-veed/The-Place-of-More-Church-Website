@@ -5,8 +5,18 @@ import { motion } from 'framer-motion'
 import ow from '../body/ow.jpg';
 import ow2 from '../body/ow2.jpg';
 import { Button } from "@mui/material";
+import YouTube from "react-youtube";
 
 export default function Video() {
+
+   function videoOnPlay (event) {
+        const player = event.target
+    }
+
+    const opts = {
+        height: 240,
+        width: 340,
+    }
 
     return (
         <>
@@ -15,11 +25,10 @@ export default function Video() {
         <h2> Featured Messages</h2>
         <Videos>
         <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="kVK0B1FpBnQ" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -28,11 +37,10 @@ export default function Video() {
                 />
             </VideoContainers>  
             <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="zGQH0me3VEo" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -41,11 +49,10 @@ export default function Video() {
                 />
             </VideoContainers>  
             <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="gmh30xw5YpI" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -56,11 +63,10 @@ export default function Video() {
         </Videos>
         <Videos>
         <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="-o8-7ZJGlWQ" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -69,11 +75,10 @@ export default function Video() {
                 />
             </VideoContainers>  
             <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="TreYWBU-Vac" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -81,12 +86,12 @@ export default function Video() {
                     onError={() => console.log('onError callback')} 
                 />
             </VideoContainers>  
+            <div></div>
             <VideoContainers>
-                <ReactPlayer 
-                    width='90%' 
-                    height='60' 
-                    controls 
-                    url={vid}
+                <YouTube 
+                    videoId="vDl-yanieJQ" 
+                    opts={opts} 
+                    onPlay
                     onReady={() => console.log('onready callback')}
                     onStart={() => console.log('onStart callback')}
                     onPause={() => console.log('onPause callback')}
@@ -95,7 +100,7 @@ export default function Video() {
                 />
             </VideoContainers>  
         </Videos>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}}>More Messages...</Button>
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw'>More Messages...</Button>
         </FeaturedMessages>
         </motion.div>
 
@@ -127,7 +132,7 @@ const Videos = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 80%;
 
     @media (max-width: 1000px) {
         flex-direction: column;
@@ -157,6 +162,12 @@ const FeaturedMessages = styled.div`
         padding-top: 40px;
         padding-bottom: 25px;
         color: #722f37;
+    }
+
+    >Button {
+        :hover {
+            background: gold;
+        }
     }
 `
 

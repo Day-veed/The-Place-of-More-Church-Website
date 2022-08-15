@@ -11,19 +11,41 @@ import logo2 from './logo2.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 import Services from '../Services';
+import {useInView} from 'react-intersection-observer';
+import {useEffect} from 'react';
+import {useAnimation} from 'framer-motion';
 
 function HomeBody() {
+
+    const {ref, inView} = useInView({threshold: 0.2});
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                x: 0,
+                transition: {
+                    delay: 0.5, type: 'string', stiffness: 10
+                }
+            })
+        }
+        if(!inView){
+            animation.start({x: '-100vw'})
+        }
+        console.log("use effect hook, inView = ", inView);
+    }, [inView])
+
   return (
     <>
-    <PictureExp>
-      <img src={ow1} alt='' />
-      <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
-      <Text>
+    <PictureExp ref={ref}>
+      <img src={ow4} alt='' />
+      <motion.div  animate={animation}>
+      <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
-        <h5 style={{color: "gray"}}> (Where Everything Works)</h5></h2>
-        <p>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.</p>
-        <div></div>
-        <p>We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
+        <h5 style={{color: "black"}}> (Where Everything Works)</h5></h2>
+        <p style={{color: "grey"}}>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
+        <div></div><br/>
+        We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
       </motion.div>
     </PictureExp>
@@ -149,7 +171,8 @@ const PictureExp = styled.div`
     justify-content: center;
     align-items: center; 
     margin-top: 25px;
-    background-color: whitesmoke;
+    background-color: white;
+    padding-bottom: 70px;
     > img {
       width: 55%;
       height: 400px;
@@ -160,15 +183,21 @@ const PictureExp = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-bottom: 50px;
       > img {
         width: 80%;
         padding-left: 0px;
       }
     }
+
+    
+
+    
     
 `
 const Text = styled.div`
-  padding-left: 20px;
+  padding-left: 50px;
+  padding-top: 40px;
   width: 70%;
   
     > h2 {
@@ -189,9 +218,11 @@ const Text = styled.div`
         font-size: 16px;
     }
     @media (max-width: 1000px) {
+        padding-left: 15px;
         width: auto;
       > p {
-        width: 95%;
+        width: 98%;
+        
       }
     }
 `

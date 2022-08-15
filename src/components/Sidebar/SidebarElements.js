@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
+import ow2 from '../body/ow2.jpg';
 
 export const SidebarContainer = styled.aside`
     position: fixed;
@@ -7,6 +8,8 @@ export const SidebarContainer = styled.aside`
     width: 100%;
     height: 100%;
     background: whitesmoke;
+    background-image: url(ow2);
+    background-size: cover;
     display: grid;
     align-items: center;
     top: 0;
