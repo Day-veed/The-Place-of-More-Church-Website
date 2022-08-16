@@ -51,7 +51,7 @@ function HomeBody() {
     </PictureExp>
     <Services />
     <motion.Motion initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
-    {/*<Sections/>
+    {/*<Sections>
         <ShennyGloryFoundation>
             <motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo1} alt='' />
             <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Shenny Glory Foundation</motion.h2>
