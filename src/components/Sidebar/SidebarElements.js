@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
-import ow2 from '../body/ow2.jpg';
+//import ow2 from '../body/ow2.jpg';
 
 export const SidebarContainer = styled.aside`
     position: fixed;
