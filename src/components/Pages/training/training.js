@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player'
 import vid from '../../video/vid.mp4'
 import { motion } from 'framer-motion'
 import styled from "styled-components"
+import MTCHistory from '../../History/MTC'
 /*import Video from './video/video'
 import Appbar from './appbar'
 import CarouselContainer from './carousel/CarouselContainer'
@@ -21,6 +22,7 @@ function Training() {
     <>
       <CarouselContainer />
       <Promotions />
+      <MTCHistory />
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
           <h1 >Training Experience</h1>
