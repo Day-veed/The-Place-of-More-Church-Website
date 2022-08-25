@@ -23,6 +23,7 @@ function Training() {
       <CarouselContainer />
       <Promotions />
       <MTCHistory />
+      <H>
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
           <h1 >Training Experience</h1>
@@ -42,12 +43,19 @@ function Training() {
           />
         </VideoContainer>
       </motion.div>
+      </H>
       
     </>
   )
 }
 
 export default Training
+
+const H = styled.div`
+  background: whitesmoke;
+  padding: 20px;
+  padding-bottom: 20px;
+`  
 
 const T = styled.div`  
     //display: block;
@@ -56,6 +64,7 @@ const T = styled.div`
     justify-content: center;
     align-content: center;
     color: #722f37;
+    padding-top: 20px;
     > h1 {
        
     }

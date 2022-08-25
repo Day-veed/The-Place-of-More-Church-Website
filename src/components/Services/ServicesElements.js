@@ -24,12 +24,12 @@ export const ServicesContainer = styled.div`
     }
 `
 export const ServicesWrapper = styled.div`
-    max-width: 1000px;
+    max-width: 1150px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    grid-gap: 16px;
+    grid-gap: 25px;
     padding: 0 50px;
     padding-top: 100px;
 

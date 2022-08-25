@@ -7,7 +7,7 @@ import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
 import logo from './logo.jpg';
 import logo1 from './logo1.jpg';
-import logo2 from './logo2.jpg';
+import crowd from './crowd.jpg';
 import { motion } from 'framer-motion'
 import { Upcoming } from '@mui/icons-material';
 import Services from '../Services';
@@ -38,7 +38,7 @@ function HomeBody() {
   return (
     <>
     <PictureExp ref={ref}>
-      <img src={ow4} alt='' />
+      <img src={crowd} alt='' />
       <motion.div  animate={animation}>
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>

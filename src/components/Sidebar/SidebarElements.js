@@ -7,7 +7,7 @@ export const SidebarContainer = styled.aside`
     z-index: 999;
     width: 100%;
     height: 100%;
-    background: whitesmoke;
+    background: #722f37;
     background-image: url(ow2);
     background-size: cover;
     display: grid;
@@ -64,6 +64,7 @@ export const SidebarLink = styled.div`
     &:hover {
         color: gold;
         transition: 0.2s ease-in-out;
+        background: whitesmoke;
     }
 `
 export const SideBtnWrap = styled.div`
