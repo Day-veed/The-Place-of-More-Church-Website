@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
+import { Button } from "@mui/material";
 
 function MTCHistory() {
 
@@ -63,23 +64,37 @@ function MTCHistory() {
         <p>These teams are;</p>*/}
         <Set>
           <UpcomingPrograms>
-            <h4 style={{color: "black"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</h4>
+            <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
             <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
             <Images>
-              <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /></Img1>
-              <Img2><img src={Ven} alt='' /></Img2>
+              <D>
+              <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
+              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Principle</motion.div>
+              </D>
+              <D>
+              <Img2><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven} alt='' /></Img2>
+              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Power</motion.div>
+              </D>
+              <D>
+              <Img3><img src={Ven3} alt='' /></Img3>
+              <div>Team Purpose</div>
+              </D>
+              <D>
               <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
+              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Prayer</motion.div>
+              </D>
+              <D>
+              <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
+              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
+              </D>
             </Images>
           </UpcomingPrograms>
         </Set>
-        <p>- Team Principle</p>
-        <p>- Team Prayer</p>
-        <p>- Team Power</p>
-        <p>- Team Passion</p>
-        <p>- Team Purpose</p><br/>
+        
 
-        <h4> To register for MTC with the TPM Institute of Leadership, fill the form below</h4>
+        <h4> To register for MTC with the TPM Institute of Leadership, click the button bellow</h4>
         <h6>https://forms.gle/jZGQXC8XKTV9Fmbd6</h6>
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/jZGQXC8XKTV9Fmbd6'>Register</Button>
 
         
       </HistoryContainer>
@@ -120,6 +135,15 @@ function MTCHistory() {
 }
 
 export default MTCHistory
+
+
+const D = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: auto;
+`
 
 const PictureExp = styled.div`
     display: flex;
@@ -204,9 +228,9 @@ const UpcomingPrograms = styled.div`
     width: 85%;
    // background-clip: ;
 
-    > h4 {
+    > p {
         padding-top: 25px;
-        font-size: 28;
+        font-size: 38;
     }
     >h2{
         font-weight: bold;
@@ -233,7 +257,7 @@ const Images = styled.div`
     }
 `
 const Img1 = styled.div`
-    width: 32%;
+    width: auto;
     height: 400px;
     
     @media (max-width: 750px) {
@@ -242,7 +266,7 @@ const Img1 = styled.div`
     }
 `
 const Img2 = styled.div`
-    width: 32%;
+    width: auto;
     height: 400px;
     padding-left: 20px;
     @media (max-width: 750px) {
@@ -251,7 +275,7 @@ const Img2 = styled.div`
     }
 `
 const Img3 = styled.div`
-    width: 32%;
+    width: auto;
     height: 400px;
     padding-left: 20px;
     @media (max-width: 750px) {

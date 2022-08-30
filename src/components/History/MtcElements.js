@@ -72,7 +72,7 @@ export const ServicesIcon = styled.img`
     margin-bottom: 5px;
 
     @media screen and (max-width: 1000px) {
-        width: 50%;
+        width: 80%;
     }
 `
 export const ServicesH1 = styled.h1`
