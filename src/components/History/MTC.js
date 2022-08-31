@@ -103,7 +103,7 @@ function MTCHistory() {
     <Facilitators>
       <div>Training Facilitators</div>
       <ServicesContainer>
-        {/*<SservicesH1>Our Services</ServicesH1>*/}
+        {/*<ServicesH1>Our Services</ServicesH1>*/}
         <ServicesWrapper>
           <ServicesCard>
             <ServicesIcon src={Ven4}/>
