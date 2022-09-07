@@ -1,0 +1,111 @@
+import React from 'react'
+import './Form.css'
+import styled from 'styled-components';
+import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
+import Input from './Input';
+
+function Counselling() {
+  return (
+    <div className='body'>
+        <CounsellingText>
+            <h4 style={{color: "#722f37"}}>You can access</h4>
+            <h1 style={{color: "black"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
+            <h1 style={{color: "#722f37"}}>COUNSELLING</h1>
+            <br/><br/>
+            <D>
+            <h4 style={{color: "brown"}}>Complete the form to book for an appointment or call </h4>..<h4 style={{color: "blue"}}> (+234) 8012345678.</h4>
+            </D>
+        </CounsellingText>
+        <MainContainer>
+            <WelcomeText>Appointment Form</WelcomeText>
+            <InputContainer>
+                <Input type='text' placeholder="Name"/>
+                <Input type='password' placeholder="Email"/>
+                <Input type='text' placeholder="Phone Number"/>
+                <Input type='text' placeholder="Message"/>
+                <Input type='text' placeholder="Select"/>
+            </InputContainer>
+        </MainContainer>
+    </div>
+
+    /*<div className='form-content-right'>
+      <form className='form'>
+        <h1>
+            Appointment Form
+        </h1>
+        <div className='form-inputs'>
+            <label htmlFor='Name' className='form-label'>
+                Name
+            </label>
+            <input id='Name' type='text' name='Name' className='form-input' placeholder="Enter your Name" />
+        </div>
+        <div className='form-inputs'>
+            <label htmlFor='email' className='form-label'>
+                Email
+            </label>
+            <input type='email' name='email' className='form-input' placeholder="Enter your Email" />
+        </div>
+        <div className='form-inputs'>
+            <label htmlFor='phone' className='form-label'>
+                Phone Number
+            </label>
+            <input type='phone' name='phone' className='form-input' placeholder="Enter your Phone Number" />
+        </div>
+        <div className='form-inputs'>
+            <label htmlFor='message' className='form-label'>
+                Email
+            </label>
+            <input type='text' name='message' className='form-input' placeholder="Message" />
+        </div>
+        <div className='form-inputs'>
+            <label htmlFor='select' className='form-label'>
+                Email
+            </label>
+            <input type='select' name='select' className='form-input' placeholder="Select..." />
+        </div>
+        <button className='form-input-login-btn' type='submit'>
+          Book Appointment
+        </button>
+        
+      </form>
+  </div>*/
+  )
+}
+
+export default Counselling
+
+const D = styled.div`
+    display: flex;
+`
+
+const CounsellingText = styled.div`
+    padding-right: 50px;
+`
+
+const MainContainer = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+`
+
+const WelcomeText = styled.h2`
+    margin: 3rem 0 2rem 0;
+`
+const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    padding-top: 125px;
+`

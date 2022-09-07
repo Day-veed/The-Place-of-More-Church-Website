@@ -9,12 +9,14 @@ import img9 from '../Image/img8.jpg';
 import img10 from '../Image/img10.jpg';
 import styled from "styled-components"
 //import "./CarouselContainer.css"
+import './testimony.css'
 
 function TestimonyContainer() {
   return (
+    <div className='bodyy'>
       <Div>
         <Di>
-        <h2>Testimonies...</h2>
+        <h1>TESTIMONIES...</h1>
       <Carousel controls={false} fade={true} pause={false}>
           <Carousel.Item interval={4000}>
               <img
@@ -39,18 +41,19 @@ function TestimonyContainer() {
               </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={4000}>
-              <img
-              className="d-block w-100"
-              src={img10}
-              alt="Third slide"
-              />
-              <Carousel.Caption>
-              <h3></h3>
-              <p></p>
-              </Carousel.Caption>
+            <img
+            className="d-block w-100"
+            src={img10}
+            alt="Third slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
           </Carousel.Item>
-  </Carousel></Di>
+        </Carousel></Di>
       </Div>
+      </div>
   )
 }
 
@@ -62,7 +65,6 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
-   
 `
 
 const Di = styled.div`
@@ -70,11 +72,12 @@ const Di = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100vh;
     padding-top: 50px;
 
-    >h2 {
+    >h1 {
         padding-top: 30px;
         color: #722f37;
+        font-weight: bold;
     }
 `

@@ -14,6 +14,7 @@ import Services from '../Services';
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
+import Counselling from '../Counselling/counselling';
 
 function HomeBody() {
 
@@ -81,6 +82,7 @@ function HomeBody() {
         </Images>
     </UpcomingPrograms>
     </Set>
+    
     </>
   )
 }
@@ -173,6 +175,7 @@ const PictureExp = styled.div`
     margin-top: 25px;
     background-color: white;
     padding-bottom: 70px;
+
     > img {
       width: 55%;
       height: 400px;
@@ -189,11 +192,6 @@ const PictureExp = styled.div`
         padding-left: 0px;
       }
     }
-
-    
-
-    
-    
 `
 const Text = styled.div`
   padding-left: 50px;

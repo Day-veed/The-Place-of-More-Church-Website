@@ -9,6 +9,7 @@ import Images from '../../images/Images'
 import Footer from '../../footer/Footer'
 import AppDrawer from '../../drawer/AppDrawer'
 import HomeBody from '../../body/HomeBody';
+import Counselling from '../../Counselling/counselling';
 import VideoCarousel from '../../carousel/VideoCarousel'
 import HeroSection from '../../HeroSection/index'
 
@@ -23,6 +24,7 @@ function Home() {
         {/*<VideoCarousel />*/}
         <HomeBody />
         <Video />
+        <Counselling />
         <TestimonyContainer />
         
         

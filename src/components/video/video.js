@@ -36,6 +36,7 @@ export default function Video() {
                     onError={() => console.log('onError callback')} 
                 />
             </VideoContainers>  
+            <br/>
             <VideoContainers>
                 <YouTube 
                     videoId="zGQH0me3VEo" 
