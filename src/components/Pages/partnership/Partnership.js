@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
 function Partnership() {
   return (
-    <div>Partnership</div>
+    <Div>Partnership</Div>
   )
 }
 
 export default Partnership
+
+const Div = styled.div`
+  padding-top: 100px;
+  padding-bottom: 1000px;
+`

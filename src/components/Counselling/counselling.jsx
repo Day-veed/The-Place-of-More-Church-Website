@@ -7,11 +7,12 @@ import Input from './Input';
 function Counselling() {
   return (
     <div className='body'>
+        <Div>
         <CounsellingText>
             <h4 style={{color: "#722f37"}}>You can access</h4>
             <h1 style={{color: "black"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
             <h1 style={{color: "#722f37"}}>COUNSELLING</h1>
-            <br/><br/>
+            <br/>
             <D>
             <h4 style={{color: "brown"}}>Complete the form to book for an appointment or call </h4>..<h4 style={{color: "blue"}}> (+234) 8012345678.</h4>
             </D>
@@ -20,12 +21,13 @@ function Counselling() {
             <WelcomeText>Appointment Form</WelcomeText>
             <InputContainer>
                 <Input type='text' placeholder="Name"/>
-                <Input type='password' placeholder="Email"/>
+                <Input type='text' placeholder="Email"/>
                 <Input type='text' placeholder="Phone Number"/>
                 <Input type='text' placeholder="Message"/>
                 <Input type='text' placeholder="Select"/>
             </InputContainer>
         </MainContainer>
+        </Div>
     </div>
 
     /*<div className='form-content-right'>
@@ -74,12 +76,38 @@ function Counselling() {
 
 export default Counselling
 
+const Div = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
+`
+
 const D = styled.div`
     display: flex;
+
+    @media (max-width: 750px) {
+        display: block;
+    }
 `
 
 const CounsellingText = styled.div`
     padding-right: 50px;
+    padding: 10px;
+    padding-top: 100px;
+
+    @media (max-width: 750px) {
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+        >h1 {
+            font-stretch: expanded;
+            font-weight: bold;
+        }
+    }
 `
 
 const MainContainer = styled.div`
@@ -95,6 +123,11 @@ const MainContainer = styled.div`
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
+
+    @media (max-width: 750px) {
+        width: 90%;
+        height: 60vh;
+    }
 `
 
 const WelcomeText = styled.h2`
@@ -107,5 +140,5 @@ const InputContainer = styled.div`
     align-items: center;
     height: 20%;
     width: 100%;
-    padding-top: 125px;
+    padding-top: 100px;
 `

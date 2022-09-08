@@ -35,6 +35,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Expectations</h3>
             </VideoContainers>  
             <br/>
             <VideoContainers>
@@ -48,6 +49,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Spiritual Technologies</h3>
             </VideoContainers>  
             <VideoContainers>
                 <YouTube 
@@ -60,6 +62,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Strategic Leadership</h3>
             </VideoContainers>  
         </Videos>
         <Videos>
@@ -74,6 +77,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Dancegiving Service</h3>
             </VideoContainers>  
             <VideoContainers>
                 <YouTube 
@@ -86,6 +90,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Believers Service</h3>
             </VideoContainers>  
             <div></div>
             <VideoContainers>
@@ -99,6 +104,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
+                <h3>Strategic Leadership</h3>
             </VideoContainers>  
         </Videos>
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw'>More Messages...</Button>
@@ -141,9 +147,11 @@ const Videos = styled.div`
 `
 const VideoContainers = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
 `
 
 const FeaturedMessages = styled.div`

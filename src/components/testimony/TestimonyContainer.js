@@ -80,4 +80,8 @@ const Di = styled.div`
         color: #722f37;
         font-weight: bold;
     }
+
+    @media (max-width: 750px) {
+        width: 55vh;
+    }
 `

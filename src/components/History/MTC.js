@@ -108,7 +108,7 @@ function MTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven4}/>
             <ServicesH2>Pastor Shenny Glory</ServicesH2>
-            <ServicesP>A List of ministries and their functions.</ServicesP>
+            <ServicesP>Lead Pastor of The Place of More Church</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Ven2}/>

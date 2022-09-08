@@ -63,11 +63,17 @@ export const HeroH2 = styled.h1`
     }
 `
 export const HeroP = styled.p`
-    margin-top: 24px;
-    color: darkorange;
-    font-size: 24px;
+    margin-bottom: 35px;
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    line-height: 24px;
     text-align: center;
-    max-width: 600px;
+    letter-spacing: 2px;
+    color: darkorange;
+    //margin-top: 24px;
+    //color: darkorange;
+    //font-size: 24px;
+    //text-align: center;
+    //max-width: 600px;
 
     @media screen and (max-width: 768px) {
         font-size: 24px;
