@@ -416,6 +416,7 @@ import vid from '../../video/vid.mp4'
 import { motion } from 'framer-motion'
 import styled from "styled-components"
 import MTCHistory from '../../History/MTC'
+import Carousel from './Carousel'
 /*import Video from './video/video'
 import Appbar from './appbar'
 import CarouselContainer from './carousel/CarouselContainer'

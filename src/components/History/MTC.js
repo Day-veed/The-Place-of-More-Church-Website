@@ -12,6 +12,7 @@ import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
+import Carousel from '../Pages/training/Carousel';
 
 function MTCHistory() {
 
@@ -62,10 +63,12 @@ function MTCHistory() {
         <h5>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</h5>
   </About>
         <p>These teams are;</p>*/}
+        
         <Set>
           <UpcomingPrograms>
             <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
-            <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
+            <Carousel />
+            {/*<h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
             <Images>
               <D>
               <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
@@ -87,9 +90,9 @@ function MTCHistory() {
               <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
               <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
               </D>
-            </Images>
+      </Images>*/}
           </UpcomingPrograms>
-        </Set>
+      </Set>
         
 
         <h4> To register for MTC with the TPM Institute of Leadership, click the button bellow</h4>
@@ -225,7 +228,7 @@ const UpcomingPrograms = styled.div`
     margin-bottom: 50px;
     padding-bottom: 40px;
     
-    width: 85%;
+    width: 100%;
    // background-clip: ;
 
     > p {
