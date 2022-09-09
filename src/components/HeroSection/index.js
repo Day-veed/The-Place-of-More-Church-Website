@@ -1,7 +1,7 @@
 import React from 'react'
-import { MainHeading } from '../globalStyles'
+import { Button, MainHeading } from '../globalStyles'
 import video from '../video/video.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroH2, HeroP } from './HeroElement'
+import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroH2, HeroP, HeroButton, ButtonWrapper } from './HeroElement'
 
 function HeroSection() {
   return (
@@ -15,6 +15,9 @@ function HeroSection() {
             <HeroP>
                 When you worship with us, you learn more than just the letters of the word.
             </HeroP>
+            <ButtonWrapper>
+              <Button>About Us</Button>
+            </ButtonWrapper>
             
         </HeroContent>
     </HeroContainer>

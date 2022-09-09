@@ -140,6 +140,7 @@ const Videos = styled.div`
     justify-content: center;
     align-items: center;
     width: 80%;
+    padding-bottom: 45px;
 
     @media (max-width: 1000px) {
         flex-direction: column;
@@ -164,7 +165,7 @@ const FeaturedMessages = styled.div`
     width: auto;
     height: auto;
     background-color: whitesmoke;
-    padding-bottom: 35px;
+    padding-bottom: 75px;
 
     > h2 {
         font-weight: bold;

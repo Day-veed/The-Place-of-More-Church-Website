@@ -23,6 +23,7 @@ import Navbar from './components/NavBar/index';
 import AboutUs from './components/Pages/AboutUs/AboutUs';
 import Partnership from './components/Pages/partnership/Partnership';
 import Sidebar from './components/Sidebar';
+import Schedule from './components/ministry/Schedule';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,6 +51,7 @@ function App() {
             <Route path='/training' element={<Training />} /> 
             <Route path='/contact-us' element={<Contact />} />      
           </Routes>
+          <Schedule />
           <Footer />
         
         {/*<CarouselContainer /> 

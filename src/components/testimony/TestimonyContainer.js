@@ -65,6 +65,7 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
+    background: whitesmoke;
 `
 
 const Di = styled.div`
@@ -74,6 +75,7 @@ const Di = styled.div`
     align-items: center;
     width: 100vh;
     padding-top: 50px;
+    padding-bottom: 50px;
 
     >h1 {
         padding-top: 30px;

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Button} from '../globalStyles'
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -89,3 +90,26 @@ export const HeroBtnWrapper = styled.div`
     flex-direction: column;
     align-items: center;
 `
+export const HeroButton = styled(Button)`
+    color: black;
+
+    &:before{
+        background: #fff;
+        height: 500%;
+    }
+
+    &:hover:before {
+        height: 0%;
+    }
+
+    &:hover {
+        color: white;
+    }
+`
+export const ButtonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 0.5rem;
+`;
