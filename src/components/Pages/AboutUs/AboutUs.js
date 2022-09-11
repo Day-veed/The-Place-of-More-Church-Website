@@ -29,7 +29,7 @@ function AboutUs() {
       </Text>
       </div>
     </PictureExp>
-        <Top>
+        {/*<Top>
           <Purpose>
             <h2>PURPOSE OF THE MINISTRY</h2>
             <h6>We are a people of More, doing More for God and getting More from God.</h6>
@@ -38,7 +38,7 @@ function AboutUs() {
           <Vision>
             <h2>VISION OF THE MINISTRY</h2>
             <h6>To Inspire and Empower our generation to discover their purpose and fulfil their destinies to the glory of God and the advancement of His Kingdom.</h6>
-          </Vision>
+  </Vision>*/}
         
 
         <Values>
@@ -200,10 +200,13 @@ const Values = styled.div`
   margin-top: 50px;
 `
 const Mandate = styled.div`
-  padding: 20px;
-  
+  padding: 30px;
   justify-content: center;
   align-items: center;
+
+  >h5 {
+    padding: 30px;
+  }
 `
 
 const PictureExp = styled.div`

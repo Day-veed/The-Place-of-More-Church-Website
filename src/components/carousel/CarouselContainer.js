@@ -57,7 +57,7 @@
                 <p></p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={4000}>
+            {/*<Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
                 src={img5}
@@ -67,7 +67,7 @@
                 <h3></h3>
                 <p></p>
                 </Carousel.Caption>
-            </Carousel.Item>
+    </Carousel.Item>*/}
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"

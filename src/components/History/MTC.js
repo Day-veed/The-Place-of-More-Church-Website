@@ -121,13 +121,13 @@ function MTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven3}/>
             <ServicesH2>Pastor Sarah Larbong</ServicesH2>
-            <ServicesP>Assistant Director of Training(MTC)</ServicesP>
+            <ServicesP>MTC Coordinator</ServicesP>
           </ServicesCard>
-          <ServicesCard>
+          {/*<ServicesCard>
             <ServicesIcon src={Ven}/>
             <ServicesH2>Minister Mercy Vencit</ServicesH2>
             <ServicesP>MIC/ TPM Coordinator of Training</ServicesP>
-          </ServicesCard>
+    </ServicesCard>*/}
         </ServicesWrapper>
     </ServicesContainer>
 

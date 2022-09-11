@@ -441,9 +441,10 @@ function Training() {
         </T>
         
         <VideoContainer>
+          <V>
           <ReactPlayer 
-              width='850px' 
-              height='70' 
+              width='450px' 
+              height='35' 
               controls 
               url={vid}
               onReady={() => console.log('onready callback')}
@@ -452,6 +453,20 @@ function Training() {
               onEnded={() => console.log('onEnded callback')}
               onError={() => console.log('onError callback')} 
           />
+          </V>
+          <VD>
+          <ReactPlayer 
+              width='450px' 
+              height='35' 
+              controls 
+              url={vid}
+              onReady={() => console.log('onready callback')}
+              onStart={() => console.log('onStart callback')}
+              onPause={() => console.log('onPause callback')}
+              onEnded={() => console.log('onEnded callback')}
+              onError={() => console.log('onError callback')} 
+          />
+          </VD>
         </VideoContainer>
       </motion.div>
       </H>
@@ -461,6 +476,13 @@ function Training() {
 }
 
 export default Training
+
+const V = styled.div`
+  padding-right: 70px;
+`  
+const VD = styled.div`
+  
+`  
 
 const H = styled.div`
   background: whitesmoke;
@@ -484,5 +506,7 @@ const T = styled.div`
 const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
+    padding: 10px 20px;
 `
