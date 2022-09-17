@@ -5,7 +5,7 @@ import styled, { useThem } from "styled-components"
 
 
 const messages = [
-    "TPM Institute of Leadership",
+    "You are welcome to the TPM family",
     "We develop World Class Leaders",
     "We Inspire and Empower"
 ];

@@ -79,6 +79,7 @@ const PreFooter = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    background: white;
 
     @media screen and (max-width: 960px){
         flex-direction: column;

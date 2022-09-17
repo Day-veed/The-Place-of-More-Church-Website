@@ -1,16 +1,70 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {FaBars} from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, IconBtn} from './NavBarElements'
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import NavIconOption from './NavIconOption';
+import Dropdown from './Dropdown';
+import './index.css';
+import { MenuItems } from './MenuItems';
+import {FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
+//import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
 function Navbar({ toggle }) {
 
+    const [open, setOpen] = useState(false);
+
     const [scrollNav, setScrollNav] = useState(false)
+    const [dropdown, setDropdown] = useState(false);
+
+    const [selectedOption, setSelectedOption] = useState("");
+
+    const [isMenu, setisMenu] = useState(false);
+    const [isResponsiveclose, setResponsiveclose] = useState(false);
+    const toggleClass = () => {
+        setisMenu(isMenu === false ? true : false);
+        setResponsiveclose(isResponsiveclose === false ? true : false);
+    };
+
+    let boxClass = ["main-menu menu-right menuq1"];
+    if(isMenu) {
+        boxClass.push('');
+    }else {
+        boxClass.push('');
+    }
+
+    const [isMenuSubMenu, setMenuSubMenu] = useState(false);
+
+    let boxClassSubMenu = ['sub__menus'];
+    if(isMenuSubMenu) {
+        boxClassSubMenu.push('sub__menus__Active');
+    }else {
+        boxClassSubMenu.push('');
+    }
+
+
+    const toggleSubmenu = () => {
+        setMenuSubMenu(isMenuSubMenu === false ? true : false);
+    };
+
+    const onMouseEnter = () => {
+        if(window.innerWidth < 960) {
+            setDropdown(false)
+        }else {
+            setDropdown(true);
+        }
+    };
+
+    const onMouseLeave = () => {
+        if(window.innerWidth < 960) {
+            setDropdown(false)
+        }else {
+            setDropdown(false);
+        }
+    };
 
     const changeNav = ()=> {
         if(window.scrollY >= 80) {
@@ -55,11 +109,24 @@ function Navbar({ toggle }) {
                 <FaBars />
             </MobileIcon>
             <NavMenu>
+                {isResponsiveclose === true ? <>
+                <span className='menubar__button' style={{ display: 'none' }} onClick={toggleClass} ><FiXCircle /> </span></> : <>
+                <span className='menubar__button' style={{display: 'none'}} onClick={toggleClass} > <FiAlignRight /> </span>
+                </>}
                 <NavItem>
                     <NavLinks onClick={() => home()}>Home</NavLinks>
                 </NavItem>
-                <NavItem>
-                    <NavLinks onClick={() => aboutUs()}>About Us</NavLinks>
+                <NavItem  >
+                    <NavLinks >
+                    <NavLinks onClick={() => aboutUs()}>AboutUs</NavLinks>
+                        {/*About Us <i className='fas fa-caret-down'></i>
+                        <div className='dropdown__menu'>
+                            <ul>
+                                <li><a href='#'>The Place of More</a></li>
+                                <li><a href='#'>Pastor Shenny Glory</a></li>
+                            </ul>
+                        </div>*/}
+                    </NavLinks>
                 </NavItem>
                 <NavItem>
                     <NavLinks onClick={() => partnership()}>Partnership</NavLinks>
@@ -83,4 +150,36 @@ function Navbar({ toggle }) {
   )
 }
 
+function DropdownItem(){
+    return(
+        <li className='dropdownItem'>
+            <h6>The place of More</h6>
+        </li>
+    )
+}
+
 export default Navbar
+
+/**<NavItem  onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    <NavLinks /*onClick={() => aboutUs()} onClick={()=>{setOpen(!open)}}>About Us <i className='fas fa-caret-down' /> 
+                    <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
+                        <ul>
+                            <DropdownItem  text = {'settings'}/>
+                        </ul>
+                    </div>
+                    </NavLinks>
+                </NavItem> 
+                
+                <ul className='menu-item'>
+                        <li onClick={toggleSubmenu} className='menu-item sub__menus__arrows' > <Link to="#">About Us <FiChevronDown /></Link>
+                            <ul className={boxClassSubMenu.join(' ')}>
+                                <li> <NavLink onClick={toggleClass}
+                                activeClassName='is-active' to={`/TPM`}
+                                >The Place of More</NavLink></li>
+                                <li> <NavLink onClick={toggleClass}
+                                activeClassName='is-active' to={`/PSG`}
+                                >Pastor Shenny Glory</NavLink></li>
+                            </ul>
+                        </li>
+                        </ul>
+                */
