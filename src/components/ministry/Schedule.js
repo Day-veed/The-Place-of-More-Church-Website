@@ -14,8 +14,8 @@ function Schedule() {
         
         <GetInTouch>
             <h3>Get in Touch</h3>
-            <p>___________________________________</p>
-            <br/>
+            <p>________________________________________</p>
+            
             <h5>Plot 17 Angwa Rukuba, Former Oasis bakery</h5>
             <Ico>
                 <LocationOnIcon />
@@ -33,7 +33,8 @@ function Schedule() {
 
         <GetInTouchh>
             <h3>Quick Link</h3>
-            <br/>
+            <p>________________________________________</p>
+            
             <h5>Partnership</h5>
             <h5>The Place of More</h5>
             <h5>Pastor Shenny Glory</h5>
@@ -49,7 +50,8 @@ function Schedule() {
 
         <GetInTouchhh>
             <h3>Ministry Schedule</h3>
-            <br/>
+            <p>________________________________________</p>
+            
             <h4>SUNDAY</h4>
             <h5>1st Service -  4:00pm (GMT + 1)</h5>
             <h5>2nd Service -  6:00pm (GMT + 1)</h5>
@@ -93,7 +95,7 @@ const PreFooter = styled.div`
     align-items: flex-start;
     width: 100%;
     background: white;
-    padding: 10px;
+    
 
     @media screen and (max-width: 960px){
         flex-direction: column;
@@ -137,7 +139,7 @@ const GetInTouch = styled.div`
 `
 
 const GetInTouchh = styled.div`
-    padding: 10px;
+    padding: 15px;
     font-family: 'EB Garamond', serif;
 
     >h3 {

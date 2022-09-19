@@ -13,7 +13,7 @@ import './testimony.css'
 
 function TestimonyContainer() {
   return (
-    <div className='bodyy'>
+    <div className='bod'>
       <Div>
         <Di>
         <h1>TESTIMONIES...</h1>
@@ -65,7 +65,7 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
-    background: whitesmoke;
+    //background: whitesmoke;
 `
 
 const Di = styled.div`

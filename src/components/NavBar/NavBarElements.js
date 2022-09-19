@@ -20,7 +20,7 @@ export const Nav = styled.nav`
 `
 export const NavbarContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 80px;
     z-index: 1;
     width: 100%;
@@ -31,6 +31,7 @@ export const NavbarContainer = styled.div`
 export const NavLogo = styled.div`
     display: flex;
     flex: 0.2;
+    
     >img {
         object-fit: contain;
         height: 80px;
@@ -38,13 +39,155 @@ export const NavLogo = styled.div`
         flex-direction: column;
         align-items: flex-start;
         padding-top: 5px;
+        padding-right: 105px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1000px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 550px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
         padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 920px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 490px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 850px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 400px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 770px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 320px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 680px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 250px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 590px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 170px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 550px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 120px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
     }
 `
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1100px) {
         display: block;
         position: absolute;
         top: 0;
@@ -69,7 +212,7 @@ export const NavMenu = styled.div`
     padding-right: 30px;
     
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1100px) {
         display: none;
     }
 `
@@ -231,7 +374,7 @@ export const IconBtn = styled.div`
     padding-left: 20px;
     
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1100px) {
         display: none;
     }
 `

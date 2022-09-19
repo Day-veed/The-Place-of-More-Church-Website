@@ -20,12 +20,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './components/Pages/Home/Home';
 import Contact from './components/Pages/contact/Contact';
 import Navbar from './components/NavBar/index';
-import AboutUs from './components/Pages/AboutUs/AboutUs';
+//import AboutUs from './components/Pages/AboutUs/AboutUs';
 import Partnership from './components/Pages/partnership/Partnership';
 import Sidebar from './components/Sidebar';
 import Schedule from './components/ministry/Schedule';
 import PSG from './components/Pages/PSG/PSG';
 import TPM from './components/Pages/TPM/TPM';
+import LTC from './components/Pages/LTC/LTC';
+import AMTC from './components/Pages/AMTC/AMTC';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -48,12 +50,13 @@ function App() {
           <AppDrawer />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about-us' element={<AboutUs />} />
             <Route path='/partnership' element={<Partnership />} />
             <Route path='/MTC' element={<MTC />} /> 
             <Route path='/contact-us' element={<Contact />} />
             <Route path='/TPM' element={<TPM />} />
-            <Route path='/PSG' element={<PSG />} />      
+            <Route path='/PSG' element={<PSG />} />
+            <Route path='/LTC' element={<LTC />} />
+            <Route path='/AMTC' element={<AMTC />} />      
           </Routes>
           <Schedule />
           <Footer />

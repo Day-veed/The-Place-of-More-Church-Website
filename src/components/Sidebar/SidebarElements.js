@@ -89,3 +89,36 @@ export const SidebarIconOptions = styled.div`
         color: gold;
     }
 `
+export const SideLogo = styled.div`
+    display: flex;
+    flex: 0.2;
+    
+    >img {
+        object-fit: contain;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        top: -42px;
+        right: 100px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+`

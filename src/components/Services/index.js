@@ -12,12 +12,12 @@ function Services() {
           <ServicesCard>
             <ServicesIcon src={Logo}/>
             <ServicesH2>MINISTRIES</ServicesH2>
-            <ServicesP>A List of ministries and their functions.</ServicesP>
+            <ServicesP>Check Out The List of Our ministries and their functions.</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Logo1}/>
             <ServicesH2>RESOURCES</ServicesH2>
-            <ServicesP>A List of our Ministry Books, Videos and Audios here.</ServicesP>
+            <ServicesP>You Can Get our Ministry Books, Videos and Audios here.</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Logo2}/>

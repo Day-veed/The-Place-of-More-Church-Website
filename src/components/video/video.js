@@ -6,6 +6,7 @@ import ow from '../body/ow.jpg';
 import ow2 from '../body/ow2.jpg';
 import { Button } from "@mui/material";
 import YouTube from "react-youtube";
+import './video.css';
 
 export default function Video() {
 
@@ -20,7 +21,7 @@ export default function Video() {
 
     return (
         <>
-        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
+        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }} className='bo'>
         <FeaturedMessages >
         <h2> Featured Messages</h2>
         <Videos>
@@ -37,7 +38,7 @@ export default function Video() {
                 />
                 <h4>Expectations</h4>
             </VideoContainers>  
-            <br/>
+            
             <VideoContainers>
                 <YouTube 
                     videoId="zGQH0me3VEo" 
@@ -168,7 +169,7 @@ const FeaturedMessages = styled.div`
     background-position: center;
     width: auto;
     height: auto;
-    background-color: whitesmoke;
+    //background-color: whitesmoke;
     padding-bottom: 75px;
 
     > h2 {

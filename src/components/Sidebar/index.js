@@ -1,5 +1,5 @@
 import React from 'react'
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SideBtnWrap, SidebarLink, SidebarIconOptions, SidebarMenu } from './SidebarElements'
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SideBtnWrap, SidebarLink, SidebarIconOptions, SidebarMenu, SideLogo } from './SidebarElements'
 import { useNavigate } from 'react-router-dom';
 import {IconBtn} from './SidebarElements'
 import SidebarIconOption from './SidebarIconOption';
@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import logo from '../body/logo.png'
 
 function Sidebar({ isOpen, toggle }) {
 
@@ -34,6 +35,9 @@ function Sidebar({ isOpen, toggle }) {
 
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <SideLogo onClick={() => home()}>
+            <img src={logo} alt='' />
+        </SideLogo>
         <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>

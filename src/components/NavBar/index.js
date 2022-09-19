@@ -138,8 +138,8 @@ function Navbar({ toggle }) {
                         
                         
                             <ul>
-                                <li><a href='#'>The Place of More</a></li>
-                                <li><a href='#'>Pastor Shenny Glory</a></li>
+                                <li onClick={() => TPM()}><a href='#'>The Place of More</a></li>
+                                <li onClick={() => PSG()}><a href='#'>Pastor Shenny Glory</a></li>
                             </ul>
                         
                     
@@ -153,9 +153,9 @@ function Navbar({ toggle }) {
                     <NavLinksss >
                         Training <i className='fas fa-caret-down'></i>
                         <ul>
-                            <li><a href='#'>LTC</a></li>
+                            <li onClick={() => LTC()}><a href='#'>LTC</a></li>
                             <li onClick={() => MTC()}><a href='#'>MTC</a></li>
-                            <li><a href='#'>AMTC</a></li>
+                            <li onClick={() => AMTC()}><a href='#'>AMTC</a></li>
                         </ul>
                     </NavLinksss>
                 </NavItem>

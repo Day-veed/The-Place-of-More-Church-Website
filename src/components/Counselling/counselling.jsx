@@ -6,15 +6,15 @@ import Input from './Input';
 
 function Counselling() {
   return (
-    <div className='body'>
+    <div className='bodyy'>
         <Div>
         <CounsellingText>
-            <h4 style={{color: "#722f37"}}>You can access</h4>
+            <h4 style={{color: "#fff"}}>You can access</h4>
             <h1 style={{color: "black"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
-            <h1 style={{color: "#722f37"}}>COUNSELLING</h1>
+            <h1 style={{color: "blue"}}>COUNSELLING</h1>
             <br/>
             <D>
-            <h4 style={{color: "brown"}}>Complete the form to book for an appointment or call </h4>..<h4 style={{color: "blue"}}> (+234) 8012345678.</h4>
+            <h3 style={{color: "#fff"}}>Complete the form to book for an appointment or call (+234) 8012345678.</h3>
             </D>
         </CounsellingText>
         <MainContainer>
@@ -89,6 +89,16 @@ const Div = styled.div`
 const D = styled.div`
     display: flex;
 
+    >h3 {
+        font-weight: bold;
+        font-family: 'EB Garamond', serif;
+        font-size: 28px;
+
+        @media (max-width: 750px) {
+            font-size: 28px;
+        }
+    }
+
     @media (max-width: 750px) {
         display: block;
     }
@@ -97,7 +107,27 @@ const D = styled.div`
 const CounsellingText = styled.div`
     padding-right: 50px;
     padding: 10px;
-    padding-top: 100px;
+
+    >h1 {
+            font-stretch: expanded;
+            font-weight: bold;
+            font-family: 'EB Garamond', serif;
+            font-size: 50px;
+
+            @media (max-width: 750px) {
+            font-size: 28px;
+        }
+    }
+
+    >h4{
+        font-weight: bold;
+        font-family: 'EB Garamond', serif;
+        font-size: 28px;
+
+        @media (max-width: 750px) {
+            font-size: 28px;
+        }
+    }
 
     @media (max-width: 750px) {
         padding-top: 70px;
@@ -106,6 +136,7 @@ const CounsellingText = styled.div`
         >h1 {
             font-stretch: expanded;
             font-weight: bold;
+            font-family: 'EB Garamond', serif;
         }
     }
 `

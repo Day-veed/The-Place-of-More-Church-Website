@@ -7,20 +7,21 @@ export const ServicesContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: whitesmoke;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
 
     @media screen and (max-width: 1000px){
         padding-top: 0px;
+        height: 800px;
     }
     
 
     @media screen and (max-width: 768px){
-        height: 1100px;
-        padding-top: 120px;
+        height: 1200px;
+        //padding-top: 120px;
     }
 
-    @media screen and (max-width: 480px){
-        height: 1300px;
+    @media screen and (max-width: 580px){
+        height: 1150px;
     }
 `
 export const ServicesWrapper = styled.div`
@@ -31,15 +32,25 @@ export const ServicesWrapper = styled.div`
     align-items: center;
     grid-gap: 25px;
     padding: 0 50px;
-    padding-top: 100px;
+    padding-top: 10px;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+        //padding-top: 400px;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+        //padding-top: 400px;
+    }
+
+    @media screen and (max-width: 770px) {
         grid-template-columns: 1fr;
-        padding: 0 20px;
+        //padding-top: 0px;
+        max-width: 500px;
+        
     }
 `
 export const ServicesCard = styled.div`
