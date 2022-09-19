@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 //import './App.css';
 import { Button, Container } from "@mui/material";
 import { useEffect } from 'react';
-import Training from './components/Pages/training/training';
+import MTC from './components/Pages/MTC/MTC';
 import { ThemeProvider } from '@mui/system';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
@@ -24,6 +24,8 @@ import AboutUs from './components/Pages/AboutUs/AboutUs';
 import Partnership from './components/Pages/partnership/Partnership';
 import Sidebar from './components/Sidebar';
 import Schedule from './components/ministry/Schedule';
+import PSG from './components/Pages/PSG/PSG';
+import TPM from './components/Pages/TPM/TPM';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -48,8 +50,10 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about-us' element={<AboutUs />} />
             <Route path='/partnership' element={<Partnership />} />
-            <Route path='/training' element={<Training />} /> 
-            <Route path='/contact-us' element={<Contact />} />      
+            <Route path='/MTC' element={<MTC />} /> 
+            <Route path='/contact-us' element={<Contact />} />
+            <Route path='/TPM' element={<TPM />} />
+            <Route path='/PSG' element={<PSG />} />      
           </Routes>
           <Schedule />
           <Footer />

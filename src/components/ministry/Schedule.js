@@ -9,13 +9,12 @@ function Schedule() {
   return (
     <PreFooter>
         <Img>
-        <div>
         <img src={logo} alt='' />
-        </div>
         </Img>
         
         <GetInTouch>
             <h3>Get in Touch</h3>
+            <p>___________________________________</p>
             <br/>
             <h5>Plot 17 Angwa Rukuba, Former Oasis bakery</h5>
             <Ico>
@@ -70,24 +69,22 @@ export default Schedule
 const Img = styled.div`
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: center; 
 
->div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    >img {
+@media screen and (max-width: 960px){
+    width: 100%;
+}
+>img {
         object-fit: contain;
         height: 300px;
         padding: 30px;
-    }
-    @media screen and (max-width: 960px){
-        flex-direction: column;
+
+        @media screen and (max-width: 960px){
         justify-content: center;
         align-items: center;
-        padding-left: 10px;
+        height: 370px
     }
-}
+    }
 `
 
 const PreFooter = styled.div`

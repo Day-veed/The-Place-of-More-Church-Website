@@ -73,7 +73,7 @@ const Di = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vh;
+    width: 80vh;
     padding-top: 50px;
     padding-bottom: 50px;
 

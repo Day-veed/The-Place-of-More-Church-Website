@@ -428,7 +428,7 @@ import AppDrawer from './drawer/AppDrawer'
 import Navbar from './Navbar'
 import HomeBody from './body/HomeBody'*/
 
-function Training() {
+function MTC() {
   return (
     <>
       <CarouselContainer />
@@ -476,7 +476,7 @@ function Training() {
   )
 }
 
-export default Training
+export default MTC
 
 const V = styled.div`
   padding-right: 70px;

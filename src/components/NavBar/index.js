@@ -94,7 +94,7 @@ function Navbar({ toggle }) {
     }
 
     const MTC = () => {
-        navigate('/training')
+        navigate('/MTC')
     }
 
     const LTC = () => {
@@ -154,7 +154,7 @@ function Navbar({ toggle }) {
                         Training <i className='fas fa-caret-down'></i>
                         <ul>
                             <li><a href='#'>LTC</a></li>
-                            <li><a href='#'>MTC</a></li>
+                            <li onClick={() => MTC()}><a href='#'>MTC</a></li>
                             <li><a href='#'>AMTC</a></li>
                         </ul>
                     </NavLinksss>
