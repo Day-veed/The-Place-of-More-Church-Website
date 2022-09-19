@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import {FaBars} from 'react-icons/fa'
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, IconBtn} from './NavBarElements'
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, IconBtn, NavLinkss, NavLinksss} from './NavBarElements'
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -11,6 +11,7 @@ import Dropdown from './Dropdown';
 import './index.css';
 import { MenuItems } from './MenuItems';
 import {FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
+import logo from '../body/logo.png'
 //import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
 function Navbar({ toggle }) {
@@ -92,8 +93,24 @@ function Navbar({ toggle }) {
         navigate('/partnership')
     }
 
-    const Training = () => {
+    const MTC = () => {
         navigate('/training')
+    }
+
+    const LTC = () => {
+        navigate('/LTC')
+    }
+
+    const AMTC = () => {
+        navigate('/AMTC')
+    }
+
+    const TPM = () => {
+        navigate('/TPM')
+    }
+
+    const PSG = () => {
+        navigate('/PSG')
     }
 
     const ContactUs = () => {
@@ -104,35 +121,43 @@ function Navbar({ toggle }) {
     <>
     <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-            <NavLogo onClick={() => home()}>TPM</NavLogo>
+            <NavLogo onClick={() => home()}>
+                <img src={logo} alt='' />
+            </NavLogo>
             <MobileIcon onClick={toggle}>
                 <FaBars />
             </MobileIcon>
             <NavMenu>
-                {isResponsiveclose === true ? <>
-                <span className='menubar__button' style={{ display: 'none' }} onClick={toggleClass} ><FiXCircle /> </span></> : <>
-                <span className='menubar__button' style={{display: 'none'}} onClick={toggleClass} > <FiAlignRight /> </span>
-                </>}
                 <NavItem>
                     <NavLinks onClick={() => home()}>Home</NavLinks>
                 </NavItem>
                 <NavItem  >
-                    <NavLinks >
-                    <NavLinks onClick={() => aboutUs()}>AboutUs</NavLinks>
-                        {/*About Us <i className='fas fa-caret-down'></i>
-                        <div className='dropdown__menu'>
+                    <NavLinkss >
+                    {/*<NavLinks onClick={() => aboutUs()}>AboutUs</NavLinks>*/}
+                    About Us <i className='fas fa-caret-down'></i>
+                        
+                        
                             <ul>
                                 <li><a href='#'>The Place of More</a></li>
                                 <li><a href='#'>Pastor Shenny Glory</a></li>
                             </ul>
-                        </div>*/}
-                    </NavLinks>
+                        
+                    
+                        
+                    </NavLinkss>
                 </NavItem>
                 <NavItem>
                     <NavLinks onClick={() => partnership()}>Partnership</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks onClick={() => Training()}>Training</NavLinks>
+                    <NavLinksss >
+                        Training <i className='fas fa-caret-down'></i>
+                        <ul>
+                            <li><a href='#'>LTC</a></li>
+                            <li><a href='#'>MTC</a></li>
+                            <li><a href='#'>AMTC</a></li>
+                        </ul>
+                    </NavLinksss>
                 </NavItem>
                 <NavItem>
                     <NavLinks onClick={() => ContactUs()}>Contact Us</NavLinks>

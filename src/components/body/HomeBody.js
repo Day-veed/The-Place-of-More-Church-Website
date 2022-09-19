@@ -44,7 +44,7 @@ function HomeBody() {
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
         <h5 style={{color: "black"}}> (Where Everything Works)</h5></h2>
-        <p style={{color: "grey"}}>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
+        <p style={{color: "black"}}>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
         <div></div><br/>
         We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
@@ -73,7 +73,7 @@ function HomeBody() {
     </motion.Motion>
     <Set>
     <UpcomingPrograms>
-        <h4 style={{color: "#722f37"}}>Upcoming Programs...</h4>
+        <h5 style={{color: "#722f37"}}>Upcoming Programs...</h5>
         <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
         <Images>
         <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow3} alt='' /></Img1>
@@ -95,8 +95,7 @@ const Set = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-
+    background-color: white;
     @media (max-width: 750px) {
         flex-direction: column;
     }
@@ -112,19 +111,27 @@ const UpcomingPrograms = styled.div`
     background-color: white;
     width: 85%;
    // background-clip: ;
-
-    > h4 {
-        padding-top: 25px;
-    }
-    >h2{
+    > h5 {
+        padding-top: 75px;
+        font-family: 'Playfair Display', serif;
         font-weight: bold;
-        font-stretch: expanded;
-        padding-top: 25px;
+        
     }
-
+    >h1{
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        padding-top: 5px;
+    }
     @media (max-width: 1000px) {
         width: auto;
         height: auto;
+
+        >h1{
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        padding-top: 5px;
+        font-stretch: expanded;
+    }
     }
 `
 const Images = styled.div`
@@ -133,7 +140,6 @@ const Images = styled.div`
     align-items: center;
     width: 95%;
     
-
     @media (max-width: 750px) {
         flex-direction: column;
         width: auto;
@@ -175,7 +181,6 @@ const PictureExp = styled.div`
     margin-top: 25px;
     background-color: white;
     padding-bottom: 70px;
-
     > img {
       width: 55%;
       height: 400px;
@@ -203,7 +208,7 @@ const Text = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        font-family: 'Playfair Display', serif;
         font-style: inherit;
         font-weight: bold;
     }
@@ -214,6 +219,12 @@ const Text = styled.div`
         align-items: center;
         padding-left: 25px;
         font-size: 16px;
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+    }
+
+    >h5 {
+        font-family: 'Playfair Display', serif;
     }
     @media (max-width: 1000px) {
         padding-left: 15px;
@@ -229,7 +240,6 @@ const Sections = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-
     @media (max-width: 1000px) {
         flex-direction: column;
     }
@@ -247,16 +257,13 @@ const ShennyGloryFoundation = styled.div`
         width: 50%;
         margin-bottom: 15px;
     }
-
     > h1 {
         
     }
-
     > p {
         width: 90%;
         margin-bottom: 30px;
     }
-
     @media (max-width: 1000px) {
         width: 70%;
         margin-top: 15px;
@@ -278,7 +285,6 @@ const MoreBooksVille = styled.div`
         width: 50%;
         margin-bottom: 5px;
     }
-
     > p {
         width: 90%;
         margin-bottom: 30px;
@@ -304,12 +310,10 @@ const LeadWithPsg = styled.div`
         width: 50%;
         margin-bottom: 15px;
     }
-
     > p {
         width: 100%;
         margin-bottom: 110px;
     }
-
     @media (max-width: 1000px) {
         width: 70%;
         margin-top: 15px;

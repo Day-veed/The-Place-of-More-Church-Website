@@ -66,6 +66,7 @@ export const HeroH2 = styled.h1`
 export const HeroP = styled.p`
     margin-bottom: 35px;
     font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    font-family: 'EB Garamond', serif;
     line-height: 24px;
     text-align: center;
     letter-spacing: 2px;

@@ -21,6 +21,7 @@ export const Container = styled.div`
 `;
 export const MainHeading = styled.h1`
 	font-size: clamp(2.3rem, 6vw, 4.5rem);
+	font-family: 'Playfair Display', serif;
 	margin-bottom: 2rem;
 	color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
 	width: 100%;

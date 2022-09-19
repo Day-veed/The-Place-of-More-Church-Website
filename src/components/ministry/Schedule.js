@@ -9,7 +9,9 @@ function Schedule() {
   return (
     <PreFooter>
         <Img>
+        <div>
         <img src={logo} alt='' />
+        </div>
         </Img>
         
         <GetInTouch>
@@ -30,11 +32,11 @@ function Schedule() {
             </Ico>
         </GetInTouch>
 
-        <GetInTouch>
+        <GetInTouchh>
             <h3>Quick Link</h3>
             <br/>
             <h5>Partnership</h5>
-            <h5>About Us</h5>
+            <h5>The Place of More</h5>
             <h5>Pastor Shenny Glory</h5>
             <Ico>
                 <PhoneIcon />
@@ -44,22 +46,21 @@ function Schedule() {
                 <EmailIcon />
                 <h5>Jos North, Plateau State, Nigeria.</h5>
             </Ico>
-        </GetInTouch>
+        </GetInTouchh>
 
-        <GetInTouch>
+        <GetInTouchhh>
             <h3>Ministry Schedule</h3>
             <br/>
             <h4>SUNDAY</h4>
             <h5>1st Service -  4:00pm (GMT + 1)</h5>
             <h5>2nd Service -  6:00pm (GMT + 1)</h5>
-            <h5>Pastor Shenny Glory</h5>
             <br/>
             <h4>TUESDAY</h4>
             <h5>Lead With PSG - 2:00pm (GMT + 1) </h5>
             <br />
             <h4>THURSDAY</h4>
             <h5>Believers Service -  5:00pm (GMT + 1) </h5>
-        </GetInTouch>
+        </GetInTouchhh>
     </PreFooter>
   )
 }
@@ -67,38 +68,113 @@ function Schedule() {
 export default Schedule
 
 const Img = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 
->img {
+>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >img {
         object-fit: contain;
         height: 300px;
+        padding: 30px;
     }
+    @media screen and (max-width: 960px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+}
 `
 
 const PreFooter = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     background: white;
+    padding: 10px;
 
     @media screen and (max-width: 960px){
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
         padding-left: 20px;
     }
 `
 const Ico = styled.div`
     display: flex;
-    padding-top: 30px;
+    padding-top: 10px;
+    font-family: 'EB Garamond', serif;
+
+    >h5 {
+        font-family: 'EB Garamond', serif;
+    }
 
     @media screen and (max-width: 960px){
         padding-top: 5px;
     }
 `
 const GetInTouch = styled.div`
-    
-    padding: 30px;
+    padding: 15px;
+    font-family: 'EB Garamond', serif;
+
+    >h3 {
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    >h4{
+        font-family: 'EB Garamond', serif;
+    }
+    >h5{
+        font-family: 'EB Garamond', serif;
+    }
+
+    @media screen and (max-width: 960px){
+        padding: 10px;
+    }
+`
+
+const GetInTouchh = styled.div`
+    padding: 10px;
+    font-family: 'EB Garamond', serif;
+
+    >h3 {
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    >h4{
+        font-family: 'EB Garamond', serif;
+    }
+    >h5{
+        font-family: 'EB Garamond', serif;
+    }
+
+    @media screen and (max-width: 960px){
+        padding: 10px;
+    }
+`
+
+const GetInTouchhh = styled.div`
+    padding: 15px;
+    font-family: 'EB Garamond', serif;
+
+    >h3 {
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    >h4{
+        font-family: 'EB Garamond', serif;
+    }
+    >h5{
+        font-family: 'EB Garamond', serif;
+    }
 
     @media screen and (max-width: 960px){
         padding: 10px;

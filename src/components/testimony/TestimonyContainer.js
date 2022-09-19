@@ -80,7 +80,10 @@ const Di = styled.div`
     >h1 {
         padding-top: 30px;
         color: #722f37;
-        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: 'EB Garamond', serif;
     }
 
     @media (max-width: 750px) {

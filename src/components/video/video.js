@@ -35,7 +35,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Expectations</h3>
+                <h4>Expectations</h4>
             </VideoContainers>  
             <br/>
             <VideoContainers>
@@ -49,7 +49,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Spiritual Technologies</h3>
+                <h4>Spiritual Technologies</h4>
             </VideoContainers>  
             <VideoContainers>
                 <YouTube 
@@ -62,7 +62,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Strategic Leadership</h3>
+                <h4>Strategic Leadership</h4>
             </VideoContainers>  
         </Videos>
         <Videos>
@@ -77,7 +77,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Dancegiving Service</h3>
+                <h4>Dancegiving Service</h4>
             </VideoContainers>  
             <VideoContainers>
                 <YouTube 
@@ -90,7 +90,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Believers Service</h3>
+                <h4>Believers Service</h4>
             </VideoContainers>  
             <div></div>
             <VideoContainers>
@@ -104,7 +104,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h3>Strategic Leadership</h3>
+                <h4>Strategic Leadership</h4>
             </VideoContainers>  
         </Videos>
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw'>More Messages...</Button>
@@ -153,6 +153,10 @@ const VideoContainers = styled.div`
     align-items: center;
     margin-bottom: 5px;
     padding: 10px 20px;
+
+    > h4{
+        font-family: 'EB Garamond', serif;
+    }
 `
 
 const FeaturedMessages = styled.div`
@@ -172,6 +176,7 @@ const FeaturedMessages = styled.div`
         padding-top: 40px;
         padding-bottom: 25px;
         color: #722f37;
+        font-family: 'Playfair Display', serif;
     }
 
     >Button {

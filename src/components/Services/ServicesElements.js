@@ -72,6 +72,7 @@ export const ServicesIcon = styled.img`
 `
 export const ServicesH1 = styled.h1`
     font-size: 2.5rem;
+    font-family: 'EB Garamond', serif;
     color: #722f37;
     margin-bottom: 64px;
 
@@ -81,11 +82,13 @@ export const ServicesH1 = styled.h1`
 `
 export const ServicesH2 = styled.h2`
     font-size: 1.7rem;
+    font-family: 'EB Garamond', serif;
     margin-bottom: 25px;
     color: #722f37;
 `
 export const ServicesP = styled.p`
     font-size: 1.1rem;
+    font-family: 'EB Garamond', serif;
     text-align: center;
     color: black;
 `
