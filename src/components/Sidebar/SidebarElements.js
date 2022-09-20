@@ -53,13 +53,66 @@ export const SidebarLink = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
     color: #0d0d0d;
     cursor: pointer;
+    font-family: Century Gothic;
+    font-weight: bold;
+    font-size: 25px;
+
+
+    ul li a:hover {
+        background: gold;
+    }
+
+    ul li a {
+        width: 150px;
+        color: #722f37;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        
+        text-align: center;
+        padding-top: 5px;
+        border-radius: 10px;
+        font-family: Century Gothic;
+        
+    } 
+
+    ul li{
+        float: none;
+        list-style: none;
+        padding-bottom: 10px;
+    }
+
+    ul {
+        background: whitesmoke;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        display: none;
+        
+    }
+
+    &.active {
+        border-bottom: 3px solid #ffd700;
+    }
+
+    &:hover{
+        display: block;
+        color: #ffd700;
+        padding-top: 10px;
+    }
+
+    &:hover ul{
+        display: block;
+        color: #ffd700;
+        padding-top: 20px;
+    }
+
 
     &:hover {
         color: gold;
@@ -91,7 +144,10 @@ export const SidebarIconOptions = styled.div`
 `
 export const SideLogo = styled.div`
     display: flex;
-    flex: 0.2;
+    position: absolute;
+    top: -42px;
+    right: 620px;
+    transform: translate(-100%, 60%);
     
     >img {
         object-fit: contain;
@@ -104,15 +160,117 @@ export const SideLogo = styled.div`
         cursor: pointer;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         position: absolute;
-        top: -42px;
-        right: 100px;
+        top: -52px;
+        right: 500px;
         transform: translate(-100%, 60%);
 
         >img {
         object-fit: contain;
-        height: 75px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 920px) {
+        position: absolute;
+        top: -52px;
+        right: 400px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 850px) {
+        position: absolute;
+        top: -52px;
+        right: 350px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 770px) {
+        position: absolute;
+        top: -52px;
+        right: 250px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 680px) {
+        position: absolute;
+        top: -52px;
+        right: 180px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 590px) {
+        position: absolute;
+        top: -52px;
+        right: 130px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 550px) {
+        position: absolute;
+        top: -52px;
+        right: 80px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

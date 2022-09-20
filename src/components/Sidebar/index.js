@@ -8,12 +8,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import logo from '../body/logo.png'
+import './index.css'
 
 function Sidebar({ isOpen, toggle }) {
 
     const navigate = useNavigate();
 
     const home = () => {
+        toggle()
         navigate('/')
     }
 
@@ -22,19 +24,47 @@ function Sidebar({ isOpen, toggle }) {
     }
 
     const partnership = () => {
+        toggle()
         navigate('/partnership')
     }
 
+    const MTC = () => {
+        toggle()
+        navigate('/MTC')
+    }
+
+    const LTC = () => {
+        toggle()
+        navigate('/LTC')
+    }
+
+    const AMTC = () => {
+        toggle()
+        navigate('/AMTC')
+    }
+
+    const TPM = () => {
+        toggle()
+        navigate('/TPM')
+    }
+
+    const PSG = () => {
+        toggle()
+        navigate('/PSG')
+    }
+
     const Training = () => {
+        toggle()
         navigate('/training')
     }
 
     const ContactUs = () => {
+        toggle()
         navigate('/contact-us')
     }
 
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} >
         <SideLogo onClick={() => home()}>
             <img src={logo} alt='' />
         </SideLogo>
@@ -43,17 +73,26 @@ function Sidebar({ isOpen, toggle }) {
         </Icon>
         <SidebarWrapper>
             <SidebarMenu>
-                <SidebarLink onClick={() => home()} >
+                <SidebarLink onClick={() => home() }>
                     Home
                 </SidebarLink>
-                <SidebarLink onClick={() => aboutUs()} >
-                    About Us
+                <SidebarLink>
+                About Us <i className='fas fa-caret-down'></i>
+                            <ul>
+                                <li onClick={() => TPM()}><a href='#'>The Place of More</a></li>
+                                <li onClick={() => PSG()}><a href='#'>Pastor Shenny Glory</a></li>
+                            </ul>
                 </SidebarLink>
                 <SidebarLink onClick={() => partnership()} >
                     Partnership
                 </SidebarLink>
-                <SidebarLink onClick={() => Training()}>
-                    Training
+                <SidebarLink>
+                Training <i className='fas fa-caret-down'></i>
+                        <ul>
+                            <li onClick={() => LTC()}><a href='#'>LTC</a></li>
+                            <li onClick={() => MTC()}><a href='#'>MTC</a></li>
+                            <li onClick={() => AMTC()}><a href='#'>AMTC</a></li>
+                        </ul>
                 </SidebarLink>
                 <SidebarLink onClick={() => ContactUs()} >
                     Contact Us

@@ -80,8 +80,9 @@ const Div = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 
-    @media (max-width: 750px) {
+    @media (max-width: 1100px) {
         flex-direction: column;
     }
 `
@@ -155,8 +156,20 @@ const MainContainer = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.4rem;
 
-    @media (max-width: 750px) {
-        width: 90%;
+    @media (max-width: 1300px) {
+        width: 50%;
+        height: 60vh;
+    }
+    @media (max-width: 1100px) {
+        width: 55%;
+        height: 60vh;
+    }
+    @media (max-width: 900px) {
+        width: 70%;
+        height: 60vh;
+    }
+    @media (max-width: 700px) {
+        width: 80%;
         height: 60vh;
     }
 `

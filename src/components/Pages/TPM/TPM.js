@@ -18,17 +18,22 @@ function TPM() {
       <Text >
         <h2 style={{color: "#722f37"}}>PURPOSE OF THE MINISTRY<br/></h2>
         <p style={{color: "black"}}>We are a people of More, doing More for God and getting More from God.
-        <div></div><br/>
         We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
+      
+      </div>
+    </PictureExp>
+    <PictureExpe >
+      <div >
       <Text >
-        <h2 style={{color: "#722f37"}}>VISION OF THE MINISTRY<br/></h2>
+        <h2 style={{color: "gold"}}>VISION OF THE MINISTRY<br/></h2>
         
         <div></div><br/>
         <p>To Inspire and Empower our generation to discover their purpose and fulfil their destinies to the glory of God and the advancement of His Kingdom.</p>
       </Text>
       </div>
-    </PictureExp>
+      <img src={crowd} alt='' />
+    </PictureExpe>
         {/*<Top>
           <Purpose>
             <h2>PURPOSE OF THE MINISTRY</h2>
@@ -146,7 +151,7 @@ const SpiritPic = styled.div`
 >img{
     object-fit: cover;
     width: 130px;
-    height: 25vh;
+    height: 27vh;
     padding-right: 20px;
   }
 `
@@ -156,11 +161,25 @@ const Section = styled.div`
   padding: 15px;
   background: whitesmoke;
   
+  @media screen and (max-width: 960px){
+    padding: 3px;
+  }
 `
 const Textt = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 90px;
+
+  >h3{
+    font-family: 'Playfair Display', serif;
+  }
+  >p{
+    font-family: 'Playfair Display', serif;
+  }
+
+  @media screen and (max-width: 960px){
+    padding-top: 80px;
+  }
 `
 
 const Container = styled.div`
@@ -168,7 +187,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   padding-bottom: 50px;
 
   @media screen and (max-width: 960px){
@@ -178,7 +197,7 @@ const Container = styled.div`
 const Content = styled.div`
   width: 100%;
   background: white;
-  padding: 10px;
+  
 `
 const Purpose = styled.div`
   padding: 20px;
@@ -198,14 +217,29 @@ const Values = styled.div`
   background: whitesmoke;
   padding-bottom: 70px;
   margin-top: 50px;
+
+  @media screen and (max-width: 960px){
+    padding: 20px;
+  }
 `
 const Mandate = styled.div`
   padding: 30px;
   justify-content: center;
   align-items: center;
+  background: white;
 
   >h5 {
     padding: 30px;
+    //color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  >h2{
+    //color: #722f37;
+    font-family: 'Playfair Display', serif;
+  }
+  >h4{
+    //color: white;
+    font-family: 'Playfair Display', serif;
   }
 `
 
@@ -213,13 +247,13 @@ const PictureExp = styled.div`
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 25px;
-    background-color: white;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    
 
     > img {
       width: 45%;
-      height: 500px;
+      height: 450px;
       padding-left: 100px;
       
     }
@@ -235,9 +269,35 @@ const PictureExp = styled.div`
       }
     }
 `
+const PictureExpe = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: black;
+    padding-bottom: 50px;
+
+    > img {
+      width: 45%;
+      height: 450px;
+      padding-right: 100px;
+      
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      > img {
+        width: 90%;
+        height: 400px;
+        padding-right: 0px;
+      }
+    }
+`
+
 const Text = styled.div`
   padding-left: 50px;
-  padding-top: 40px;
+  padding-top: 70px;
   width: 85%;
   
     > h2 {
@@ -245,7 +305,7 @@ const Text = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        font-family: 'Playfair Display', serif;
         font-style: inherit;
         font-weight: bold;
     }
@@ -254,15 +314,20 @@ const Text = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: 25px;
-        font-size: 16px;
+        padding-left: 55px;
+        color: white;
+        font-size: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
     }
     @media (max-width: 1000px) {
-        padding-left: 15px;
-        width: auto;
+        padding-left: 0px;
+        padding-top: 30px;
+        width: 100%;
       > p {
-        width: 98%;
-        
+        width: 99%;
+        padding-left: 30px;
+        font-size: 18px;
+        font-family: 'Playfair Display', serif;
       }
     }
 `
