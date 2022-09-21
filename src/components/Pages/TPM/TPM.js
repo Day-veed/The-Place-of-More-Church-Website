@@ -110,7 +110,94 @@ function TPM() {
 
         <Mandate>
           <h2>OUR MANDATE </h2>
-          <h4>At The Place of More, we are driven by Seven Mandates</h4>
+          <Mandates>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 1</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 2</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Church: To be a Place of More, doing More for God and getting More from God.</p>
+                </div>
+              </div>
+            </div>
+            </Mandatess>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 3</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 4</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Church: To be a Place of More, doing More for God and getting More from God.</p>
+                </div>
+              </div>
+            </div>
+            </Mandatess>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 5</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 6</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Church: To be a Place of More, doing More for God and getting More from God.</p>
+                </div>
+              </div>
+            </div>
+            </Mandatess>
+            <Mandatesss>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Mandate 7</h3>
+                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <div className='card-body'>
+                  
+                  <div className='underline'></div>
+                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                </div>
+              </div>
+            </div>
+            </Mandatesss>
+            </Mandates>
+          {/*<h4>At The Place of More, we are driven by Seven Mandates</h4>
           <h5>1.	As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth </h5>
           
           <h5>2.	As a Church: To be a Place of More, doing More for God and getting More from God.</h5>
@@ -126,7 +213,8 @@ function TPM() {
           <h5>6.	For Reach Out (Evangelism): Introduce people to an experience of Christ’s Love and Power </h5>
           
           
-          <h5>7.	For Family: Help start and lay the foundation for Kingdom Families.</h5>
+<h5>7.	For Family: Help start and lay the foundation for Kingdom Families.</h5>*/}
+          
         </Mandate>
       </Content>
     </Container>
@@ -222,23 +310,131 @@ const Values = styled.div`
     padding: 20px;
   }
 `
-const Mandate = styled.div`
-  padding: 30px;
+const Mandatess = styled.div`
+  display: flex;
+  //flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: whitesmoke;
+  padding: 25px;
+
+  >div{
+    width: 450px;
+    margin: 20px;
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      >h3 {
+        margin-top: 40px;
+        margin-bottom: -30px;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      >img {
+        height: 300px;
+        width: 250px;
+      }
+      >div {
+          >p{
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
+    }
+  }
+
+  @media screen and (max-width: 960px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+`
+const Mandatesss = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: whitesmoke;
+  padding: 25px;
+
+  >div{
+    width: 450px;
+    display: flex;
+    padding-bottom: 50px;
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      >h3 {
+        margin-top: 40px;
+        margin-bottom: -30px;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      >img {
+        height: 300px;
+        width: 250px;
+      }
+      >div {
+          >p{
+            font-weight: bold;
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
+    }
+  }
+`
+
+const Mandates = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: whitesmoke;
+  padding: 100px;
 
   >h5 {
-    padding: 30px;
+    //padding: 30px;
     //color: white;
     font-family: 'Playfair Display', serif;
   }
   >h2{
     //color: #722f37;
+    //padding: 30px;
+    //padding-left: 190px;
     font-family: 'Playfair Display', serif;
   }
   >h4{
     //color: white;
+    padding-left: 150px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @media screen and (max-width: 960px){
+    padding: 20px;
+  }
+`
+
+const Mandate = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding-bottom: 30px;
+
+  >h5 {
+    //padding: 30px;
+    //color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  >h2{
+    color: #722f37;
+    padding-top: 50px;
+    //padding-left: 190px;
+    font-family: 'Playfair Display', serif;
+  }
+  >h4{
+    //color: white;
+    padding-left: 150px;
     font-family: 'Playfair Display', serif;
   }
 `

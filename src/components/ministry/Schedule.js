@@ -94,7 +94,7 @@ const PreFooter = styled.div`
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    background: white;
+    background: whitesmoke;
     
 
     @media screen and (max-width: 960px){
