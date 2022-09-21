@@ -126,7 +126,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 2</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={purpose} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -139,7 +139,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 3</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={excellence} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -150,7 +150,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 4</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={value} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -174,7 +174,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 6</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={excellence} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -187,7 +187,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 7</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={Spiritual} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -246,8 +246,9 @@ const SpiritPic = styled.div`
 
 const Section = styled.div`
   display: flex;
-  padding: 15px;
+  padding: 0px;
   background: whitesmoke;
+  padding-left: 70px;
   
   @media screen and (max-width: 960px){
     padding: 3px;
@@ -279,13 +280,13 @@ const Container = styled.div`
   padding-bottom: 50px;
 
   @media screen and (max-width: 960px){
-    padding-top: 0px;
+    padding: 0px;
+    padding-top: 110px;
   }
 `
 const Content = styled.div`
   width: 100%;
   background: white;
-  
 `
 const Purpose = styled.div`
   padding: 20px;
@@ -326,6 +327,7 @@ const Mandatess = styled.div`
       justify-content: center;
       align-items: center;
       >h3 {
+        color: #722f37;
         margin-top: 40px;
         margin-bottom: -30px;
         font-family: 'Roboto Condensed', sans-serif;
@@ -333,9 +335,11 @@ const Mandatess = styled.div`
       >img {
         height: 300px;
         width: 250px;
+        margin-top: -10px;
       }
       >div {
           >p{
+            font-weight: 500;
             font-family: 'Roboto Condensed', sans-serif;
           }
         }
@@ -365,6 +369,7 @@ const Mandatesss = styled.div`
       justify-content: center;
       align-items: center;
       >h3 {
+        color: #722f37;
         margin-top: 40px;
         margin-bottom: -30px;
         font-family: 'Roboto Condensed', sans-serif;
@@ -372,6 +377,7 @@ const Mandatesss = styled.div`
       >img {
         height: 300px;
         width: 250px;
+        margin-top: -10px;
       }
       >div {
           >p{
@@ -409,7 +415,15 @@ const Mandates = styled.div`
   }
 
   @media screen and (max-width: 960px){
-    padding: 20px;
+    padding: 90px;
+  }
+
+  @media screen and (max-width: 800px){
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 600px){
+    padding: 2px;
   }
 `
 
@@ -437,6 +451,10 @@ const Mandate = styled.div`
     padding-left: 150px;
     font-family: 'Playfair Display', serif;
   }
+
+  @media screen and (max-width: 600px){
+    padding-bottom: 0px;
+  }
 `
 
 const PictureExp = styled.div`
@@ -445,6 +463,7 @@ const PictureExp = styled.div`
     align-items: center; 
     padding-bottom: 20px;
     background-color: whitesmoke;
+    margin-top: -30px;
     
 
     > img {
@@ -469,14 +488,13 @@ const PictureExpe = styled.div`
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: black;
+    background-color: white;
     padding-bottom: 50px;
 
     > img {
       width: 45%;
       height: 450px;
       padding-right: 100px;
-      
     }
     @media (max-width: 1000px) {
       flex-direction: column;
@@ -511,7 +529,7 @@ const Text = styled.div`
         justify-content: center;
         align-items: center;
         padding-left: 55px;
-        color: white;
+        color: black;
         font-size: 20px;
         font-family: 'Roboto Condensed', sans-serif;
     }

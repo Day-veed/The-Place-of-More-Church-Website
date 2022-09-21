@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../body/logo.jpg'
+import logo from '../body/logo.png'
 import styled from 'styled-components'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -84,7 +84,8 @@ align-items: center;
         @media screen and (max-width: 960px){
         justify-content: center;
         align-items: center;
-        height: 370px
+        height: 370px;
+        padding: 50px;
     }
     }
 `
