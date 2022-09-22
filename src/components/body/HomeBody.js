@@ -115,12 +115,13 @@ const UpcomingPrograms = styled.div`
         padding-top: 75px;
         font-family: 'Playfair Display', serif;
         font-weight: bold;
-        
+        margin-top: -50px;
     }
     >h1{
         font-weight: bold;
         font-family: 'Playfair Display', serif;
         padding-top: 5px;
+        margin-bottom: -50px;
     }
     @media (max-width: 1000px) {
         width: auto;
@@ -201,16 +202,21 @@ const PictureExp = styled.div`
 const Text = styled.div`
   padding-left: 50px;
   padding-top: 40px;
-  width: 70%;
+  width: 80%;
   
     > h2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
+
+        >h5 {
+        font-family: 'Playfair Display', serif;
+        //font-family: 'Roboto Condensed', sans-serif;
+    }
     }
     > p {
         display: flex;
@@ -219,19 +225,16 @@ const Text = styled.div`
         align-items: center;
         padding-left: 25px;
         font-size: 16px;
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
     }
 
-    >h5 {
-        font-family: 'Playfair Display', serif;
-    }
+    
     @media (max-width: 1000px) {
         padding-left: 15px;
         width: auto;
       > p {
         width: 98%;
-        
       }
     }
 `

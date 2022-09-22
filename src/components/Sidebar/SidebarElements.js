@@ -74,12 +74,11 @@ export const SidebarLink = styled.div`
         display: block;
         text-decoration: none;
         font-size: 14px;
-        
         text-align: center;
         padding-top: 5px;
         border-radius: 10px;
         font-family: Century Gothic;
-        
+        font-family: 'Roboto Condensed', sans-serif;
     } 
 
     ul li{

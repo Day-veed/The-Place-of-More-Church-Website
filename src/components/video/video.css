@@ -1,7 +1,8 @@
 .bo {
     font-family: 'Raleway', sans-serif;
-    background-image: url('./white.jpg');
-    background-size: cover;
+    background: whitesmoke;
+    /*background-image: url('./white.jpg');
+    background-size: cover;*/
     display: flex;
     justify-content: center;
     align-items: center;

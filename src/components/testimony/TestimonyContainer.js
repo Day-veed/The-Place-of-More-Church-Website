@@ -75,7 +75,7 @@ const Di = styled.div`
     align-items: center;
     width: 80vh;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 
     >h1 {
         padding-top: 30px;
@@ -84,6 +84,7 @@ const Di = styled.div`
         justify-content: center;
         align-items: flex-end;
         font-family: 'EB Garamond', serif;
+        margin-bottom: -50px;
     }
 
     @media (max-width: 750px) {

@@ -480,6 +480,10 @@ export default MTC
 
 const V = styled.div`
   padding-right: 70px;
+  @media (max-width: 800px) {
+      padding-right: 0px;
+      padding-bottom: 20px;
+    }
 `  
 const VD = styled.div`
   
@@ -510,4 +514,10 @@ const VideoContainer = styled.div`
     align-items: center;
     margin-bottom: 30px;
     padding: 10px 20px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 `

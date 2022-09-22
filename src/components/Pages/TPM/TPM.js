@@ -26,7 +26,7 @@ function TPM() {
     <PictureExpe >
       <div >
       <Text >
-        <h2 style={{color: "gold"}}>VISION OF THE MINISTRY<br/></h2>
+        <h2 style={{color: "#722f37"}}>VISION OF THE MINISTRY<br/></h2>
         
         <div></div><br/>
         <p>To Inspire and Empower our generation to discover their purpose and fulfil their destinies to the glory of God and the advancement of His Kingdom.</p>
@@ -143,7 +143,7 @@ function TPM() {
                 <div className='card-body'>
                   
                   <div className='underline'></div>
-                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                  <p>As a Family: To be a place of Love & Acceptance. Accepting people in love and helping them become BETTER and HAPPIER</p>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ function TPM() {
                 <div className='card-body'>
                   
                   <div className='underline'></div>
-                  <p>As a Church: To be a Place of More, doing More for God and getting More from God.</p>
+                  <p>For Leadership: To train Faithful, Fruitful and Fireful Leaders & Ministers.</p>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@ function TPM() {
                 <div className='card-body'>
                   
                   <div className='underline'></div>
-                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                  <p>For the Word: To teach the Word as a Standard for Living and teach Spiritual Truths in Simplicity.</p>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ function TPM() {
                 <div className='card-body'>
                   
                   <div className='underline'></div>
-                  <p>As a Church: To be a Place of More, doing More for God and getting More from God.</p>
+                  <p>For Reach Out (Evangelism): Introduce people to an experience of Christ’s Love and Power </p>
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ function TPM() {
                 <div className='card-body'>
                   
                   <div className='underline'></div>
-                  <p>As a Commission: To Inspire and Empower people who will glorify God and advance His kingdom on Earth</p>
+                  <p>For Family: Help start and lay the foundation for Kingdom Families.</p>
                 </div>
               </div>
             </div>
@@ -465,7 +465,6 @@ const PictureExp = styled.div`
     background-color: whitesmoke;
     margin-top: -30px;
     
-
     > img {
       width: 45%;
       height: 450px;

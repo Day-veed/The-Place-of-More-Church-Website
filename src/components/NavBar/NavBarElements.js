@@ -267,7 +267,7 @@ export const NavLinkss = styled.div`
         padding-top: 5px;
         border-radius: 10px;
         font-family: Century Gothic;
-        
+        font-family: 'Roboto Condensed', sans-serif;
     } 
 
     ul li{
@@ -330,7 +330,7 @@ export const NavLinksss = styled.div`
         padding-top: 5px;
         border-radius: 10px;
         font-family: Century Gothic;
-        
+        font-family: 'Roboto Condensed', sans-serif;
     } 
 
     ul li{
