@@ -135,15 +135,10 @@ function Navbar({ toggle }) {
                     <NavLinkss >
                     {/*<NavLinks onClick={() => aboutUs()}>AboutUs</NavLinks>*/}
                     About Us <i className='fas fa-caret-down'></i>
-                        
-                        
                             <ul>
                                 <li onClick={() => TPM()}><a href='#'>The Place of More</a></li>
                                 <li onClick={() => PSG()}><a href='#'>Pastor Shenny Glory</a></li>
                             </ul>
-                        
-                    
-                        
                     </NavLinkss>
                 </NavItem>
                 <NavItem>
@@ -165,7 +160,7 @@ function Navbar({ toggle }) {
             </NavMenu>
             <IconBtn>
                 <NavIconOption Icon={FacebookIcon} title="Facebook" />
-                <NavIconOption Icon={TwitterIcon} title="Twitter" />
+                <NavIconOption Icon={TwitterIcon} title="Twitter" href='t.me/theeveningchurchTPM'/>
                 <NavIconOption Icon={InstagramIcon}  title="Instagram" />
                 <NavIconOption Icon={ YouTubeIcon} title="Youtube" />
             </IconBtn>

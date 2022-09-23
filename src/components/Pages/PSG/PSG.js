@@ -40,7 +40,7 @@ function PSG() {
     </PictureExpe>
 
 <Sgf>
-<h1>SHENNY GLORY FOUNDATION (SGF)</h1>
+<h1 style={{color: "#722f37"}}>SHENNY GLORY FOUNDATION (SGF)</h1>
 <p>Shenny Glory Foundation is the brainchild of Pastor Shenny Glory, the Lead Pastor at The Place of More Church, Mentor and Business Strategist</p>
 <p>It is committed to rewarding Excellence, Restoring Hope and positively adding values to impact the lives of the people.</p>
 </Sgf>
@@ -52,15 +52,16 @@ function PSG() {
 export default PSG
 
 const Sgf = styled.div`
-  //background: whitesmoke;
-  padding: 20px;
+  background: whitesmoke;
+  padding: 50px;
 
   >h1 {
     //font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
+    //color: "#722f37"
   }
   >p {
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
   }
@@ -71,7 +72,7 @@ const About = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background: white;
+  background: whitesmoke;
   //padding: 10px;
   padding-top: 130px;
 
@@ -84,6 +85,10 @@ const About = styled.div`
     font-family: 'Playfair Display', serif;
     font-weight: bold;
   }
+
+  @media screen and (max-width: 900px){
+    padding-top: 100px;
+  }
 `
 
 const Div = styled.div`
@@ -93,6 +98,7 @@ const Div = styled.div`
   align-items: center;
   padding: 70px;
   background: white;
+  padding-top: 80px;
 
   @media screen and (max-width: 600px){
     padding: 0px;
@@ -105,6 +111,7 @@ const PictureExp = styled.div`
     padding-bottom: 70px;
     background-color: white;
     margin-top: -100px;
+    background: whitesmoke;
     
     > img {
       width: 75%;
@@ -144,8 +151,8 @@ const PictureExp = styled.div`
       padding: 15px;
       padding-bottom: 50px;
       > img {
-        width: 100%;
-        height: 550px;
+        width: 80%;
+        height: 590px;
         padding-left: 0px;
       }
     }
@@ -160,11 +167,12 @@ const PictureExpe = styled.div`
     
     > img {
       width: 75%;
-      height: 500px;
+      height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
       
     }
+  
     @media (max-width: 1000px) {
       flex-direction: column;
       justify-content: center;
@@ -239,11 +247,20 @@ const Text = styled.div`
         //font-family: 'Playfair Display', serif;
       }
     }
+    @media (max-width: 600px) {
+        padding-left: 0px;
+        padding-top: 30px;
+        width: 100%;
+      > p {
+        padding-top: 15px;
+        //font-family: 'Playfair Display', serif;
+      }
+    }
 `
 const Textt = styled.div`
   padding-left: 10px;
   padding-top: 120px;
-  width: 85%;
+  width: 70%;
   
     > h2 {
         display: flex;

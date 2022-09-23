@@ -13,7 +13,7 @@ import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
 
-function MTCHistory() {
+function LTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
@@ -40,12 +40,12 @@ function MTCHistory() {
       <img src={MTC} alt='' />
       <motion.div  animate={animation}>
       <Text >
-        <h2 style={{color: "#722f37"}}>Ministerial Training Course <br/>
-        <h5 style={{color: "black"}}> (MTC) </h5></h2>
-        <p style={{color: "black"}}>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
-          We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.
+        <h2 style={{color: "#722f37"}}>Leadership Training Course <br/>
+        <h5 style={{color: "black"}}> (LTC) </h5></h2>
+        <p style={{color: "black"}}>LTC is a Four weeks extensive Leadership Training Course by TPM Institute of Leadership where we train members to become leaders. 
+        This training is a robust course on leadership that can be applied in any area of life.
         <br/><br/>
-        We have currently trained over 300 Ministers through the TPM Institute of Leadership.</p>
+        Over the years, we have trained over 300 Leaders at TPM Institute of Leadership.</p>
       </Text>
       </motion.div>
     </PictureExp>
@@ -64,7 +64,7 @@ function MTCHistory() {
         <p>These teams are;</p>*/}
         <Set>
           <UpcomingPrograms>
-            <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
+            <p style={{color: "#722f37"}}>LTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
             <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
             <Images>
               <D>
@@ -92,8 +92,12 @@ function MTCHistory() {
         </Set>
         
 
-        <h4> To register for MTC with the TPM Institute of Leadership, click the button bellow</h4>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/jZGQXC8XKTV9Fmbd6'>Register</Button>
+        <h4> To register for LTC with the TPM Institute of Leadership, click the button bellow</h4>
+        
+        <ButtonWrapper>
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>
+            </ButtonWrapper>
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>
 
         
       </HistoryContainer>
@@ -128,8 +132,15 @@ function MTCHistory() {
   )
 }
 
-export default MTCHistory
+export default LTCHistory
 
+const ButtonWrapper = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+flex-flow: wrap;
+gap: 0.5rem;
+`;
 
 const D = styled.div`
 display: flex;

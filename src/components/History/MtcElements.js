@@ -20,7 +20,7 @@ export const ServicesWrapper = styled.div`
     max-width: 1300px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     grid-gap: 20px;
     padding: 0 50px;
@@ -56,14 +56,15 @@ export const ServicesCard = styled.div`
 
 export const ServicesH2 = styled.h2`
     font-size: 1.7rem;
+    font-family: 'EB Garamond', serif;
     margin-bottom: 2px;
     color: #722f37;
 `
 export const ServicesP = styled.p`
     font-size: 1.1rem;
+    font-family: 'EB Garamond', serif;
     text-align: center;
     color: black;
-    margin-bottom: 20px;
 `
 
 export const ServicesIcon = styled.img`

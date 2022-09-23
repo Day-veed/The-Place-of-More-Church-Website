@@ -13,7 +13,7 @@ import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
 
-function MTCHistory() {
+function AMTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
@@ -40,12 +40,12 @@ function MTCHistory() {
       <img src={MTC} alt='' />
       <motion.div  animate={animation}>
       <Text >
-        <h2 style={{color: "#722f37"}}>Ministerial Training Course <br/>
-        <h5 style={{color: "black"}}> (MTC) </h5></h2>
-        <p style={{color: "black"}}>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
-          We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.
+        <h2 style={{color: "#722f37"}}>ADVANCED MINISTERIAL TRAINING COURSE <br/>
+        <h5 style={{color: "black"}}> (AMTC) </h5></h2>
+        <p style={{color: "black"}}>AMTC is an eight weeks extensive Training Course by TPM Institute of Leadership for people who have a call into Ministry. 
+        For everyone who has a call into any ministry, then this training is for you. 
         <br/><br/>
-        We have currently trained over 300 Ministers through the TPM Institute of Leadership.</p>
+        We will equip you with the knowledge on what you need to know and do in other to fulfil the ministry God has called you into.</p>
       </Text>
       </motion.div>
     </PictureExp>
@@ -64,7 +64,7 @@ function MTCHistory() {
         <p>These teams are;</p>*/}
         <Set>
           <UpcomingPrograms>
-            <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
+            <p style={{color: "#722f37"}}>LTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
             <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
             <Images>
               <D>
@@ -92,8 +92,9 @@ function MTCHistory() {
         </Set>
         
 
-        <h4> To register for MTC with the TPM Institute of Leadership, click the button bellow</h4>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/jZGQXC8XKTV9Fmbd6'>Register</Button>
+        <h4> To register for AMTC with the TPM Institute of Leadership, click the button bellow</h4>
+        
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Register</Button>
 
         
       </HistoryContainer>
@@ -128,7 +129,7 @@ function MTCHistory() {
   )
 }
 
-export default MTCHistory
+export default AMTCHistory
 
 
 const D = styled.div`
@@ -173,9 +174,11 @@ const Text = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 28px;
         font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
+        padding-left: 25px;
 
         >h5 {
         font-family: 'Playfair Display', serif;

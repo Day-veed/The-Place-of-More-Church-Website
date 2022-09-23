@@ -11,6 +11,11 @@ const StyledInput = styled.input`
     width: 80%;
     height: 3rem;
     padding: 1rem;
+    margin-bottom: 0.7rem;
     border: none;
     outline: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
 `

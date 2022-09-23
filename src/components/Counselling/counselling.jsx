@@ -3,6 +3,7 @@ import './Form.css'
 import styled from 'styled-components';
 import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 import Input from './Input';
+import { Button } from '@mui/material';
 
 function Counselling() {
   return (
@@ -25,7 +26,11 @@ function Counselling() {
                 <Input type='text' placeholder="Phone Number"/>
                 <Input type='text' placeholder="Message"/>
                 <Input type='text' placeholder="Select"/>
+                <div>
+                <Button style={{backgroundColor:'blue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
+                </div>
             </InputContainer>
+            
         </MainContainer>
         </Div>
     </div>
@@ -106,7 +111,7 @@ const D = styled.div`
 `
 
 const CounsellingText = styled.div`
-    padding-right: 50px;
+    padding-right: 25px;
     padding: 10px;
 
     >h1 {
@@ -135,7 +140,7 @@ const CounsellingText = styled.div`
         padding-bottom: 30px;
 
         >h1 {
-            font-stretch: expanded;
+            //font-stretch: expanded;
             font-weight: bold;
             font-family: 'EB Garamond', serif;
         }
@@ -154,28 +159,30 @@ const MainContainer = styled.div`
     border-radius: 10px;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
 
     @media (max-width: 1300px) {
         width: 50%;
-        height: 60vh;
+        height: 80vh;
     }
     @media (max-width: 1100px) {
         width: 55%;
-        height: 60vh;
+        height: 80vh;
     }
     @media (max-width: 900px) {
         width: 70%;
-        height: 60vh;
+        height: 72vh;
     }
     @media (max-width: 700px) {
         width: 80%;
-        height: 60vh;
+        height: 75vh;
     }
 `
 
 const WelcomeText = styled.h2`
-    margin: 3rem 0 2rem 0;
+    margin-top: 3rem;
+    margin-bottom: 5rem ;
+    font-family: 'EB Garamond', serif;
 `
 const InputContainer = styled.div`
     display: flex;
@@ -185,4 +192,13 @@ const InputContainer = styled.div`
     height: 20%;
     width: 100%;
     padding-top: 100px;
+
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: -100px;
+    }
 `
