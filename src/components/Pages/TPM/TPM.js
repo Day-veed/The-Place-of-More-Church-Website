@@ -7,33 +7,30 @@ import purpose from './purpose.jpg'
 import king from './king.jpg'
 import crowd from '../../body/crowd.jpg';
 import Card from './Card'
+import { motion } from 'framer-motion'
+import { headerAnimation, imageAnimation } from "../../Animations/Animations"
+import { useScroll } from '../../useScroll';
+import PictureExpe from './PictureExpe'
 
 function TPM() {
+  const [element, controls] = useScroll();
+
   return (
     <Container>
       <Content>
-      <PictureExp >
+      <PictureExp ref={element}>
       <img src={crowd} alt='' />
-      <div >
+      <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>PURPOSE OF THE MINISTRY<br/></h2>
         <p style={{color: "black"}}>We are a people of More, doing More for God and getting More from God.
         We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
       
-      </div>
+      </motion.div>
     </PictureExp>
-    <PictureExpe >
-      <div >
-      <Text >
-        <h2 style={{color: "#722f37"}}>VISION OF THE MINISTRY<br/></h2>
-        
-        <div></div><br/>
-        <p>To Inspire and Empower our generation to discover their purpose and fulfil their destinies to the glory of God and the advancement of His Kingdom.</p>
-      </Text>
-      </div>
-      <img src={crowd} alt='' />
-    </PictureExpe>
+    <PictureExpe />
+    
         {/*<Top>
           <Purpose>
             <h2>PURPOSE OF THE MINISTRY</h2>
@@ -483,30 +480,7 @@ const PictureExp = styled.div`
       }
     }
 `
-const PictureExpe = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: white;
-    padding-bottom: 50px;
 
-    > img {
-      width: 45%;
-      height: 450px;
-      padding-right: 100px;
-    }
-    @media (max-width: 1000px) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 50px;
-      > img {
-        width: 90%;
-        height: 400px;
-        padding-right: 0px;
-      }
-    }
-`
 
 const Text = styled.div`
   padding-left: 50px;

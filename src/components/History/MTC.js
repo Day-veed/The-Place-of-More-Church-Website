@@ -12,6 +12,9 @@ import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
+//import Images from './images';
+import images from './images';
+import './MTC.css'
 
 function MTCHistory() {
 
@@ -66,7 +69,18 @@ function MTCHistory() {
           <UpcomingPrograms>
             <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
             <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
-            <Images>
+            <motion.div className='carousel'>
+              <motion.div drag='x' dragConstraints={{right: 0, left:0}} className='inner-carousel'>
+                {images.map((image) => {
+                  return (
+                    <motion.div className='item'>
+                      <img src={image} alt='' />
+                      </motion.div>
+                  )
+                })}
+              </motion.div>
+            </motion.div>
+            {/*<Images>
               <D>
               <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
               <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Principle</motion.div>
@@ -87,7 +101,7 @@ function MTCHistory() {
               <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
               <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
               </D>
-            </Images>
+      </Images>*/}
           </UpcomingPrograms>
         </Set>
         

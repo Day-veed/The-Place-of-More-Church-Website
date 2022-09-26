@@ -17,73 +17,30 @@ import {useAnimation} from 'framer-motion';
 import Counselling from '../Counselling/counselling';
 import { headerAnimation, imageAnimation } from "../Animations/Animations"
 import { useScroll } from '../useScroll';
-import Upcomingp from './upcoming';
 
-function HomeBody() {
+function Upcomingp() {
 
-    const {ref, inView} = useInView({threshold: 0.2});
-    const animation = useAnimation();
+    //const animation = useAnimation();
     const [element, controls] = useScroll();
 
-    useEffect(() => {
-        if(inView){
-            animation.start({
-                x: 0,
-                transition: {
-                    delay: 0.5, type: 'string', stiffness: 10
-                }
-            })
-        }
-        if(!inView){
-            animation.start({x: '100vw'})
-        }
-        console.log("use effect hook, inView = ", inView);
-    }, [inView])
-
   return (
-    <>
-    <PictureExp ref={element}>
-      <img src={crowd} alt='' />
-      <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
-      <Text >
-        <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
-        <h5 style={{color: "black"}}> (Where Everything Works)</h5></h2>
-        <p style={{color: "black"}}>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
-        <div></div><br/>
-        We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
-      </Text>
-      </motion.div>
-    </PictureExp>
-    <Services />
-    <motion.Motion initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
-    {/*<Sections>
-        <ShennyGloryFoundation>
-            <motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo1} alt='' />
-            <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Shenny Glory Foundation</motion.h2>
-            <motion.h2 initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }} style={{color: "#722f37"}}>(SGF)</motion.h2>
-            <motion.p initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Shenny Glory Foundation has contributed immensely to the society through various welfare programmes and schemes.</motion.p>
-        </ShennyGloryFoundation>
-        <MoreBooksVille>
-        <img src={logo2} alt='' />
-            <h2 style={{color: "#722f37"}}>More Books Ville</h2>
-            <p>More Books Ville is the book store of The Place of More Church were you can get books on different fields to help feed your soul and increase your knowledge bank.</p>
-        </MoreBooksVille>
-        <LeadWithPsg>
-            <motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 20 }} src={logo} alt='' />
-            <motion.h2 initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 15 }} style={{color: "#722f37"}}>Upper Room</motion.h2>
-            <motion.p initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 12 }}>Upper Room is the Cildren's Ministry of Salvation Ministies that nurtures children spiritually and mentally to grow in Christ.</motion.p>
-        </LeadWithPsg>
-  </Sections>*/}
-    </motion.Motion>
-    <Upcomingp />
-    
-    </>
+    <Set ref={element}>
+    <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
+    <UpcomingPrograms>
+        <h5 style={{color: "#722f37"}}>Upcoming Programs...</h5>
+        <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
+        <Images>
+        <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow3} alt='' /></Img1>
+        <Img2><img src={ow4} alt='' /></Img2>
+        <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow5} alt='' /></Img3>
+        </Images>
+    </UpcomingPrograms>
+    </motion.div>
+    </Set>
   )
 }
 
-export default HomeBody
-
-const Motion = styled.div``
+export default Upcomingp
 
 const Set = styled.div`
     display: flex;

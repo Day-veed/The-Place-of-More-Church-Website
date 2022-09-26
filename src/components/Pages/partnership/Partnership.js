@@ -14,7 +14,7 @@ function Partnership() {
           <UsingComponents />
           <img src={Give} alt='' />
           
-          <img src={Tpm} alt='' />
+          {/*<img src={Tpm} alt='' />*/}
         </Div>
     </>
   )
@@ -27,14 +27,13 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: whitesmoke;
   margin-top: 80px;
 
   > img {
-      width: 70%;
+      width: 100%;
       height: auto;
-      
-      
+      margin-top: -162px;
     }
 
     @media (max-width: 1000px) {

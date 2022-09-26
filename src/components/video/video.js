@@ -7,8 +7,11 @@ import ow2 from '../body/ow2.jpg';
 import { Button } from "@mui/material";
 import YouTube from "react-youtube";
 import './video.css';
+import { headerAnimation, headerAnimationss, headerAnimationsss, imageAnimation } from "../Animations/Animations"
+import { useScroll } from '../useScroll';
 
 export default function Video() {
+    const [element, controls] = useScroll();
 
    function videoOnPlay (event) {
         const player = event.target
@@ -21,10 +24,11 @@ export default function Video() {
 
     return (
         <>
-        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }} className='bo'>
+        <div >
+        {/*<motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>*/}
         <FeaturedMessages >
         <h2> Featured Messages</h2>
-        <Videos>
+        <Videos >
         <VideoContainers>
                 <YouTube 
                     videoId="kVK0B1FpBnQ" 
@@ -110,10 +114,10 @@ export default function Video() {
         </Videos>
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw'>More Messages...</Button>
         </FeaturedMessages>
-        </motion.div>
+        {/*</motion.div>*/}
 
-        <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
-           {/* <T>
+        {/*<motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
+            <T>
             <h1 >Training Experience</h1>
             </T>
             
@@ -129,9 +133,10 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-    </VideoContainer>  */}  
-        </motion.div>
+    </VideoContainer>   
+    </motion.div>*/}
         
+        </div>
         </>
     );
 }

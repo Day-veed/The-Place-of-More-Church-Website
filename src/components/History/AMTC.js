@@ -12,11 +12,15 @@ import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
+//import { motion } from "framer-motion";
+import { headerAnimation, imageAnimation } from "../Animations/Animations"
+import { useScroll } from '../useScroll';
 
 function AMTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
+    const [element, controls] = useScroll();
 
     useEffect(() => {
         if(inView){
@@ -36,9 +40,9 @@ function AMTCHistory() {
   return (
     <>
     <Div>
-    <PictureExp ref={ref}>
+    <PictureExp ref={element}>
       <img src={MTC} alt='' />
-      <motion.div  animate={animation}>
+      <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>ADVANCED MINISTERIAL TRAINING COURSE <br/>
         <h5 style={{color: "black"}}> (AMTC) </h5></h2>
