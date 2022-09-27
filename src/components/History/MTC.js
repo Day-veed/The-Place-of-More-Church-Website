@@ -15,6 +15,7 @@ import { Button } from "@mui/material";
 //import Images from './images';
 import images from './images';
 import './MTC.css'
+import Carousel from '../Pages/MTC/Carousel';
 
 function MTCHistory() {
 
@@ -39,19 +40,19 @@ function MTCHistory() {
   return (
     <>
     <Div>
-    <PictureExp ref={ref}>
-      <img src={MTC} alt='' />
-      <motion.div  animate={animation}>
-      <Text >
-        <h2 style={{color: "#722f37"}}>Ministerial Training Course <br/>
-        <h5 style={{color: "black"}}> (MTC) </h5></h2>
-        <p style={{color: "black"}}>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
-          We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.
-        <br/><br/>
-        We have currently trained over 300 Ministers through the TPM Institute of Leadership.</p>
-      </Text>
-      </motion.div>
-    </PictureExp>
+      <PictureExp ref={ref}>
+        <img src={MTC} alt='' />
+        <motion.div  animate={animation}>
+        <Text >
+          <h2 style={{color: "#722f37"}}>Ministerial Training Course <br/>
+          <h5 style={{color: "black"}}> (MTC) </h5></h2>
+          <p style={{color: "black"}}>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
+            We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.
+          <br/><br/>
+          We have currently trained over 300 Ministers through the TPM Institute of Leadership.</p>
+        </Text>
+        </motion.div>
+      </PictureExp>
        <HistoryContainer>
         {/*<div>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</div>*/}
         <ServicesContainer>
@@ -68,18 +69,19 @@ function MTCHistory() {
         <Set>
           <UpcomingPrograms>
             <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
-            <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
-            <motion.div className='carousel'>
+            {/*<h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>*/}
+            
+            {/*<motion.div className='carousel'>
               <motion.div drag='x' dragConstraints={{right: 0, left:0}} className='inner-carousel'>
                 {images.map((image) => {
                   return (
                     <motion.div className='item'>
                       <img src={image} alt='' />
-                      </motion.div>
+                  </motion.div>
                   )
                 })}
               </motion.div>
-            </motion.div>
+              </motion.div>*/}
             {/*<Images>
               <D>
               <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
@@ -103,10 +105,11 @@ function MTCHistory() {
               </D>
       </Images>*/}
           </UpcomingPrograms>
+          
         </Set>
-        
+        <Carousel />
 
-        <h4> To register for MTC with the TPM Institute of Leadership, click the button bellow</h4>
+        <h4> To register for MTC with the TPM Institute of Leadership, fill the form bellow</h4>
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/jZGQXC8XKTV9Fmbd6'>Register</Button>
 
         
@@ -208,7 +211,6 @@ const Text = styled.div`
         font-weight: bold;
     }
 
-    
     @media (max-width: 1000px) {
         padding-left: 15px;
         width: auto;
@@ -220,6 +222,7 @@ const Text = styled.div`
 
 const Set = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: whitesmoke;
@@ -233,16 +236,19 @@ const UpcomingPrograms = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: -50px;
     padding-bottom: 40px;
-    
-    width: 85%;
+    background: whitesmoke;
+    width: 90%;
+    height: 100px;
    // background-clip: ;
     > p {
         padding-top: 25px;
         font-size: 38;
+        color: lightsalmon;
+        font-family: 'Roboto Condensed', sans-serif;
     }
-    >h2{
+    >h2 {
         font-weight: bold;
         font-stretch: expanded;
         padding-top: 25px;
@@ -250,7 +256,7 @@ const UpcomingPrograms = styled.div`
     @media (max-width: 1000px) {
         width: auto;
         height: auto;
-    }
+      }
 `
 const Images = styled.div`
     display: flex;
@@ -294,7 +300,7 @@ const Img3 = styled.div`
 
 const Div = styled.div`
   //background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-GqyBK6QyQbqvABxnZ1y5r2CjzVgmoIbRA&usqp=CAU");
-background: whitesmoke;
+  background: white;
   height: auto;
   width: 100%;
   display: flex;
@@ -313,7 +319,7 @@ const Facilitators = styled.div`
   color: #722f37;
   font-style: italic;
   padding-top: 70px;
-  background: white;
+  background: whitesmoke;
 }
 `
 
@@ -322,8 +328,8 @@ const HistoryContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  padding: 70px;
+  background: white;
+  //padding: 30px;
   @media screen and (max-width: 900px){
     padding: 30px;
   }

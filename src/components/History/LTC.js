@@ -54,54 +54,61 @@ function LTCHistory() {
         <ServicesContainer>
         {/*<ServicesH1>Our Services</ServicesH1>*/}
         
-      </ServicesContainer>
+        </ServicesContainer>
         {/*<About>
-        <h5>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
-          We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.</h5>
-        <h5>We have currently trained over 300 Ministers through the TPM Institute of Leadership.</h5>
-        <h5>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</h5>
-  </About>
-        <p>These teams are;</p>*/}
-        <Set>
-          <UpcomingPrograms>
-            <p style={{color: "#722f37"}}>LTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
-            <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
-            <Images>
-              <D>
-              <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
-              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Principle</motion.div>
-              </D>
-              <D>
-              <Img2><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven} alt='' /></Img2>
-              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Power</motion.div>
-              </D>
-              <D>
-              <Img3><img src={Ven3} alt='' /></Img3>
-              <div>Team Purpose</div>
-              </D>
-              <D>
-              <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
-              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Prayer</motion.div>
-              </D>
-              <D>
-              <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
-              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
-              </D>
-            </Images>
-          </UpcomingPrograms>
-        </Set>
+            <h5>MTC is a Six weeks extensive Ministerial Training Course by TPM Institute of Leadership where we train Leaders to become Ministers. 
+              We train Ministers to be Spiritual, Purposeful, Fireful, and to Serve.</h5>
+            <h5>We have currently trained over 300 Ministers through the TPM Institute of Leadership.</h5>
+            <h5>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</h5>
+            </About>
+            <p>These teams are;</p>
+            <Set>
+              <UpcomingPrograms>
+                <p style={{color: "#722f37"}}>LTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
+                <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
+                {/*<Images>
+                  <D>
+                  <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
+                  <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Principle</motion.div>
+                  </D>
+                  <D>
+                  <Img2><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven} alt='' /></Img2>
+                  <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Power</motion.div>
+                  </D>
+                  <D>
+                  <Img3><img src={Ven3} alt='' /></Img3>
+                  <div>Team Purpose</div>
+                  </D>
+                  <D>
+                  <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
+                  <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Prayer</motion.div>
+                  </D>
+                  <D>
+                  <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
+                  <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
+                  </D>
+          </Images>
+              </UpcomingPrograms>
+            </Set>*/}
         
 
-        <h4> To register for LTC with the TPM Institute of Leadership, click the button bellow</h4>
-        
-        <ButtonWrapper>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>
-            </ButtonWrapper>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>
+        <h3> To register for LTC with the TPM Institute of Leadership, fill the form bellow</h3>
+        <form>
+          <label>Blog title:</label>
+          <input type="text" required />
+          <label>blog body:</label>
+          <textarea required></textarea>
+          <label>Blog author:</label>
+          <select>
+            <option value="mario">mario</option>
+            <option value="yoshi">yoshi</option>
+          </select>
+          <button>Add Blog</button>
+        </form>
 
-        
+  
+        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>  
       </HistoryContainer>
-
     </Div>
     <Facilitators>
       <div>Training Facilitators</div>
@@ -124,8 +131,7 @@ function LTCHistory() {
             <ServicesP>Assistant Director of Training(MTC)</ServicesP>
           </ServicesCard>
         </ServicesWrapper>
-    </ServicesContainer>
-
+      </ServicesContainer>
     </Facilitators>
     </>
     
@@ -238,6 +244,7 @@ const UpcomingPrograms = styled.div`
     > p {
         padding-top: 25px;
         font-size: 38;
+        font-family: 'Roboto Condensed', sans-serif;
     }
     >h2{
         font-weight: bold;
@@ -333,9 +340,10 @@ const HistoryContainer = styled.div`
   >h1 {
     color: #722f37;
   }
-  >h4 {
+  >h3 {
 color: lightsalmon;
-font-size: 18px;
+font-family: 'Roboto Condensed', sans-serif;
+//font-size: 18px;
   }
   >h5 {
     color: gold;

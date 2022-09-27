@@ -58,7 +58,7 @@ export default function Video() {
             </VideoContainers>  
             <VideoContainers>
                 <YouTube 
-                    videoId="gmh30xw5YpI" 
+                    videoId="re1DNozxW-8" 
                     opts={opts} 
                     onPlay
                     onReady={() => console.log('onready callback')}
@@ -67,7 +67,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h4>Strategic Leadership</h4>
+                <h4>Ministers Conference</h4>
             </VideoContainers>  
         </Videos>
         <Videos>

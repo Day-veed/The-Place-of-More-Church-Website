@@ -2,7 +2,7 @@ import React from 'react'
 import './Form.css'
 import styled from 'styled-components';
 import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
-import Input from './Input';
+import Input, { Option } from './Input';
 import { Button } from '@mui/material';
 
 function Counselling() {
@@ -18,20 +18,27 @@ function Counselling() {
             <h3 style={{color: "#fff"}}>Complete the form to book for an appointment or call (+234) 8012345678.</h3>
             </D>
         </CounsellingText>
-        <MainContainer>
+        <form>
             <WelcomeText>Appointment Form</WelcomeText>
             <InputContainer>
                 <Input type='text' placeholder="Name"/>
                 <Input type='text' placeholder="Email"/>
                 <Input type='text' placeholder="Phone Number"/>
                 <Input type='text' placeholder="Message"/>
-                <Input type='text' placeholder="Select"/>
+                <select>
+                    
+                    <option value="Marriage">Marriage</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Spiritual">Spiritual</option>
+                    <option value="Academic">Academic</option>
+                    
+                </select>
                 <div>
                 <Button style={{backgroundColor:'blue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
                 </div>
             </InputContainer>
             
-        </MainContainer>
+        </form>
         </Div>
     </div>
 
@@ -89,6 +96,38 @@ const Div = styled.div`
 
     @media (max-width: 1100px) {
         flex-direction: column;
+    }
+
+    >form {
+        display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+    @media (max-width: 1300px) {
+        width: 50%;
+        height: 80vh;
+    }
+    @media (max-width: 1100px) {
+        width: 55%;
+        height: 80vh;
+    }
+    @media (max-width: 900px) {
+        width: 70%;
+        height: 72vh;
+    }
+    @media (max-width: 700px) {
+        width: 80%;
+        height: 75vh;
+    }
     }
 `
 
@@ -201,4 +240,27 @@ const InputContainer = styled.div`
         margin-top: 50px;
         margin-bottom: -100px;
     }
+
+    >select {
+        width: 80%;
+        height: 3rem;
+        padding: 0.7rem;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 2rem;
+        font-family: 'EB Garamond', serif;
+        color: black;
+        font-size: 20px;
+    }
+`
+const Select = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    padding-top: 100px;
 `

@@ -25,7 +25,7 @@ function LTC() {
       <CarouselContainer />
       <Promotions />
       <LTCHistory />
-      <Carousel />
+      {/*<Carousel />*/}
       <H>
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
