@@ -18,6 +18,12 @@ function LTCHistory() {
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
 
+    const onChange = (e) => {
+      //const {value = e.target};
+
+      //setName(value)
+    }
+
     useEffect(() => {
         if(inView){
             animation.start({
@@ -94,16 +100,16 @@ function LTCHistory() {
 
         <h3> To register for LTC with the TPM Institute of Leadership, fill the form bellow</h3>
         <form>
-          <label>Blog title:</label>
-          <input type="text" required />
-          <label>blog body:</label>
-          <textarea required></textarea>
-          <label>Blog author:</label>
+          
+          <input placeholder='FULL NAME' type="text" required />
+          <input placeholder='EMAIL' type="text" required />
+          <input placeholder='WHATSAPP NUMBER' type="text" required />
+          
           <select>
-            <option value="mario">mario</option>
-            <option value="yoshi">yoshi</option>
+            <option value="mario">Yes</option>
+            <option value="yoshi">No</option>
           </select>
-          <button>Add Blog</button>
+          <button>Register</button>
         </form>
 
   
