@@ -95,7 +95,7 @@ function LTCHistory() {
                   </D>
           </Images>
               </UpcomingPrograms>
-            </Set>.*/}
+            </Set>*/}
         
 
         <h3> To register for LTC with the TPM Institute of Leadership, fill the form bellow</h3>
