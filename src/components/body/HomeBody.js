@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import ow1 from './ow1.jpg';
-import ow2 from './ow2.jpg';
+import TPM from './TPM.jpg';
+import PMS from './PMS.png';
 import ow3 from './ow3.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
@@ -43,7 +43,7 @@ function HomeBody() {
   return (
     <>
     <PictureExp ref={element}>
-      <img src={crowd} alt='' />
+      <img src={PMS} alt='' />
       <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
@@ -187,8 +187,8 @@ const PictureExp = styled.div`
     background-color: white;
     padding-bottom: 70px;
     > img {
-      width: 55%;
-      height: 400px;
+      width: 70%;
+      height: 490px;
       padding-left: 150px;
       
     }

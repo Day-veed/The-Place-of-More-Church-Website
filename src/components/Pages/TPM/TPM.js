@@ -6,7 +6,7 @@ import value from './value.jpg'
 import purpose from './purpose.jpg'
 import king from './king.jpg'
 import crowd from '../../body/crowd.jpg';
-import Card from './Card'
+import TPm from './TPM.jpg'
 import { motion } from 'framer-motion'
 import { headerAnimation, imageAnimation } from "../../Animations/Animations"
 import { useScroll } from '../../useScroll';
@@ -19,7 +19,7 @@ function TPM() {
     <Container>
       <Content>
       <PictureExp ref={element}>
-      <img src={crowd} alt='' />
+      <img src={TPm} alt='' />
       <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>PURPOSE OF THE MINISTRY<br/></h2>

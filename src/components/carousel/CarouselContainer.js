@@ -4,8 +4,8 @@
   import img2 from '../Image/img2.jpg';
   import img3 from '../Image/img3.jpg';
   import img4 from '../Image/img4.jpg';
-  import img5 from '../Image/img5.jpg';
-  import img6 from '../Image/img6.jpg';
+  import Path from './02.jpg';
+  import img5 from '../Image/img6.jpg';
   import img7 from '../Image/img7.jpg';
   import "./CarouselContainer.css"
   
@@ -16,7 +16,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img}
+                src={Path}
                 alt="First slide"
                 />
                 <Carousel.Caption>
@@ -27,7 +27,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img2} 
+                src={img3} 
                 alt="Second slide"
                 />
                 <Carousel.Caption>
@@ -38,7 +38,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img3}
+                src={img5}
                 alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -71,7 +71,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img6}
+                src={img7}
                 alt="Sixth slide"
                 />
                 <Carousel.Caption>
@@ -82,7 +82,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img7}
+                src={img}
                 alt="Seventh slide"
                 />
                 <Carousel.Caption>

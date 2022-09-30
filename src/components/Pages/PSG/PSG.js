@@ -1,6 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Psg from './PSG.jpg'
+import Psg1 from './SGF-35.jpg'
+import Psg2 from './SGF-47.jpg'
+import Psg3 from './SGF-80.JPG'
+import Psg4 from './SGF-106.JPG'
+import Psg5 from './SGF-121.JPG'
+import Psg6 from './SGF-1.jpg'
+import Psg7 from './SGF-2.jpg'
 
 function PSG() {
   return (
@@ -43,6 +50,13 @@ function PSG() {
 <h1 style={{color: "#722f37"}}>SHENNY GLORY FOUNDATION (SGF)</h1>
 <p>Shenny Glory Foundation is the brainchild of Pastor Shenny Glory, the Lead Pastor at The Place of More Church, Mentor and Business Strategist</p>
 <p>It is committed to rewarding Excellence, Restoring Hope and positively adding values to impact the lives of the people.</p>
+<img src={Psg1} alt='' />
+<img src={Psg2} alt='' />
+<img src={Psg3} alt='' />
+<img src={Psg4} alt='' />
+<img src={Psg5} alt='' />
+<img src={Psg6} alt='' />
+<img src={Psg7} alt='' />
 </Sgf>
     </About>
     </Div>
@@ -54,6 +68,10 @@ export default PSG
 const Sgf = styled.div`
   background: whitesmoke;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   >h1 {
     //font-size: 20px;
@@ -65,6 +83,103 @@ const Sgf = styled.div`
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
   }
+  > img {
+      width: 80%;
+      height: 700px;
+      padding-left: 100px;
+      padding-bottom: 40px;
+      
+  }
+
+  @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      > img {
+        width: 80%;
+        height: 590px;
+        padding-left: 0px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      > img {
+        width: 95%;
+        height: 550px;
+        padding-left: 0px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      padding-bottom: 50px;
+      > img {
+        width: 80%;
+        height: 590px;
+        padding-left: 0px;
+      }
+    }
+`
+const PictureExpee = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-bottom: 70px;
+    background-color: white;
+    margin-top: -100px;
+    
+    > img {
+      width: 59%;
+      height: 700px;
+      padding-left: 100px;
+      padding-bottom: 40px;
+      
+    }
+  
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      > img {
+        width: 80%;
+        height: 590px;
+        padding-left: 0px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      > img {
+        width: 95%;
+        height: 550px;
+        padding-right: 0px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      padding-bottom: 50px;
+      > img {
+        width: 100%;
+        height: 550px;
+        padding-right: 0px;
+      }
+    }
 `
 
 const About = styled.div`
@@ -74,7 +189,7 @@ const About = styled.div`
   align-items: flex-start;
   background: whitesmoke;
   //padding: 10px;
-  padding-top: 130px;
+  //padding-top: 130px;
 
   >p {
     font-size: 20px;
@@ -114,7 +229,7 @@ const PictureExp = styled.div`
     background: whitesmoke;
     
     > img {
-      width: 75%;
+      width: 59%;
       height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
@@ -166,7 +281,7 @@ const PictureExpe = styled.div`
     margin-top: -100px;
     
     > img {
-      width: 75%;
+      width: 59%;
       height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
@@ -213,8 +328,8 @@ const PictureExpe = styled.div`
 
 const Text = styled.div`
   padding-left: 10px;
-  padding-top: 70px;
-  width: 85%;
+  padding-top: 100px;
+  width: 70%;
   
     > h2 {
         display: flex;

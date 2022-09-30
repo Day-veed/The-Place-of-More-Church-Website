@@ -7,6 +7,11 @@ import Ven2 from '../body/Ven2.png';
 import Ven3 from '../body/Ven3.png'; 
 import Ven from '../body/Ven.png'; 
 import MTC from '../body/MTC.jpg'; 
+import Power from './Power.jpg';
+import Purpose from './Purpose.jpg';
+import prayer from './prayer.jpg'; 
+import principle from './principle.jpg'; 
+import passion from './passion.jpg'; 
 import { motion } from 'framer-motion'
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
@@ -68,7 +73,7 @@ function MTCHistory() {
         <p>These teams are;</p>*/}
         <Set>
           <UpcomingPrograms>
-            <p style={{color: "#722f37"}}>MTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
+            <p style={{color: "#722f37"}}></p>
             {/*<h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>*/}
             
             {/*<motion.div className='carousel'>
@@ -107,15 +112,64 @@ function MTCHistory() {
           </UpcomingPrograms>
           
         </Set>
-        <Carousel />
+        {/*<Carousel />*/}
 
-        <h4> To register for MTC with the TPM Institute of Leadership, fill the form bellow</h4>
-        <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/jZGQXC8XKTV9Fmbd6'>Register</Button>
+        
 
         
       </HistoryContainer>
 
     </Div>
+
+    <Mandate>
+          <h1>MTC is divided into five teams during the training with Pastor in Charge and Team Leads. </h1>
+          <h2>These Teams Are... </h2>
+          <Mandates>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Team Power</h3>
+              <img src={Power} className='w-100 border-bottom' alt='Mandate' />
+                
+              </div>
+            </div>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Team Purpose</h3>
+                <img src={Purpose} className='w-100 border-bottom' alt='Mandate' />
+                
+              </div>
+            </div>
+            </Mandatess>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Team Prayer</h3>
+                <img src={prayer} className='w-100 border-bottom' alt='Mandate' />
+                
+              </div>
+            </div>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Team Principle</h3>
+                <img src={principle} className='w-100 border-bottom' alt='Mandate' />
+                
+              </div>
+            </div>
+            </Mandatess>
+            <Mandatess>
+            <div className='col-md-4'>
+              <div className='card shadow'>
+              <h3>Team Passion</h3>
+                <img src={passion} className='w-100 border-bottom' alt='Mandate' />
+                
+              </div>
+            </div>
+            
+            </Mandatess>
+            
+            </Mandates>
+            </Mandate>
     <Facilitators>
       <div>Training Facilitators</div>
       <ServicesContainer>
@@ -147,6 +201,165 @@ function MTCHistory() {
 
 export default MTCHistory
 
+const Mandatess = styled.div`
+  display: flex;
+  //flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: whitesmoke;
+  padding: 25px;
+  margin-top: -100px;
+  margin-bottom: 50px;
+
+  >div{
+    width: 450px;
+    margin: 20px;
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      >h3 {
+        color: #722f37;
+        margin-top: 25px;
+        margin-bottom: -30px;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      >img {
+        height: 400px;
+        width: 250px;
+        margin-top: -50px;
+      }
+      >div {
+          >p{
+            font-weight: 500;
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
+    }
+  }
+
+  @media screen and (max-width: 960px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-top: 0px;
+  }
+`
+const Mandatesss = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: whitesmoke;
+  padding: 25px;
+
+  >div{
+    width: 450px;
+    display: flex;
+    padding-bottom: 50px;
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      >h3 {
+        color: #722f37;
+        margin-top: 40px;
+        margin-bottom: -30px;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      >img {
+        height: 300px;
+        width: 250px;
+        margin-top: -10px;
+      }
+      >div {
+          >p{
+            font-weight: bold;
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
+    }
+  }
+`
+
+const Mandates = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  padding: 100px;
+
+  >h5 {
+    //padding: 30px;
+    //color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  >h2{
+    //color: #722f37;
+    //padding: 30px;
+    //padding-left: 190px;
+    font-family: 'Playfair Display', serif;
+  }
+  >h4{
+    //color: white;
+    padding-left: 150px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @media screen and (max-width: 960px){
+    padding: 90px;
+  }
+
+  @media screen and (max-width: 800px){
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 600px){
+    padding: 2px;
+  }
+`
+
+const Mandate = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  padding: 15px;
+  //padding-bottom: 30px;
+
+  >h5 {
+    //padding: 30px;
+    //color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  >h2{
+    color: grey;
+    font-weight: bold;
+    //padding-top: 50px;
+    font-size: 20px;
+    //padding-left: 190px;
+    font-family: 'Playfair Display', serif;
+  }
+  >h1{
+    color: #722f37;
+    //padding-top: 50px;
+    font-size: 24px;
+    //padding-left: 190px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+  }
+  >h4{
+    //color: white;
+    padding-left: 150px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @media screen and (max-width: 600px){
+    padding-bottom: 0px;
+  }
+`
 
 const D = styled.div`
 display: flex;
@@ -236,7 +449,7 @@ const UpcomingPrograms = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
     padding-bottom: 40px;
     background: whitesmoke;
     width: 90%;
@@ -244,7 +457,8 @@ const UpcomingPrograms = styled.div`
    // background-clip: ;
     > p {
         padding-top: 25px;
-        font-size: 38;
+        font-size: 18;
+        margin-bottom: -50px;
         color: lightsalmon;
         font-family: 'Roboto Condensed', sans-serif;
     }
@@ -256,6 +470,14 @@ const UpcomingPrograms = styled.div`
     @media (max-width: 1000px) {
         width: auto;
         height: auto;
+
+        > p {
+        padding-top: 25px;
+        font-size: 18;
+        margin-bottom: -50px;
+        color: lightsalmon;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
       }
 `
 const Images = styled.div`
@@ -300,7 +522,7 @@ const Img3 = styled.div`
 
 const Div = styled.div`
   //background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-GqyBK6QyQbqvABxnZ1y5r2CjzVgmoIbRA&usqp=CAU");
-  background: white;
+  background: whitesmoke;
   height: auto;
   width: 100%;
   display: flex;
@@ -308,7 +530,7 @@ const Div = styled.div`
   align-items: center;
   //box-shadow: inset 0 0 0 1000px rgba(0, 0, 0.2);
   object-fit: contain;
-  padding-top: 10px;
+  padding-top: 20px;
 `
 const Facilitators = styled.div`
 >div {
@@ -319,7 +541,8 @@ const Facilitators = styled.div`
   color: #722f37;
   font-style: italic;
   padding-top: 70px;
-  background: whitesmoke;
+  background: white;
+  font-family: 'Playfair Display', serif;
 }
 `
 
@@ -328,7 +551,7 @@ const HistoryContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: whitesmoke;
   //padding: 30px;
   @media screen and (max-width: 900px){
     padding: 30px;
