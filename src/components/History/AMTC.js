@@ -44,7 +44,7 @@ function AMTCHistory() {
       <img src={MTC} alt='' />
       <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
-        <h2 style={{color: "#722f37"}}>ADVANCED MINISTERIAL TRAINING COURSE <br/>
+        <h2 style={{color: "#722f37"}}>ADVANCED MINISTERIAL TRAINING <br/> <h2 style={{color: "#722f37"}}>COURSE </h2><br/>
         <h5 style={{color: "black"}}> (AMTC) </h5></h2>
         <p style={{color: "black"}}>AMTC is an eight weeks extensive Training Course by TPM Institute of Leadership for people who have a call into Ministry. 
         For everyone who has a call into any ministry, then this training is for you. 
@@ -66,34 +66,7 @@ function AMTCHistory() {
         <h5>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</h5>
   </About>
         <p>These teams are;</p>*/}
-        <Set>
-          <UpcomingPrograms>
-            <p style={{color: "#722f37"}}>LTC is divided into five teams during the training with Pastor in Charge and Team Leads</p>
-            <h2 style={{color: "gray", fontStyle: 'italic'}}>These teams are...</h2>
-            <Images>
-              <D>
-              <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven2} alt='' /> </Img1>
-              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Principle</motion.div>
-              </D>
-              <D>
-              <Img2><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven} alt='' /></Img2>
-              <motion.div initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Power</motion.div>
-              </D>
-              <D>
-              <Img3><img src={Ven3} alt='' /></Img3>
-              <div>Team Purpose</div>
-              </D>
-              <D>
-              <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
-              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Prayer</motion.div>
-              </D>
-              <D>
-              <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={Ven3} alt='' /></Img3>
-              <motion.div initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }}>Team Passion</motion.div>
-              </D>
-            </Images>
-          </UpcomingPrograms>
-        </Set>
+        
         
 
         <h4> To register for AMTC with the TPM Institute of Leadership, click the button bellow</h4>
@@ -178,13 +151,18 @@ const Text = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 28px;
         font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
-        padding-left: 25px;
+
+        >h2{
+          font-family: 'Roboto Condensed', sans-serif;
+          font-style: inherit;
+          font-weight: bold;
+        }
 
         >h5 {
+          margin-top: -25px;
         font-family: 'Playfair Display', serif;
         font-weight: bold;
         //font-family: 'Roboto Condensed', sans-serif;
@@ -207,6 +185,9 @@ const Text = styled.div`
         width: auto;
       > p {
         width: 98%;
+      }
+      >h2{
+        //font-size: 21px;
       }
     }
 `

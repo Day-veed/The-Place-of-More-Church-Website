@@ -50,13 +50,21 @@ function PSG() {
 <h1 style={{color: "#722f37"}}>SHENNY GLORY FOUNDATION (SGF)</h1>
 <p>Shenny Glory Foundation is the brainchild of Pastor Shenny Glory, the Lead Pastor at The Place of More Church, Mentor and Business Strategist</p>
 <p>It is committed to rewarding Excellence, Restoring Hope and positively adding values to impact the lives of the people.</p>
+<div>
 <img src={Psg1} alt='' />
 <img src={Psg2} alt='' />
+</div>
+<div>
 <img src={Psg3} alt='' />
 <img src={Psg4} alt='' />
+</div>
+<div>
 <img src={Psg5} alt='' />
 <img src={Psg6} alt='' />
+</div>
+<Divv>
 <img src={Psg7} alt='' />
+</Divv>
 </Sgf>
     </About>
     </Div>
@@ -72,6 +80,7 @@ const Sgf = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   >h1 {
     //font-size: 20px;
@@ -84,49 +93,98 @@ const Sgf = styled.div`
     font-family: 'Roboto Condensed', sans-serif;
   }
   > img {
-      width: 80%;
+      width: 40%;
       height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
       
   }
 
+  >div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 59%;
+      height: 500px;
+      padding: 20px;
+      padding-bottom: 40px;    
+    }
+  }
+
   @media (max-width: 1000px) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 50px;
-      > img {
-        width: 80%;
-        height: 590px;
-        padding-left: 0px;
-      }
+    padding: 0px;
+    >h1{
+      padding: 20px;
+    }
+    >p{
+      padding: 20px;
+    }
+    >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 70%;
+      height: 500px;
+      padding: 20px;
+      padding-bottom: 40px;    
+    }
+  }
     }
 
     @media (max-width: 800px) {
+      padding: 0px;
+      >div {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-bottom: 50px;
       > img {
-        width: 95%;
-        height: 550px;
-        padding-left: 0px;
+        width: 90%;
+        height: 500px;
+        padding: 20px;
+        padding-bottom: 40px;    
       }
+    }
     }
 
     @media (max-width: 600px) {
+      padding: 0px;
+      >h1{
+        margin-top: 20px;
+        margin-bottom: -15px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      >p{
+        font-size: 18px;
+      }
+      >div {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 15px;
-      padding-bottom: 50px;
       > img {
-        width: 80%;
-        height: 590px;
-        padding-left: 0px;
+        width: 100%;
+        height: 450px;
+        padding: 20px;
+        padding-bottom: 40px;    
       }
     }
+    }
+  
+`
+const Divv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    width: 70%;
+    height: 700px;
+    padding-bottom: 40px;  
+  }
 `
 const PictureExpee = styled.div`
     display: flex;
@@ -187,7 +245,8 @@ const About = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background: whitesmoke;
+  background: white;
+  padding-top: 100px;
   //padding: 10px;
   //padding-top: 130px;
 
@@ -211,7 +270,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  //padding: 70px;
   background: white;
   padding-top: 80px;
 
@@ -229,20 +288,22 @@ const PictureExp = styled.div`
     background: whitesmoke;
     
     > img {
-      width: 59%;
+      width: 50%;
       height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
       
     }
-    @media (max-width: 1000px) {
+    
+    @media (max-width: 1150px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-bottom: 50px;
+      padding-bottom: 20px;
+      margin-bottom: 5px;
       > img {
-        width: 80%;
-        height: 590px;
+        width: 70%;
+        height: 700px;
         padding-left: 0px;
       }
     }
@@ -252,9 +313,10 @@ const PictureExp = styled.div`
       justify-content: center;
       align-items: center;
       padding-bottom: 50px;
+      margin-bottom: 20px;
       > img {
-        width: 95%;
-        height: 550px;
+        width: 85%;
+        height: 599px;
         padding-left: 0px;
       }
     }
@@ -266,8 +328,8 @@ const PictureExp = styled.div`
       padding: 15px;
       padding-bottom: 50px;
       > img {
-        width: 80%;
-        height: 590px;
+        width: 100%;
+        height: 599px;
         padding-left: 0px;
       }
     }
@@ -281,11 +343,25 @@ const PictureExpe = styled.div`
     margin-top: -100px;
     
     > img {
-      width: 59%;
+      width: 50%;
       height: 700px;
-      padding-left: 100px;
+      padding-right: 100px;
       padding-bottom: 40px;
       
+    }
+
+    @media (max-width: 1150px) {
+      margin-top: 55px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+      margin-top: 80px;
+      > img {
+        width: 70%;
+        height: 700px;
+        padding-left: 0px;
+      }
     }
   
     @media (max-width: 1000px) {
@@ -293,9 +369,10 @@ const PictureExpe = styled.div`
       justify-content: center;
       align-items: center;
       padding-bottom: 50px;
+      margin-top: 40px;
       > img {
-        width: 80%;
-        height: 590px;
+        width: 70%;
+        height: 700px;
         padding-left: 0px;
       }
     }
@@ -304,10 +381,11 @@ const PictureExpe = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 40px;
       padding-bottom: 50px;
       > img {
-        width: 95%;
-        height: 550px;
+        width: 85%;
+        height: 599px;
         padding-right: 0px;
       }
     }
@@ -317,19 +395,23 @@ const PictureExpe = styled.div`
       justify-content: center;
       align-items: center;
       padding: 15px;
-      padding-bottom: 50px;
+      width: 100%;
+
       > img {
         width: 100%;
-        height: 550px;
+        height: 599px;
+        margin-top: -80px;
         padding-right: 0px;
       }
     }
 `
 
 const Text = styled.div`
+  padding: 50px;
   padding-left: 10px;
   padding-top: 100px;
   width: 70%;
+  //padding: 20px;
   
     > h2 {
         display: flex;
@@ -350,10 +432,26 @@ const Text = styled.div`
         font-size: 18px;
         font-family: 'Roboto Condensed', sans-serif;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
         padding-left: 0px;
         padding-top: 30px;
         width: 100%;
+        padding: 20px;
+      > p {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0px;
+        font-size: 18px;
+        margin-top: -20px;
+        //font-family: 'Playfair Display', serif;
+      }
+    }
+    @media (max-width: 800px) {
+        padding-left: 0px;
+        padding-top: 30px;
+        width: 100%;
+        padding: 20px;
       > p {
         width: 100%;
         padding-left: 0px;
@@ -364,7 +462,7 @@ const Text = styled.div`
     }
     @media (max-width: 600px) {
         padding-left: 0px;
-        padding-top: 30px;
+        padding-top: 10px;
         width: 100%;
       > p {
         padding-top: 15px;
@@ -373,8 +471,9 @@ const Text = styled.div`
     }
 `
 const Textt = styled.div`
-  padding-left: 10px;
-  padding-top: 120px;
+  padding: 80px;
+  padding-left: 100px;
+  padding-top: 150px;
   width: 70%;
   
     > h2 {
@@ -387,7 +486,7 @@ const Textt = styled.div`
         font-weight: bold;
     }
     > p {
-        display: flex;
+        //display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -396,16 +495,32 @@ const Textt = styled.div`
         font-size: 18px;
         font-family: 'Roboto Condensed', sans-serif;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
+      //padding: 40px;
+      padding: 0px;
+      padding-left: 0px;
+      //padding-top: 30px;
+      width: 100%;
+      > p {
+        width: 100%;
+        //padding: 20px;
+        padding: 0px;
+        padding-left: 0px;
+        padding: 15px;
+        font-size: 18px;
+        margin-top: -50px;
+        //font-family: 'Playfair Display', serif;
+      }
+      @media (max-width: 600px) {
         padding-left: 0px;
         padding-top: 30px;
         width: 100%;
       > p {
-        width: 100%;
+        padding-top: 20px;
         padding-left: 0px;
-        font-size: 18px;
-        margin-top: -20px;
+        width: 100%;
         //font-family: 'Playfair Display', serif;
       }
+    }
     }
 `

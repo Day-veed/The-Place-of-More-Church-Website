@@ -98,10 +98,10 @@ const PreFooter = styled.div`
     background: whitesmoke;
     
 
-    @media screen and (max-width: 960px){
+    @media screen and (max-width: 1100px){
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         padding-left: 20px;
     }
 `
@@ -134,14 +134,17 @@ const GetInTouch = styled.div`
         font-family: 'EB Garamond', serif;
     }
 
-    @media screen and (max-width: 960px){
+    @media screen and (max-width: 1100px){
         padding: 10px;
+        width: 80%;
+        background: white;
     }
 `
 
 const GetInTouchh = styled.div`
     padding: 15px;
     font-family: 'EB Garamond', serif;
+    
 
     >h3 {
         font-family: 'EB Garamond', serif;
@@ -155,14 +158,17 @@ const GetInTouchh = styled.div`
         font-family: 'EB Garamond', serif;
     }
 
-    @media screen and (max-width: 960px){
+    @media screen and (max-width: 1100px){
         padding: 10px;
+        width: 80%;
+        background: white;
     }
 `
 
 const GetInTouchhh = styled.div`
     padding: 15px;
     font-family: 'EB Garamond', serif;
+    
 
     >h3 {
         font-family: 'EB Garamond', serif;
@@ -176,7 +182,10 @@ const GetInTouchhh = styled.div`
         font-family: 'EB Garamond', serif;
     }
 
-    @media screen and (max-width: 960px){
+    @media screen and (max-width: 1100px){
         padding: 10px;
+        width: 80%;
+        background: white;
+        margin-bottom: 10px;
     }
 `

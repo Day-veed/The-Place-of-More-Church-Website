@@ -313,16 +313,18 @@ const Mandatess = styled.div`
   //flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   padding: 25px;
 
   >div{
     width: 450px;
-    margin: 20px;
+    margin: 70px;
+    margin-top: -70px;
     >div {
       display: flex;
       justify-content: center;
       align-items: center;
+      background: whitesmoke;
       >h3 {
         color: #722f37;
         margin-top: 40px;
@@ -354,17 +356,20 @@ const Mandatesss = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   padding: 25px;
 
   >div{
     width: 450px;
     display: flex;
     padding-bottom: 50px;
+    margin-top: -15%;
+    
     >div {
       display: flex;
       justify-content: center;
       align-items: center;
+      background: whitesmoke;
       >h3 {
         color: #722f37;
         margin-top: 40px;
@@ -391,7 +396,7 @@ const Mandates = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   padding: 100px;
 
   >h5 {

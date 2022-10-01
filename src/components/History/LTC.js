@@ -12,16 +12,29 @@ import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { db } from "../../firebase";
+import firebase from 'firebase/compat/app';
 
 function LTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
 
-    const onChange = (e) => {
-      //const {value = e.target};
+    const { register, handleSubmit, watch, errors } =useForm();
+    const dispatch = useDispatch();
 
-      //setName(value)
+    const onSubmit = (formData) => {
+        console.log(formData);
+        db.collection('emails').add({
+            to: formData.to,
+            subject: formData.subject,
+            message: formData.message,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        })
+
+        //dispatch(closeSendMessage());
     }
 
     useEffect(() => {
@@ -38,6 +51,7 @@ function LTCHistory() {
         }
         console.log("use effect hook, inView = ", inView);
     }, [inView])
+    
 
   return (
     <>
@@ -99,17 +113,23 @@ function LTCHistory() {
         
 
         <h3> To register for LTC with the TPM Institute of Leadership, fill the form bellow</h3>
-        <form>
+        <form onSubmit={ handleSubmit(onSubmit)}>
           
-          <input placeholder='FULL NAME' type="text" required />
-          <input placeholder='EMAIL' type="text" required />
-          <input placeholder='WHATSAPP NUMBER' type="text" required />
-          
+          <input placeholder='FULL NAME' id='name' type="text" {...register('message', { required: true})} />
+          {errors.name && <p className='sendMail__error'>Name is Required!</p>}
+          <input placeholder='EMAIL' id='email' type="text" {...register('to', { required: true})} />
+          {errors.email && <p className='sendMail__error'>Email is Required!</p>}
+          <input placeholder='WHATSAPP NUMBER' id='number' type="text" {...register('message', { required: true})} />
+          {errors.number && <p className='sendMail__error'>WhatsApp Number is Required!</p>}
+
           <select>
             <option value="mario">Yes</option>
             <option value="yoshi">No</option>
           </select>
-          <button>Register</button>
+
+          <div className='register__option'>
+            <Button className='register' variant='contained' color='primary' type='submit'>Register</Button>
+          </div>
         </form>
 
   
@@ -183,6 +203,7 @@ const PictureExp = styled.div`
       > img {
         width: 80%;
         padding-left: 0px;
+        margin-top: -50px;
       }
     }
 `

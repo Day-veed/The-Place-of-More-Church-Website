@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CarouselContainer from '../../carousel/CarouselContainer'
 import Promotions from '../../promotions/messages'
 import ReactPlayer from 'react-player'
@@ -9,6 +9,9 @@ import MTCHistory from '../../History/MTC'
 import Carousel from './Carousel'
 import LTCHistory from '../../History/LTC'
 import AMTCHistory from '../../History/AMTC'
+import testimonial from './data'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import { MdArrowBack, MdArrowForward } from 'react-icons/md'
 /*import Video from './video/video'
 import Appbar from './appbar'
 import CarouselContainer from './carousel/CarouselContainer'
@@ -21,12 +24,29 @@ import Navbar from './Navbar'
 import HomeBody from './body/HomeBody'*/
 
 function AMTC() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeSlide = testimonial[activeIndex];
+
+  function handlePrev(){
+    if(activeIndex <= 0){
+      setActiveIndex(testimonial.length -1);
+    } else {
+      setActiveIndex((oldIndex) => oldIndex - 1);
+    }
+  }
+  function handleNext(){
+    if(activeIndex >= testimonial.length -1){
+      setActiveIndex(0);
+    }else{
+      setActiveIndex((oldIndex) => oldIndex + 1);
+    }
+  }
   return (
     <>
       <CarouselContainer />
       <Promotions />
       <AMTCHistory />
-      <Carousel />
+      
       <H>
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
@@ -63,12 +83,181 @@ function AMTC() {
         </VideoContainer>
       </motion.div>
       </H>
-      
+      <Testimonial>
+        <Container>
+          <h2>Testimonials</h2>
+          <p>See what our trainees have to say about us</p>
+        <TestimonialWrapper>
+          <SwitchTransition>
+            <CSSTransition
+              key={activeSlide.id}
+              timeout={300} classNames="fade"
+            >
+              <TestimonialInfo>
+                <TestimonialDesc>
+                  <p>
+                    {activeSlide.desc}
+                  </p>
+                </TestimonialDesc>
+                <TestimonialName>
+                  {activeSlide.name}
+                </TestimonialName>
+                <TestimonialTitle>
+                  {activeSlide.title} {activeSlide.org}
+                </TestimonialTitle>
+              </TestimonialInfo>
+            </CSSTransition>
+          </SwitchTransition>
+        </TestimonialWrapper>
+        <Arrows>
+          <Prev
+            onClick={handlePrev}
+            role='button'
+            tabIndex={0}
+            onKeyDown={handlePrev}
+          >
+            <MdArrowBack />
+          </Prev>
+          <Next
+            onClick={handleNext}
+            role='button'
+            tabIndex={0}
+            onKeyDown={handleNext}
+          >
+            <MdArrowForward />
+          </Next>
+        </Arrows>
+        </Container>
+      </Testimonial>
     </>
   )
 }
 
 export default AMTC
+
+const Container = styled.div`
+margin-top: -70px;
+padding: 10px;
+  >p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+  }
+  >h2{
+    font-family: 'Playfair Display', serif;
+    color: #722f37;
+    font-size: 38px;
+  }
+`
+const TestimonialWrapper = styled.div`
+  position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    background: whitesmoke;
+    border-radius: 10px;
+`
+const TestimonialInfo = styled.div`
+  width: 100%;
+    height: fit-content;
+    padding: 3rem;
+    background-color: var(--deep-dark);
+    border-radius: 12px;
+    //margin-top: 5rem;
+`
+const TestimonialDesc = styled.div`
+  >p{
+    color: #722f37;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+`
+const TestimonialName = styled.div`
+  //margin-top: 4rem;
+    font-family: 'Montserrat Bold';
+    font-size: 1.5rem;
+    padding-top: 20px;
+    color: grey;
+`
+const TestimonialTitle = styled.div`
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+  font-family: 'Roboto Condensed', sans-serif;
+`
+const Arrows = styled.div`
+  //margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: -70px;
+    svg{
+      width: 30px;
+      pointer-events: none;
+    }
+    .next,
+    .prev{
+      margin: 0 0.5rem;
+      width: fit-content;
+      background-color: var(--deep-dark);
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .fade-enter{
+      opacity: 0;
+      transform: scale(.96);
+    }
+    .fade-enter-active{
+      opacity: 1;
+      transition: 250ms ease-in opacity;
+      transform: scale(1);
+      transition-property: opacity, transform;
+    }
+    .fade-exit{
+      opacity: 1;
+      transform: scale(1);
+    }
+    .fade-exit-active{
+      opacity: 0;
+      transition: 250ms ease-in opacity, transform;
+      transform: scale(.96);
+    }
+  
+`
+const Prev = styled.div`
+  //margin: 0 0.5rem;
+      width: fit-content;
+      background-color: var(--deep-dark);
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      background: whitesmoke;
+      margin: 5px;
+      &:hover {
+        background-color: #722f37;
+      }
+`
+const Next = styled.div`
+  //margin: 0 0.5rem;
+      width: fit-content;
+      background-color: var(--deep-dark);
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      background: whitesmoke;
+      margin: 5px;
+      &:hover {
+        background-color: #722f37;
+      }
+`
+const Testimonial = styled.div`
+  padding: 10rem 0;
+  text-align: center;
+  background: grey;
+  //background: black;
+`  
 
 const V = styled.div`
   padding-right: 70px;

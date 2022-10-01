@@ -347,7 +347,7 @@ const Mandate = styled.div`
     //padding-top: 50px;
     font-size: 24px;
     //padding-left: 190px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Alkalami', serif;
     font-weight: bold;
   }
   >h4{
@@ -358,6 +358,7 @@ const Mandate = styled.div`
 
   @media screen and (max-width: 600px){
     padding-bottom: 0px;
+    margin-top: -70px;
   }
 `
 

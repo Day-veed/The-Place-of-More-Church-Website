@@ -22,14 +22,14 @@ function Services() {
           </motion.div>
           
           <ServicesCard>
-            <ServicesIcon src={Logo1}/>
+            <ServicesIcon src={Logo}/>
             <ServicesH2>RESOURCES</ServicesH2>
             <ServicesP>You Can Get our Ministry Books, Videos and Audios here.</ServicesP>
           </ServicesCard>
           
           <motion.div  variants={headerAnimationsss} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 20, duration: 2}}>
           <ServicesCard>
-            <ServicesIcon src={Logo2}/>
+            <ServicesIcon src={Logo}/>
             <ServicesH2>Upper Room</ServicesH2>
             <ServicesP>Upper Room is the Children's Ministry of The Place of More.</ServicesP>
           </ServicesCard>

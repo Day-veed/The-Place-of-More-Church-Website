@@ -28,7 +28,7 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  margin-top: 80px;
+  margin-top: 90px;
 
   > img {
       width: 100%;

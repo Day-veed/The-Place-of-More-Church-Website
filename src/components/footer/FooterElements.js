@@ -44,17 +44,22 @@ export const FooterLinkItems = styled.div`
     }
 `
 export const FooterLinkTitle = styled.h1`
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 16px;
+    color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
 `
 export const FooterLink = styled.div`
-    color: #722f37;
+    color: gold;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
 
     &:hover {
-        color: gold;
+        color: #722f37;
         transition: 0.3s ease-in-out;
     }
 `
