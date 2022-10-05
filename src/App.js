@@ -28,6 +28,9 @@ import PSG from './components/Pages/PSG/PSG';
 import TPM from './components/Pages/TPM/TPM';
 import LTC from './components/Pages/LTC/LTC';
 import AMTC from './components/Pages/AMTC/AMTC';
+import Ministries from './components/Pages/Ministries/Ministries';
+import Resources from './components/Pages/Resources/Resources';
+import UpperRoom from './components/Pages/UpperRoom/UpperRoom';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,7 +59,10 @@ function App() {
             <Route path='/TPM' element={<TPM />} />
             <Route path='/PSG' element={<PSG />} />
             <Route path='/LTC' element={<LTC />} />
-            <Route path='/AMTC' element={<AMTC />} />      
+            <Route path='/AMTC' element={<AMTC />} /> 
+            <Route path='/Ministries' element={<Ministries />} /> 
+            <Route path='/Resources' element={<Resources />} /> 
+            <Route path='/UpperRoom' element={<UpperRoom />} />      
           </Routes>
           <Schedule />
           <Footer />

@@ -40,7 +40,7 @@ export default function Video() {
                     onEnded={() => console.log('onEnded callback')}
                     onError={() => console.log('onError callback')} 
                 />
-                <h4>Expectations</h4>
+                <h4>Relationship Service</h4>
             </VideoContainers>  
             
             <VideoContainers>

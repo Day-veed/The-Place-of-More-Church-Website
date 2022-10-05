@@ -18,6 +18,7 @@ import Counselling from '../Counselling/counselling';
 import { headerAnimation, imageAnimation } from "../Animations/Animations"
 import { useScroll } from '../useScroll';
 import Upcomingp from './upcoming';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function HomeBody() {
 
@@ -40,10 +41,24 @@ function HomeBody() {
         console.log("use effect hook, inView = ", inView);
     }, [inView])
 
+    const navigate = useNavigate();
+
+    const Resources = () => {
+        navigate('/Resources')
+    }
+
+    const Ministries = () => {
+        navigate('/Ministries')
+    }
+    
+    const UpperRoom = () => {
+        navigate('/UpperRoom')
+    }
+
   return (
     <>
     <PictureExp ref={element}>
-      <img src={PMS} alt='' />
+      <img src={crowd} alt='' />
       <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
@@ -198,7 +213,8 @@ const PictureExp = styled.div`
       align-items: center;
       padding-bottom: 50px;
       > img {
-        width: 80%;
+        width: 90%;
+        height: 400px;
         padding-left: 0px;
       }
     }
@@ -216,6 +232,7 @@ const Text = styled.div`
         font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
+        font-size: 30px;
 
         >h5 {
         font-family: 'Playfair Display', serif;
@@ -239,6 +256,21 @@ const Text = styled.div`
         width: auto;
       > p {
         width: 98%;
+      }
+      >h2{
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+        padding-left: 0px;
+        width: auto;
+      > p {
+        width: 98%;
+        font-weight: 100;
+      }
+      >h2{
+        font-size: 19px;
       }
     }
 `

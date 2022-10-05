@@ -11,6 +11,14 @@ export const HeroContainer = styled.div`
     position: relative;
     z-index: 1;
 
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 360px) {
+        height: 525px;
+    }
+
     /** Add :before styles */
 `
 export const HeroBg = styled.div`

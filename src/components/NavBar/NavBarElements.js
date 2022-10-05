@@ -183,6 +183,26 @@ export const NavLogo = styled.div`
         cursor: pointer;
     }
     }
+    @media screen and (max-width: 375px) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -42px;
+        right: 100px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
 `
 export const MobileIcon = styled.div`
     display: none;
@@ -327,7 +347,7 @@ export const NavLinksss = styled.div`
         text-decoration: none;
         font-size: 14px;
         text-align: center;
-        padding-top: 5px;
+        padding-top: 3px;
         border-radius: 10px;
         font-family: Century Gothic;
         font-family: 'Roboto Condensed', sans-serif;
@@ -336,7 +356,7 @@ export const NavLinksss = styled.div`
     ul li{
         float: none;
         list-style: none;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
 
     ul {

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Psg from './PSG.jpg'
+import Psgg from './1a.png'
 import Psg1 from './SGF-35.jpg'
 import Psg2 from './SGF-47.jpg'
 import Psg3 from './SGF-80.JPG'
@@ -43,7 +44,7 @@ function PSG() {
                 <p style={{color: "black"}}>We are a people of More, doing More for God and getting More from God.
           We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>*/}
       </Textt>  
-      <img src={Psg} alt='' />
+      <img src={Psgg} alt='' />
     </PictureExpe>
 
 <Sgf>
@@ -62,9 +63,9 @@ function PSG() {
 <img src={Psg5} alt='' />
 <img src={Psg6} alt='' />
 </div>
-<Divv>
+
 <img src={Psg7} alt='' />
-</Divv>
+
 </Sgf>
     </About>
     </Div>
@@ -93,8 +94,8 @@ const Sgf = styled.div`
     font-family: 'Roboto Condensed', sans-serif;
   }
   > img {
-      width: 40%;
-      height: 700px;
+    width: 59%;
+      height: 500px;
       padding-left: 100px;
       padding-bottom: 40px;
       

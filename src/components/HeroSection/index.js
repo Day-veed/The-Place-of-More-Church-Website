@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, MainHeading } from '../globalStyles'
+import { Button, MainHeading, MainHeadingg } from '../globalStyles'
 import video from '../video/video.mp4'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroH2, HeroP, HeroButton, ButtonWrapper } from './HeroElement'
 
@@ -11,7 +11,7 @@ function HeroSection() {
         </HeroBg>
         <HeroContent>
             <MainHeading>Welcome To</MainHeading>
-            <MainHeading>The Place of More Church</MainHeading>
+            <MainHeadingg>The Place of More Church</MainHeadingg>
             <HeroP>
                 When you worship with us, you learn more than just the letters of the word.
             </HeroP>

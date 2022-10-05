@@ -51,7 +51,7 @@ export const FooterLinkTitle = styled.h1`
     font-weight: bold;
 `
 export const FooterLink = styled.div`
-    color: gold;
+    color: #722f37;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
@@ -59,7 +59,7 @@ export const FooterLink = styled.div`
     font-weight: bold;
 
     &:hover {
-        color: #722f37;
+        color: gold;
         transition: 0.3s ease-in-out;
     }
 `

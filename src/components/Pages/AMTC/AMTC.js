@@ -284,6 +284,7 @@ const T = styled.div`
     align-content: center;
     color: #722f37;
     padding-top: 20px;
+    background: white;
     > h1 {
        
     }
@@ -295,6 +296,7 @@ const VideoContainer = styled.div`
     align-items: center;
     margin-bottom: 30px;
     padding: 10px 20px;
+    background: white;
 
     @media (max-width: 800px) {
       flex-direction: column;

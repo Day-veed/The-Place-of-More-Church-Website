@@ -8,8 +8,8 @@ export const SidebarContainer = styled.aside`
     width: 100%;
     height: 100%;
     background: #722f37;
-    background-image: url(ow2);
-    background-size: cover;
+    //background-image: url(ow2);
+    //background-size: cover;
     display: grid;
     align-items: center;
     top: 0;

@@ -12,25 +12,31 @@ import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
 import { Button } from "@mui/material";
-import { useForm } from "react-hook-form";
+//import { useForm } from "react-hook-form";
 import { useDispatch } from 'react-redux';
 import { db } from "../../firebase";
 import firebase from 'firebase/compat/app';
+import { useForm } from 'react-hook-form';
+import './LTC.css'
+import { useScroll } from '../useScroll';
+import { headerAnimation } from '../Animations/Animations';
 
 function LTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
+    const [element, controls] = useScroll();
 
-    const { register, handleSubmit, watch, errors } =useForm();
+    const { register, handleSubmit, watch, errors } = useForm();
     const dispatch = useDispatch();
 
     const onSubmit = (formData) => {
         console.log(formData);
         db.collection('emails').add({
-            to: formData.to,
-            subject: formData.subject,
-            message: formData.message,
+            FName: formData.name,
+            Email: formData.email,
+            WNumber: formData.number,
+
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
 
@@ -56,9 +62,9 @@ function LTCHistory() {
   return (
     <>
     <Div>
-    <PictureExp ref={ref}>
+    <PictureExp ref={element}>
       <img src={MTC} alt='' />
-      <motion.div  animate={animation}>
+      <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>Leadership Training Course <br/>
         <h5 style={{color: "black"}}> (LTC) </h5></h2>
@@ -69,7 +75,7 @@ function LTCHistory() {
       </Text>
       </motion.div>
     </PictureExp>
-       <HistoryContainer>
+       {/*<HistoryContainer>
         {/*<div>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</div>*/}
         <ServicesContainer>
         {/*<ServicesH1>Our Services</ServicesH1>*/}
@@ -109,20 +115,20 @@ function LTCHistory() {
                   </D>
           </Images>
               </UpcomingPrograms>
-            </Set>*/}
+            </Set> hereeeeeeeeeeeeeeeeeeee_________
         
 
         <h3> To register for LTC with the TPM Institute of Leadership, fill the form bellow</h3>
-        <form onSubmit={ handleSubmit(onSubmit)}>
+        <form onSubmit={ handleSubmit(onSubmit)} className='form'>
           
           <input placeholder='FULL NAME' id='name' type="text" {...register('message', { required: true})} />
-          {errors.name && <p className='sendMail__error'>Name is Required!</p>}
+          {/*errors.name && <p className='sendMail__error'>Name is Required!</p>hereeeeee_________________________________
           <input placeholder='EMAIL' id='email' type="text" {...register('to', { required: true})} />
-          {errors.email && <p className='sendMail__error'>Email is Required!</p>}
+          {/*errors.email && <p className='sendMail__error'>Email is Required!</p>___________________________________________________
           <input placeholder='WHATSAPP NUMBER' id='number' type="text" {...register('message', { required: true})} />
-          {errors.number && <p className='sendMail__error'>WhatsApp Number is Required!</p>}
+          {/*errors.number && <p className='sendMail__error'>WhatsApp Number is Required!</p>__________________________________________
 
-          <select>
+          <select placeholder='Will you be available for all the training?'>
             <option value="mario">Yes</option>
             <option value="yoshi">No</option>
           </select>
@@ -134,7 +140,7 @@ function LTCHistory() {
 
   
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/wmWi1CKKPiE2znd89'>Register</Button>  
-      </HistoryContainer>
+      </HistoryContainer>*/}
     </Div>
     <Facilitators>
       <div>Training Facilitators</div>
@@ -201,7 +207,7 @@ const PictureExp = styled.div`
       align-items: center;
       padding-bottom: 50px;
       > img {
-        width: 80%;
+        width: 90%;
         padding-left: 0px;
         margin-top: -50px;
       }
@@ -344,7 +350,7 @@ const Facilitators = styled.div`
   color: #722f37;
   font-style: italic;
   padding-top: 70px;
-  background: white;
+  background: whitesmoke;
 }
 `
 

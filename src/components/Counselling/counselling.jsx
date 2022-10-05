@@ -6,18 +6,20 @@ import Input, { Option } from './Input';
 import { Button } from '@mui/material';
 
 function Counselling() {
+    //#00FFFF
   return (
     <div className='bodyy'>
         <Div>
         <CounsellingText>
-            <h4 style={{color: "#fff"}}>You can access</h4>
-            <h1 style={{color: "black"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
+            <h4 style={{color: "black"}}>You can access</h4>
+            <h1 style={{color: "skyblue"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
             <h1 style={{color: "blue"}}>COUNSELLING</h1>
             <br/>
             <D>
-            <h3 style={{color: "#fff"}}>Complete the form to book for an appointment or call (+234) 8012345678.</h3>
+            <h3 style={{color: "whitesmoke"}}>Complete the form to book for an appointment or call (+234) 8012345678.</h3>
             </D>
         </CounsellingText>
+        
         <form>
             <WelcomeText>Appointment Form</WelcomeText>
             <InputContainer>
@@ -34,7 +36,7 @@ function Counselling() {
                     
                 </select>
                 <div>
-                <Button style={{backgroundColor:'blue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
+                <Button style={{backgroundColor:'skyblue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
                 </div>
             </InputContainer>
             
@@ -110,7 +112,7 @@ const Div = styled.div`
     border-radius: 10px;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
 
     @media (max-width: 1300px) {
         width: 50%;
@@ -128,6 +130,18 @@ const Div = styled.div`
         width: 80%;
         height: 75vh;
     }
+    @media (max-width: 600px) {
+        width: 95%;
+        height: 75vh;
+    }
+    @media (max-width: 500px) {
+        width: 95%;
+        height: 70vh;
+    }
+    @media (max-width: 360px) {
+        width: 95%;
+        height: 72vh;
+    }
     }
 `
 
@@ -140,12 +154,17 @@ const D = styled.div`
         font-size: 28px;
 
         @media (max-width: 750px) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
     @media (max-width: 750px) {
         display: block;
+    }
+
+    @media (max-width: 360px) {
+        display: block;
+        margin-bottom: -20px;
     }
 `
 
@@ -160,7 +179,10 @@ const CounsellingText = styled.div`
             font-size: 50px;
 
             @media (max-width: 750px) {
-            font-size: 28px;
+            font-size: 38px;
+        }
+        @media (max-width: 600px) {
+            font-size: 27px;
         }
     }
 
@@ -168,9 +190,26 @@ const CounsellingText = styled.div`
         font-weight: bold;
         font-family: 'EB Garamond', serif;
         font-size: 28px;
+        color: blue;
 
         @media (max-width: 750px) {
             font-size: 28px;
+        }
+        @media (max-width: 600px) {
+            font-size: 23px;
+        }
+    }
+    >h3{
+        font-weight: bold;
+        font-family: 'EB Garamond', serif;
+        font-size: 28px;
+        color: blue;
+
+        @media (max-width: 750px) {
+            font-size: 24px;
+        }
+        @media (max-width: 600px) {
+            font-size: 20px;
         }
     }
 
@@ -221,7 +260,14 @@ const MainContainer = styled.div`
 const WelcomeText = styled.h2`
     margin-top: 3rem;
     margin-bottom: 5rem ;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Playfair Display', serif;
+    @media (max-width: 360px) {
+        //width: 80%;
+        //height: 75vh;
+        margin-top: 2rem;
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
 `
 const InputContainer = styled.div`
     display: flex;
@@ -237,8 +283,12 @@ const InputContainer = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 50px;
-        margin-bottom: -100px;
+        margin-top: 25px;
+        margin-bottom: -120px;
+        @media (max-width: 360px) {
+        margin-top: 15px;
+        margin-bottom: -130px;
+    }
     }
 
     >select {

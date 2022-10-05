@@ -14,7 +14,7 @@ function Schedule() {
         
         <GetInTouch>
             <h3>Get in Touch</h3>
-            <p>________________________________________</p>
+            <p>____________________________________</p>
             
             <h5>Plot 17 Angwa Rukuba, Former Oasis bakery</h5>
             <Ico>
@@ -33,7 +33,7 @@ function Schedule() {
 
         <GetInTouchh>
             <h3>Quick Link</h3>
-            <p>________________________________________</p>
+            <p>____________________________________</p>
             
             <h5>Partnership</h5>
             <h5>The Place of More</h5>
@@ -50,7 +50,7 @@ function Schedule() {
 
         <GetInTouchhh>
             <h3>Ministry Schedule</h3>
-            <p>________________________________________</p>
+            <p>____________________________________</p>
             
             <h4>SUNDAY</h4>
             <h5>1st Service -  4:00pm (GMT + 1)</h5>
@@ -85,7 +85,7 @@ align-items: center;
         justify-content: center;
         align-items: center;
         height: 370px;
-        padding: 50px;
+        padding: 40px;
     }
     }
 `
@@ -100,8 +100,8 @@ const PreFooter = styled.div`
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding-left: 20px;
     }
 `
@@ -122,6 +122,9 @@ const GetInTouch = styled.div`
     padding: 15px;
     font-family: 'EB Garamond', serif;
 
+    >p {
+        margin-top: -20px;
+    }
     >h3 {
         font-family: 'EB Garamond', serif;
         font-weight: bold;
@@ -137,7 +140,16 @@ const GetInTouch = styled.div`
     @media screen and (max-width: 1100px){
         padding: 10px;
         width: 80%;
-        background: white;
+        //background: white;
+    }
+    @media screen and (max-width: 360px){
+        padding: 0px;
+        width: 80%;
+        margin-bottom: 25px;
+        >h3{
+            font-size: 34px;
+        }
+        //background: white;
     }
 `
 
@@ -145,7 +157,9 @@ const GetInTouchh = styled.div`
     padding: 15px;
     font-family: 'EB Garamond', serif;
     
-
+    >p {
+        margin-top: -20px;
+    }
     >h3 {
         font-family: 'EB Garamond', serif;
         font-weight: bold;
@@ -161,7 +175,16 @@ const GetInTouchh = styled.div`
     @media screen and (max-width: 1100px){
         padding: 10px;
         width: 80%;
-        background: white;
+        //background: white;
+    }
+    @media screen and (max-width: 360px){
+        padding: 0px;
+        width: 80%;
+        margin-bottom: 25px;
+        >h3{
+            font-size: 34px;
+        }
+        //background: white;
     }
 `
 
@@ -169,7 +192,9 @@ const GetInTouchhh = styled.div`
     padding: 15px;
     font-family: 'EB Garamond', serif;
     
-
+    >p {
+        margin-top: -20px;
+    }
     >h3 {
         font-family: 'EB Garamond', serif;
         font-weight: bold;
@@ -185,7 +210,15 @@ const GetInTouchhh = styled.div`
     @media screen and (max-width: 1100px){
         padding: 10px;
         width: 80%;
-        background: white;
+        //background: white;
         margin-bottom: 10px;
+    }
+    @media screen and (max-width: 360px){
+        padding: 0px;
+        width: 80%;
+        >h3{
+            font-size: 34px;
+        }
+        //background: white;
     }
 `

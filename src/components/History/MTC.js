@@ -21,11 +21,14 @@ import { Button } from "@mui/material";
 import images from './images';
 import './MTC.css'
 import Carousel from '../Pages/MTC/Carousel';
+import { headerAnimation } from '../Animations/Animations';
+import { useScroll } from '../useScroll';
 
 function MTCHistory() {
 
   const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
+    const [element, controls] = useScroll();
 
     useEffect(() => {
         if(inView){
@@ -45,9 +48,9 @@ function MTCHistory() {
   return (
     <>
     <Div>
-      <PictureExp ref={ref}>
+      <PictureExp ref={element}>
         <img src={MTC} alt='' />
-        <motion.div  animate={animation}>
+        <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
         <Text >
           <h2 style={{color: "#722f37"}}>Ministerial Training Course <br/>
           <h5 style={{color: "black"}}> (MTC) </h5></h2>
@@ -213,7 +216,7 @@ const Mandatess = styled.div`
 
   >div{
     width: 450px;
-    margin: 20px;
+    margin: 70px;
     >div {
       display: flex;
       justify-content: center;
@@ -252,6 +255,7 @@ const Mandatesss = styled.div`
   align-items: center;
   background: whitesmoke;
   padding: 25px;
+  
 
   >div{
     width: 450px;
@@ -289,6 +293,10 @@ const Mandates = styled.div`
   align-items: center;
   background: whitesmoke;
   padding: 100px;
+
+  >div{
+    border-radius: 10px;
+  }
 
   >h5 {
     //padding: 30px;

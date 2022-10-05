@@ -279,6 +279,7 @@ const H = styled.div`
 
 const T = styled.div`  
     //display: block;
+    background: white;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -296,6 +297,7 @@ const VideoContainer = styled.div`
     align-items: center;
     margin-bottom: 30px;
     padding: 10px 20px;
+    background: white;
 
     @media (max-width: 800px) {
       flex-direction: column;

@@ -53,10 +53,10 @@ function AMTCHistory() {
       </Text>
       </motion.div>
     </PictureExp>
-       <HistoryContainer>
-        {/*<div>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</div>*/}
+       {/*<HistoryContainer>
+        {/*<div>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</div>*_____________
         <ServicesContainer>
-        {/*<ServicesH1>Our Services</ServicesH1>*/}
+        {/*<ServicesH1>Our Services</ServicesH1>*_____________________________________________________________________________
         
       </ServicesContainer>
         {/*<About>
@@ -65,7 +65,7 @@ function AMTCHistory() {
         <h5>We have currently trained over 300 Ministers through the TPM Institute of Leadership.</h5>
         <h5>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</h5>
   </About>
-        <p>These teams are;</p>*/}
+        <p>These teams are;</p>*______________________________________
         
         
 
@@ -74,7 +74,7 @@ function AMTCHistory() {
         <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'50px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Register</Button>
 
         
-      </HistoryContainer>
+      </HistoryContainer>*/}
 
     </Div>
     <Facilitators>
@@ -287,7 +287,7 @@ const Facilitators = styled.div`
   color: #722f37;
   font-style: italic;
   padding-top: 70px;
-  background: white;
+  background: whitesmoke;
 }
 `
 
