@@ -12,6 +12,12 @@ import Psg7 from './SGF-2.jpg'
 
 function PSG() {
   return (
+    <>
+    <D>
+      <h1>
+        Pastor Shenny Glory
+      </h1>
+    </D>
     <Div>
     <About> 
     <PictureExp >
@@ -69,10 +75,25 @@ function PSG() {
 </Sgf>
     </About>
     </Div>
+    </>
   )
 }
 
 export default PSG
+
+const D = styled.div`
+  margin-top: 80px;
+  height: 80px;
+  background: #722f37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: gold;
+  }
+`
 
 const Sgf = styled.div`
   background: whitesmoke;
@@ -273,7 +294,7 @@ const Div = styled.div`
   align-items: center;
   //padding: 70px;
   background: white;
-  padding-top: 80px;
+  //padding-top: 80px;
 
   @media screen and (max-width: 600px){
     padding: 0px;

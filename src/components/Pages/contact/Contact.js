@@ -5,6 +5,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 function Contact() {
   return (
     <>
+    <D>
+      <h1>
+        Contact Us
+      </h1>
+    </D>
     <FooterContainer>
       <FooterWrap>
       <h1>Get in touch</h1>
@@ -47,6 +52,20 @@ function Contact() {
 
 export default Contact
 
+const D = styled.div`
+  margin-top: 80px;
+  height: 80px;
+  background: #722f37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: gold;
+  }
+`
+
 const Div = styled.div`
 padding-top: 80px;
   height: 1000px;
@@ -68,7 +87,7 @@ export const FooterWrap = styled.div`
     >h1{
       font-family: 'Playfair Display', serif;
       font-weight: bold;
-      color: #722f37;
+      color: grey;
     }
 `
 export const FooterLinksContainer = styled.div`
@@ -107,7 +126,7 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
     font-size: 34px;
     margin-bottom: 16px;
-    color: grey;
+    color: gold;
     font-family: 'Roboto Condensed', sans-serif;
     //font-weight: bold;
 `

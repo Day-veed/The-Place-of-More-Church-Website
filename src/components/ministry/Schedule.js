@@ -4,8 +4,47 @@ import styled from 'styled-components'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import Partnership from '../Pages/partnership/Partnership';
+import { useNavigate } from 'react-router-dom';
 
 function Schedule() {
+    const navigate = useNavigate();
+
+    const home = () => {
+        navigate('/')
+    }
+
+    const aboutUs = () => {
+        navigate('/about-us')
+    }
+
+    const partnership = () => {
+        navigate('/partnership')
+    }
+
+    const MTC = () => {
+        navigate('/MTC')
+    }
+
+    const LTC = () => {
+        navigate('/LTC')
+    }
+
+    const AMTC = () => {
+        navigate('/AMTC')
+    }
+
+    const TPM = () => {
+        navigate('/TPM')
+    }
+
+    const PSG = () => {
+        navigate('/PSG')
+    }
+
+    const ContactUs = () => {
+        navigate('/contact-us')
+    }
   return (
     <PreFooter>
         <Img>
@@ -35,9 +74,12 @@ function Schedule() {
             <h3>Quick Link</h3>
             <p>____________________________________</p>
             
-            <h5>Partnership</h5>
-            <h5>The Place of More</h5>
-            <h5>Pastor Shenny Glory</h5>
+            <h5 onClick={() => partnership()}>Partnership</h5>
+            <h5 onClick={() => TPM()}>The Place of More</h5>
+            <h5 onClick={() => PSG()}>Pastor Shenny Glory</h5>
+            <h5 >Ministries</h5>
+            <h5>Resources</h5>
+            <h5>Upper Room</h5>
             <Ico>
                 <PhoneIcon />
                 <h5>Jos North, Plateau State, Nigeria.</h5>
@@ -170,6 +212,10 @@ const GetInTouchh = styled.div`
     }
     >h5{
         font-family: 'EB Garamond', serif;
+
+        &:hover {
+        color: gold;
+        }
     }
 
     @media screen and (max-width: 1100px){

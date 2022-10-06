@@ -16,6 +16,12 @@ function TPM() {
   const [element, controls] = useScroll();
 
   return (
+    <>
+    <D>
+    <h1>
+      About Us
+    </h1>
+  </D>
     <Container>
       <Content>
       <PictureExp ref={element}>
@@ -215,10 +221,25 @@ function TPM() {
         </Mandate>
       </Content>
     </Container>
+    </>
   )
 }
 
 export default TPM
+
+const D = styled.div`
+  margin-top: 80px;
+  height: 80px;
+  background: #722f37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: gold;
+  }
+`
 
 const Top = styled.div`
   //display: flex;
@@ -269,7 +290,7 @@ const Textt = styled.div`
 `
 
 const Container = styled.div`
-  padding-top: 120px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,7 +299,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 960px){
     padding: 0px;
-    padding-top: 110px;
+    padding-top: 30px;
   }
 `
 const Content = styled.div`
@@ -320,11 +341,16 @@ const Mandatess = styled.div`
     width: 450px;
     margin: 70px;
     margin-top: -70px;
+    border-radius: 10px;
+    @media screen and (max-width: 960px){
+      margin-top: -40px;
+    }
     >div {
       display: flex;
       justify-content: center;
       align-items: center;
       background: whitesmoke;
+      border-radius: 30px;
       >h3 {
         color: #722f37;
         margin-top: 40px;
@@ -362,14 +388,19 @@ const Mandatesss = styled.div`
   >div{
     width: 450px;
     display: flex;
-    padding-bottom: 50px;
+    margin-bottom: -100px;
     margin-top: -15%;
+    @media screen and (max-width: 960px){
+      margin-bottom: 0px;
+      padding-bottom: 25px;
+    }
     
     >div {
       display: flex;
       justify-content: center;
       align-items: center;
       background: whitesmoke;
+      border-radius: 30px;
       >h3 {
         color: #722f37;
         margin-top: 40px;
@@ -447,6 +478,9 @@ const Mandate = styled.div`
     padding-top: 50px;
     //padding-left: 190px;
     font-family: 'Playfair Display', serif;
+    @media screen and (max-width: 960px){
+      margin-bottom: 50px;
+    }
   }
   >h4{
     //color: white;

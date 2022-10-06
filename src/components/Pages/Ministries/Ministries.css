@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body{
+    background: linear-gradient(to right, #2c5364, #203a43);
+}*/
+
+html {
+    font-family: sans-serif;
+}
+
+.card {
+    background: whitesmoke;
+    padding: 3rem 4rem;
+    border-radius: 2rem;
+}
+
+.card h2 {
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card p {
+    padding-top: 1rem;
+    line-height: 120%;
+    font-family: 'Playfair Display', serif;
+    width: 220px;
+}
+
+.expand {
+    width: 22rem;
+}

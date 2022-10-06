@@ -9,18 +9,36 @@ import UsingComponents from './UsingComponents'
 function Partnership() {
   return (
     <>
-      
-        <Div>
-          <UsingComponents />
-          <img src={Give} alt='' />
-          
-          {/*<img src={Tpm} alt='' />*/}
-        </Div>
+      <D>
+      <h1>
+        Partnership
+      </h1>
+      </D>
+      <Div>
+        <UsingComponents />
+        <img src={Give} alt='' />
+        
+        {/*<img src={Tpm} alt='' />*/}
+      </Div>
     </>
   )
 }
 
 export default Partnership
+
+const D = styled.div`
+  margin-top: 80px;
+  height: 80px;
+  background: #722f37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: gold;
+  }
+`
 
 const Div = styled.div`
   display: flex;
@@ -28,7 +46,7 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  margin-top: 90px;
+  //margin-top: 90px;
 
   > img {
       width: 100%;
