@@ -10,6 +10,7 @@ import ContactOption from './ContactOption';
 import Input, { Option } from './Input';
 import { Button } from '@mui/material';
 import './Form.css'
+import Map from './Map';
 
 function Contact() {
   return (
@@ -27,7 +28,8 @@ function Contact() {
                 <FooterLinkItems>
                 <ContactOption Icon={MapIcon} />
                     <FooterLinkTitle>Address</FooterLinkTitle>
-                    <FooterLink >Plot 17 Gondola Street, Angwa Rukuba, Jos, Plateau State, Nigeria.</FooterLink>
+                    <FooterLink >Plot 17 Gondola Street, Angwa Rukuba,</FooterLink> 
+                        <FooterLink>Jos, Plateau State, Nigeria.</FooterLink>
                 </FooterLinkItems>
                 <FooterLinkItems>
                 <ContactOption Icon={AccessTimeIcon} />
@@ -44,8 +46,8 @@ function Contact() {
             <FooterLinkItems>
             <ContactOption Icon={PhoneIcon} />
             <FooterLinkTitle>Address</FooterLinkTitle>
-                    <FooterLink >(+234) 12345670,
-                    (+234) 12345679</FooterLink>
+                    <FooterLink >(+234) 12345670,</FooterLink>
+                    <FooterLink>(+234) 12345679</FooterLink>
                     
                 </FooterLinkItems>
                 <FooterLinkItems>
@@ -59,27 +61,23 @@ function Contact() {
         
       </FooterWrap>
       <form>
-            <WelcomeText>Appointment Form</WelcomeText>
+            <WelcomeText>Contact Us</WelcomeText>
             <InputContainer>
                 <Input type='text' placeholder="Name"/>
                 <Input type='text' placeholder="Email"/>
-                <Input type='text' placeholder="Phone Number"/>
+                <Input type='text' placeholder="City of Residence"/>
                 <Input type='text' placeholder="Message"/>
-                <select>
-                    
-                    <option value="Marriage">Marriage</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Spiritual">Spiritual</option>
-                    <option value="Academic">Academic</option>
-                    
-                </select>
+
                 <div>
-                <Button style={{backgroundColor:'skyblue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
+                <Button style={{backgroundColor:'gold', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Send</Button>
                 </div>
             </InputContainer>
             
         </form>
     </FooterContainer>
+    <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+        <Map />
+    </section>
     </>
   )
 }
@@ -120,7 +118,12 @@ const MainContainer = styled.div`
 
 const WelcomeText = styled.h2`
     margin-top: 3rem;
-    margin-bottom: 5rem ;
+    margin-bottom: 3rem ;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
     font-family: 'Playfair Display', serif;
     @media (max-width: 360px) {
         //width: 80%;
@@ -217,15 +220,27 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
+    >form {
+        background: grey;
+        height: 70vh;
+        width: 30%;
+        //margin-top: -50px;
+        margin-left: 100px;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 `
 export const FooterWrap = styled.div`
-    padding: 48px 24px;
+    //padding: 48px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    //max-width: 1100px;
+    //margin: 0 auto;
     >h1{
       font-family: 'Playfair Display', serif;
       font-weight: bold;
@@ -246,6 +261,10 @@ export const FooterLinksWrapper = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    margin-bottom: 75px;
 
     @media screen and (max-width: 820px){
         flex-direction: column;
@@ -254,8 +273,10 @@ export const FooterLinksWrapper = styled.div`
 export const FooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin: 40px;
+    //pad: 10px;
+    //margin: 40px;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
@@ -348,3 +369,6 @@ export const FooterIconOption = styled.a`
     color: #722f37;
     font-size: 24px;
 `
+//pk.eyJ1IjoiZGF5LXZlZWQiLCJhIjoiY2w5NGUzcXNlMDd4YjN2bXMxb2FmZ21oaSJ9.d07RWwAqysZyFyYxLqzXYA
+//Style: mapbox://styles/day-veed/cl94ejyij004215o46urqlreu
+//Access Token: pk.eyJ1IjoiZGF5LXZlZWQiLCJhIjoiY2w5NGUzcXNlMDd4YjN2bXMxb2FmZ21oaSJ9.d07RWwAqysZyFyYxLqzXYA
