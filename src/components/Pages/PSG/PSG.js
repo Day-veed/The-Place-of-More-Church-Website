@@ -26,7 +26,7 @@ function PSG() {
       <Text >
         <p>Pastor Shenny Glory is the Lead Pastor at The Place of MORE Church (TPM), Jos, Plateau State, Nigeria. </p>
 
-        <p>Pastor Shenny is a Leadership Expert and Coach who have trained over 200 Individuals into Leaders and Ministers through TPM Institute of Leadership. </p>
+        <p>Pastor Shenny is a Leadership Expert and Coach who have trained over 300 Individuals into Leaders and Ministers through TPM Institute of Leadership. </p>
 
         <p>He is a graduate of University of Jos, Plateau State, Nigeria where he bagged his Bachelors Degree in Business Management alongside other certifications in Leadership. </p>
 

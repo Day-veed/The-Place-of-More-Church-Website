@@ -150,7 +150,7 @@ function LTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven4}/>
             <ServicesH2>Pastor Shenny Glory</ServicesH2>
-            <ServicesP>Lead Pastor at The Place of MORE Church.</ServicesP>
+            <ServicesP>Rector, TPM Institute of Leadership</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Ven2}/>
@@ -160,7 +160,7 @@ function LTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven3}/>
             <ServicesH2>Pastor Sarah Larbong</ServicesH2>
-            <ServicesP>Assistant Director of Training(MTC)</ServicesP>
+            <ServicesP>MTC Coordinator</ServicesP>
           </ServicesCard>
         </ServicesWrapper>
       </ServicesContainer>

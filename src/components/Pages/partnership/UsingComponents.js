@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 
 export default function App() {
@@ -36,4 +36,4 @@ export default function App() {
       <FlutterWaveButton {...fwConfig} />
     </div>
   );
-}
+}*/

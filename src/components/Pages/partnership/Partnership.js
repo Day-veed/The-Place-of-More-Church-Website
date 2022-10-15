@@ -15,7 +15,7 @@ function Partnership() {
       </h1>
       </D>
       <Div>
-        <UsingComponents />
+        {/*<UsingComponents />*/}
         <img src={Give} alt='' />
         
         {/*<img src={Tpm} alt='' />*/}

@@ -295,7 +295,7 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
     font-size: 34px;
     margin-bottom: 16px;
-    color: gold;
+    color: #722f37;
     font-family: 'Roboto Condensed', sans-serif;
     //font-weight: bold;
 `
