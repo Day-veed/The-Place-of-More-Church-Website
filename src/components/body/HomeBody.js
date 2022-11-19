@@ -63,7 +63,7 @@ function HomeBody() {
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>
         <h5 style={{color: "black"}}> (Where Everything Works)</h5></h2>
-        <p style={{color: "black"}}>Birthed Eight Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
+        <p style={{color: "black"}}>Birthed Nine Years ago, The Place of More Church has transformed many lives, raised Faithful, Fruitful, and Fireful, Leaders and Ministers who are relevant in Ministry and other areas of Life.
         <div></div><br/>
         We are committed to teaching the word in its simplicity and honoring God through Worship, Service, and Giving.</p>
       </Text>
@@ -217,6 +217,13 @@ const PictureExp = styled.div`
         height: 400px;
         padding-left: 0px;
       }
+    }
+
+    @media screen and (max-width: 360px) {
+        > img {
+            margin-top: -75px;
+            height: 350px;
+        }
     }
 `
 const Text = styled.div`

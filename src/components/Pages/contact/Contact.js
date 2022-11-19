@@ -75,9 +75,9 @@ function Contact() {
             
         </form>
     </FooterContainer>
-    <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+    {/*<section className='hidden xl:inline-flex xl:min-w-[600px]'>
         <Map />
-    </section>
+  </section>*/}
     </>
   )
 }
@@ -206,6 +206,11 @@ const D = styled.div`
     font-size: 50px;
     color: gold;
   }
+  @media (max-width: 450px) {
+      >h1 {
+        font-size: 35px;
+      }  
+    }
 `
 
 const Div = styled.div`
@@ -231,20 +236,40 @@ export const FooterContainer = styled.footer`
 
     @media (max-width: 900px) {
         flex-direction: column;
+        //margin-bottom: -75px;
+        >form {
+            height: 65vh;
+            width: 80%;
+            margin-left: 0px;
+        }
+    }
+    @media (max-width: 450px) {
+      >form {
+        height: 68vh;
+        width: 90%;
+      }  
     }
 `
 export const FooterWrap = styled.div`
     //padding: 48px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     //max-width: 1100px;
     //margin: 0 auto;
     >h1{
       font-family: 'Playfair Display', serif;
       font-weight: bold;
       color: grey;
+      font-size: 40px;
+    }
+    @media (max-width: 450px) {
+      >h1 {
+        font-size: 35px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+      }  
     }
 `
 export const FooterLinksContainer = styled.div`
@@ -255,6 +280,7 @@ export const FooterLinksContainer = styled.div`
 
     @media screen and (max-width: 820px){
         padding-top: 32px;
+        flex-direction: column;
     }
 `
 export const FooterLinksWrapper = styled.div`

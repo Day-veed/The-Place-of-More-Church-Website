@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
     background-color: #101522;
 `
 export const FooterWrap = styled.div`
-    padding: 48px 24px;
+    padding: 13px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +88,10 @@ export const SocailLogo = styled.div`
     align-items: center;
     margin-bottom: 16px;
     font-weight: bold;
+
+    @media screen and (max-width: 820px){
+        margin-top: -25px;
+    }
 `
 
 export const WebsiteRights = styled.small`

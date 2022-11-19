@@ -574,6 +574,14 @@ padding: 10px;
     color: #722f37;
     font-size: 38px;
   }
+  @media (max-width: 450px) {
+      >h2 {
+        margin-top: -50px;
+      }  
+      >p {
+        font-size: 22px;
+      }
+    }
 `
 const TestimonialWrapper = styled.div`
   position: relative;
@@ -596,7 +604,7 @@ const TestimonialDesc = styled.div`
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
 `
 const TestimonialName = styled.div`

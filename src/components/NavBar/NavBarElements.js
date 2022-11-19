@@ -183,18 +183,18 @@ export const NavLogo = styled.div`
         cursor: pointer;
     }
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 400px) {
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         top: -42px;
-        right: 100px;
+        right: 0px;
         transform: translate(-100%, 60%);
 
         >img {
         object-fit: contain;
-        height: 750px;
+        height: 75px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

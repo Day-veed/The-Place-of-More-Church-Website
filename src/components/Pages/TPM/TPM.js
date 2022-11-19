@@ -239,6 +239,11 @@ const D = styled.div`
     font-size: 50px;
     color: gold;
   }
+  @media (max-width: 450px) {
+      >h1 {
+        font-size: 35px;
+      }  
+    }
 `
 
 const Top = styled.div`
@@ -377,6 +382,18 @@ const Mandatess = styled.div`
     align-items: center;
     padding: 0px;
   }
+  @media (max-width: 450px) {
+      >div {
+        width: 340px;
+        >div {
+          >div {
+            >p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
 `
 const Mandatesss = styled.div`
   display: flex;
@@ -414,12 +431,24 @@ const Mandatesss = styled.div`
       }
       >div {
           >p{
-            font-weight: bold;
+            font-weight: 500;
             font-family: 'Roboto Condensed', sans-serif;
           }
         }
     }
   }
+  @media (max-width: 450px) {
+      >div {
+        width: 340px;
+        >div {
+          >div {
+            >p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
 `
 
 const Mandates = styled.div`

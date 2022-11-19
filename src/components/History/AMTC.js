@@ -140,6 +140,13 @@ const PictureExp = styled.div`
         padding-left: 0px;
       }
     }
+    @media (max-width: 450px) {
+      margin-top: -17px;
+      >img {
+        width: 90%;
+        height: 350px;
+      }  
+    }
 `
 const Text = styled.div`
   padding-left: 50px;
@@ -167,6 +174,19 @@ const Text = styled.div`
         font-weight: bold;
         //font-family: 'Roboto Condensed', sans-serif;
     }
+    }
+    @media (max-width: 450px) {
+      >h2 {
+        font-size: 18px;
+        >h2{
+          font-size: 18px;
+        }
+      }
+    }
+    @media (max-width: 650px) {
+      >p {
+        padding-left: 0px;
+      }
     }
     > p {
         display: flex;
@@ -289,6 +309,11 @@ const Facilitators = styled.div`
   padding-top: 70px;
   background: whitesmoke;
 }
+@media (max-width: 450px) {
+  >div {
+    font-size: 35px;
+    margin-top: -40px;
+  }
 `
 
 const HistoryContainer = styled.div`

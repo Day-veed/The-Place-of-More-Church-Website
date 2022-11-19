@@ -212,6 +212,12 @@ const PictureExp = styled.div`
         margin-top: -50px;
       }
     }
+    @media (max-width: 450px) {
+      margin-top: -7px;
+      >img {
+        height: 350px;
+      }  
+    }
 `
 const Text = styled.div`
   padding-left: 50px;
@@ -352,6 +358,12 @@ const Facilitators = styled.div`
   padding-top: 70px;
   background: whitesmoke;
 }
+@media (max-width: 450px) {
+      >div {
+        margin-top: -80px;
+        margin-bottom: 20px;
+      }  
+    }
 `
 
 const HistoryContainer = styled.div`

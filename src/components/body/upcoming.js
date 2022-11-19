@@ -30,9 +30,9 @@ function Upcomingp() {
         <h5 style={{color: "#722f37"}}>Upcoming Programs...</h5>
         <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
         <Images>
-        <Img1><motion.img initial={{ x: '-100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow3} alt='' /></Img1>
+        <Img1><img  src={ow3} alt='' /></Img1>
         <Img2><img src={ow4} alt='' /></Img2>
-        <Img3><motion.img initial={{ x: '100vw' }} animate={{ x: 0}} transition={{ delay: 0.2, type: 'spring', stiffness: 17 }} src={ow5} alt='' /></Img3>
+        <Img3><img  src={ow5} alt='' /></Img3>
         </Images>
     </UpcomingPrograms>
     </motion.div>

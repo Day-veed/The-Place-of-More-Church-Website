@@ -65,6 +65,10 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
+
+    @media screen and (max-width: 360px) {
+        margin-bottom: 40px;
+    }
     //background: whitesmoke;
 `
 
@@ -85,6 +89,11 @@ const Di = styled.div`
         align-items: flex-end;
         font-family: 'EB Garamond', serif;
         margin-bottom: -50px;
+
+        @media screen and (max-width: 360px) {
+        margin-top: -40px;
+        margin-bottom: -70px;
+    }
     }
 
     @media (max-width: 750px) {

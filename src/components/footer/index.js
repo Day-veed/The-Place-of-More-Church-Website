@@ -33,7 +33,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinksContainer>
+        {/*<FooterLinksContainer>
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>Information</FooterLinkTitle>
@@ -69,7 +69,7 @@ function Footer() {
                     <FooterLink onClick={() => ContactUs()}>Contact Us</FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper>
-        </FooterLinksContainer>
+  </FooterLinksContainer>*/}
         <SocialMedia>
             <SocialMediaWrap>
                 <SocailLogo>

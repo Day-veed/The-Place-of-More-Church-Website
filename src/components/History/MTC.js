@@ -248,6 +248,11 @@ const Mandatess = styled.div`
     padding: 0px;
     margin-top: 0px;
   }
+  @media (max-width: 450px) {
+      >div {
+        margin: 20px;
+      }
+    }
 `
 const Mandatesss = styled.div`
   display: flex;
@@ -401,6 +406,13 @@ const PictureExp = styled.div`
         padding-left: 0px;
       }
     }
+    @media (max-width: 450px) {
+      margin-top: -17px;
+      >img {
+        width: 90%;
+        height: 350px;
+      }  
+    }
 `
 const Text = styled.div`
   padding-left: 50px;
@@ -553,6 +565,13 @@ const Facilitators = styled.div`
   background: white;
   font-family: 'Playfair Display', serif;
 }
+@media (max-width: 450px) {
+      >div {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: -50px;
+      }
+    }
 `
 
 const HistoryContainer = styled.div`

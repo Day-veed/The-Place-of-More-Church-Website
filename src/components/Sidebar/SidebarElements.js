@@ -278,4 +278,21 @@ export const SideLogo = styled.div`
         cursor: pointer;
     }
     }
+    @media screen and (max-width: 400px) {
+        position: absolute;
+        top: -52px;
+        right: -40px;
+        transform: translate(-100%, 60%);
+
+        >img {
+        object-fit: contain;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-right: 100px;
+        cursor: pointer;
+    }
+    }
 `

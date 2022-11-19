@@ -69,8 +69,9 @@ function PSG() {
 <img src={Psg5} alt='' />
 <img src={Psg6} alt='' />
 </div>
-
+<div>
 <img src={Psg7} alt='' />
+</div>
 
 </Sgf>
     </About>
@@ -93,6 +94,11 @@ const D = styled.div`
     font-size: 50px;
     color: gold;
   }
+  @media (max-width: 450px) {
+      >h1 {
+        font-size: 35px;
+      }  
+    }
 `
 
 const Sgf = styled.div`
@@ -193,6 +199,30 @@ const Sgf = styled.div`
         height: 450px;
         padding: 20px;
         padding-bottom: 40px;    
+      }
+    }
+    }
+    @media (max-width: 360px) {
+      padding: 0px;
+      >h1{
+        margin-top: 20px;
+        margin-bottom: -15px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      >p{
+        font-size: 18px;
+      }
+      >div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 100%;
+        height: 350px;
+        padding: 20px;
+        padding-bottom: 20px;    
       }
     }
     }
@@ -353,6 +383,12 @@ const PictureExp = styled.div`
         width: 100%;
         height: 599px;
         padding-left: 0px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      >img {
+        margin-top: -50px;
       }
     }
 `
