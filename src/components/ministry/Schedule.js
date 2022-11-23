@@ -42,6 +42,18 @@ function Schedule() {
         navigate('/PSG')
     }
 
+    const Resources = () => {
+        navigate('/Resources')
+    }
+
+    const Ministries = () => {
+        navigate('/Ministries')
+    }
+    
+    const UpperRoom = () => {
+        navigate('/UpperRoom')
+    }
+
     const ContactUs = () => {
         navigate('/contact-us')
     }
@@ -58,15 +70,15 @@ function Schedule() {
             <h5>Plot 17 Angwa Rukuba, Former Oasis bakery</h5>
             <Ico>
                 <LocationOnIcon />
-                <h5>Jos North, Plateau State, Nigeria.</h5>
+                <h5>Plot 17 Gondola Street, Angwa Rukuba, Jos North, Plateau State, Nigeria.</h5>
             </Ico>
             <Ico>
                 <PhoneIcon />
-                <h5>Jos North, Plateau State, Nigeria.</h5>
+                <h5>(+234) 8141344044</h5>
             </Ico>
             <Ico>
                 <EmailIcon />
-                <h5>Jos North, Plateau State, Nigeria.</h5>
+                <h5>theplaceofmore@gmail.com</h5>
             </Ico>
         </GetInTouch>
 
@@ -77,32 +89,24 @@ function Schedule() {
             <h5 onClick={() => partnership()}>Partnership</h5>
             <h5 onClick={() => TPM()}>The Place of More</h5>
             <h5 onClick={() => PSG()}>Pastor Shenny Glory</h5>
-            <h5 >Ministries</h5>
-            <h5>Resources</h5>
-            <h5>Upper Room</h5>
-            <Ico>
-                <PhoneIcon />
-                <h5>Jos North, Plateau State, Nigeria.</h5>
-            </Ico>
-            <Ico>
-                <EmailIcon />
-                <h5>Jos North, Plateau State, Nigeria.</h5>
-            </Ico>
+            <h5 onClick={() => Ministries()}>Ministries</h5>
+            <h5 onClick={() => Resources()}>Resources</h5>
+            <h5 onClick={() => UpperRoom()}>More Kids</h5>
         </GetInTouchh>
 
         <GetInTouchhh>
-            <h3>Ministry Schedule</h3>
+            <h3>Opening Hours</h3>
             <p>____________________________________</p>
             
-            <h4>SUNDAY</h4>
-            <h5>1st Service -  4:00pm (GMT + 1)</h5>
-            <h5>2nd Service -  6:00pm (GMT + 1)</h5>
+            <h4>Mondays, Wednesdays & Fridays</h4>
+            <h5>12:00pm -  8:00pm </h5>
+            
             <br/>
-            <h4>TUESDAY</h4>
-            <h5>Lead With PSG - 2:00pm (GMT + 1) </h5>
+            <h4>Thursdays</h4>
+            <h5>5:00pm - 8:00pm  </h5>
             <br />
-            <h4>THURSDAY</h4>
-            <h5>Believers Service -  5:00pm (GMT + 1) </h5>
+            <h4>Sundays</h4>
+            <h5>4:00pm -  8:00pm  </h5>
         </GetInTouchhh>
     </PreFooter>
   )

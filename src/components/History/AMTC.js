@@ -128,6 +128,7 @@ const PictureExp = styled.div`
       width: 55%;
       height: 400px;
       padding-left: 150px;
+      margin-top: -50px;
       
     }
     @media (max-width: 1000px) {
@@ -297,6 +298,7 @@ background: whitesmoke;
   //box-shadow: inset 0 0 0 1000px rgba(0, 0, 0.2);
   object-fit: contain;
   padding-top: 10px;
+  margin-top: 80px;
 `
 const Facilitators = styled.div`
 >div {
@@ -314,6 +316,7 @@ const Facilitators = styled.div`
     font-size: 35px;
     margin-top: -40px;
   }
+}
 `
 
 const HistoryContainer = styled.div`

@@ -43,8 +43,7 @@ function Ministries(props) {
       </h1>
     </D>
     <Di>
-      <Dii>
-    <Card>
+     
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -61,8 +60,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -79,8 +77,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -97,10 +94,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -117,8 +111,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -135,8 +128,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -153,10 +145,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -173,8 +162,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -191,8 +179,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -209,10 +196,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -229,8 +213,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -247,8 +230,7 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
@@ -265,14 +247,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnn(!isOpennnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnn(!isOpennnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -285,12 +264,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -303,12 +281,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -321,14 +298,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -341,12 +315,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -359,12 +332,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -377,19 +349,16 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+   
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
           <motion.h2 layout="position">Research & Development Ministry. </motion.h2>
-          {isOpennnnnnnnnnnnnnnnnnn && (
+          {isOpennnnnnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>
             Obtaining new information for improvement.
@@ -397,17 +366,16 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
           <motion.h2 layout="position">Communications Ministry. </motion.h2>
-          {isOpennnnnnnnnnnnnnnnnnnn && (
+          {isOpennnnnnnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>
             Giving general information.
@@ -415,36 +383,32 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
           <motion.h2 layout="position">Communion Ministry.</motion.h2>
-          {isOpennnnnnnnnnnnnnnnnnnnn && (
+          {isOpennnnnnnnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>Ministering through Communion.
             </p>
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
           <motion.h2 layout="position">Communications Ministry. </motion.h2>
-          {isOpennnnnnnnnnnnnnnnnnnnnn && (
+          {isOpennnnnnnnnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>
             Giving general information.
@@ -452,17 +416,16 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
           <motion.h2 layout="position">Census & Statistics Ministry . </motion.h2>
-          {isOpennnnnnnnnnnnnnnnnnnnnnn && (
+          {isOpennnnnnnnnnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>
             Systematically recording the numeric growth and reach of the church.
@@ -470,12 +433,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -488,14 +450,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -508,12 +467,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -526,12 +484,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -544,14 +501,11 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
-    <Dii>
-    <Card>
+    
         <motion.div 
           transition={{Layout: {duration: 1, type: "spring"}}} 
           layout 
-          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
+          onClick={() => SetIsOpennnnnnnnnnnnnnnnnnnnnnnnnnnn(!isOpennnnnnnnnnnnnnnnnnnnnnnnnnnnn)} 
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
@@ -564,8 +518,6 @@ function Ministries(props) {
           </motion.div>
           )}
         </motion.div>
-    </Card>
-    </Dii>
     </Di>
     </>
   )
@@ -576,13 +528,16 @@ export default Ministries
 const Card = styled.div`
   //max-width: 1150px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    //grid-gap: 40px;
     justify-content: center;
     align-items: center;
     grid-gap: 25px;
     padding: 0 50px;
     padding-top: 10px;
     width: 25rem;
+    
     //width: 100%;
     
     /*>div{
@@ -601,12 +556,57 @@ const Card = styled.div`
 
 const Di = styled.div`
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding: 50px;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    @media (max-width: 750px) {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            padding: 30px;
+            //margin: -20px;
+        }
+
+  >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    >h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+    }
+    >div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      >p{
+        font-family: 'Tangerine', serif;
+        font-size: 17px;
+      }
+    }
+  }
+  >p{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 `
 const Dii = styled.div`
 display: flex;

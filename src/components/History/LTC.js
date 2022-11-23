@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import img2 from '../Image/img2.jpg';
-import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP, ServicesIcon } from './MtcElements'
+import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP, ServicesIcon } from './LtcElements'
 import Ven4 from '../body/Ven4.png';
 import Ven2 from '../body/Ven2.png';
 import Ven3 from '../body/Ven3.png'; 
@@ -157,11 +157,11 @@ function LTCHistory() {
             <ServicesH2>Pastor Noah Adediran</ServicesH2>
             <ServicesP>Director of Training</ServicesP>
           </ServicesCard>
-          <ServicesCard>
+          {/*<ServicesCard>
             <ServicesIcon src={Ven3}/>
             <ServicesH2>Pastor Sarah Larbong</ServicesH2>
             <ServicesP>MTC Coordinator</ServicesP>
-          </ServicesCard>
+    </ServicesCard>*/}
         </ServicesWrapper>
       </ServicesContainer>
     </Facilitators>

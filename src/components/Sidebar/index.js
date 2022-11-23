@@ -91,7 +91,7 @@ function Sidebar({ isOpen, toggle }) {
                         <ul>
                             <li onClick={() => LTC()}><a href='#'>LTC</a></li>
                             <li onClick={() => MTC()}><a href='#'>MTC</a></li>
-                            <li onClick={() => AMTC()}><a href='#'>AMTC</a></li>
+                            {/*<li onClick={() => AMTC()}><a href='#'>AMTC</a></li>*/}
                         </ul>
                 </SidebarLink>
                 <SidebarLink onClick={() => ContactUs()} >
@@ -101,7 +101,7 @@ function Sidebar({ isOpen, toggle }) {
             <SideBtnWrap>
                 <IconBtn>
                     <SidebarIconOption Icon={FacebookIcon} title="Facebook" />
-                    <SidebarIconOption Icon={TwitterIcon} title="Twitter" />
+                    {/*<SidebarIconOption Icon={TwitterIcon} title="Twitter" />*/}
                     <SidebarIconOption Icon={InstagramIcon}  title="Instagram" />
                     <SidebarIconOption Icon={ YouTubeIcon} title="Youtube" />
                 </IconBtn>

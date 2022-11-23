@@ -78,7 +78,7 @@ function Footer() {
                 <WebsiteRights>The Place of More © {new Date().getFullYear()}. All rights reserved.</WebsiteRights>
                 <IconBtn>
                     <FooterIconOption Icon={FacebookIcon} title="Facebook" />
-                    <FooterIconOption Icon={TwitterIcon} title="Twitter" />
+                    {/*<FooterIconOption Icon={TwitterIcon} title="Twitter" />*/}
                     <FooterIconOption Icon={InstagramIcon}  title="Instagram" />
                     <FooterIconOption Icon={ YouTubeIcon} title="Youtube" />
                 </IconBtn>

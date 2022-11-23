@@ -5,6 +5,9 @@ import ow2 from './ow2.jpg';
 import ow3 from './ow3.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
+import one from './one.jpg';
+import two from './two.jpg';
+import three from './three.jpg';
 import logo from './logo.jpg';
 import logo1 from './logo1.jpg';
 import crowd from './crowd.jpg';
@@ -24,18 +27,18 @@ function Upcomingp() {
     const [element, controls] = useScroll();
 
   return (
-    <Set ref={element}>
-    <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
-    <UpcomingPrograms>
-        <h5 style={{color: "#722f37"}}>Upcoming Programs...</h5>
+    <Set >
+    <div>
+    <UpcomingPrograms ref={element}>
+        <motion.h5 variants={headerAnimation} animate={controls} transition={{ type: 'spring', stiffness: 30}} style={{color: "#722f37"}}>Upcoming Programs...</motion.h5>
         <h1 style={{color: "gray", fontStyle: 'italic'}}>Prepare to attend</h1>
         <Images>
-        <Img1><img  src={ow3} alt='' /></Img1>
-        <Img2><img src={ow4} alt='' /></Img2>
-        <Img3><img  src={ow5} alt='' /></Img3>
+        <Img1><img  src={three} alt='' /></Img1>
+        <Img2><img src={two} alt='' /></Img2>
+        <Img3><img  src={one} alt='' /></Img3>
         </Images>
     </UpcomingPrograms>
-    </motion.div>
+    </div>
     </Set>
   )
 }

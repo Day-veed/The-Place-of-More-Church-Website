@@ -6,8 +6,8 @@ import styled, { useThem } from "styled-components"
 
 const messages = [
     "You are welcome to the TPM family",
-    "We develop World Class Leaders",
-    "To Inspire and Empower our generation"
+    "It has been 9 years of God's faithfulness",
+    "Join us as we Celebrate and Glorify God"
 ];
 
 export default function Promotions() {

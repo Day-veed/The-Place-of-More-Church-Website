@@ -462,7 +462,7 @@ function MTC() {
       <Promotions />
       <MTCHistory />
       
-      <H>
+      {/*<H>
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
           <h1 >Training Experience</h1>
@@ -497,7 +497,7 @@ function MTC() {
           </VD>
         </VideoContainer>
       </motion.div>
-      </H>
+  </H>*/}
 
       <Testimonial>
         <Container>

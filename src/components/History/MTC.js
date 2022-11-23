@@ -181,7 +181,7 @@ function MTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven4}/>
             <ServicesH2>Pastor Shenny Glory</ServicesH2>
-            <ServicesP>Lead Pastor at The Place of MORE Church.</ServicesP>
+            <ServicesP>Rector, TPM Institute of Ministers</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Ven2}/>
@@ -191,7 +191,7 @@ function MTCHistory() {
           <ServicesCard>
             <ServicesIcon src={Ven3}/>
             <ServicesH2>Pastor Sarah Larbong</ServicesH2>
-            <ServicesP>Assistant Director of Training(MTC)</ServicesP>
+            <ServicesP>MTC Coordinator of Training</ServicesP>
           </ServicesCard>
         </ServicesWrapper>
     </ServicesContainer>
@@ -210,13 +210,13 @@ const Mandatess = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background: whitesmoke;
-  padding: 25px;
+  //padding: 25px;
   margin-top: -100px;
   margin-bottom: 50px;
 
   >div{
     width: 450px;
-    margin: 70px;
+    //margin: 70px;
     >div {
       display: flex;
       justify-content: center;
@@ -231,6 +231,11 @@ const Mandatess = styled.div`
         height: 400px;
         width: 250px;
         margin-top: -50px;
+      }
+      @media (max-width: 450px) {
+        >img {
+          margin: -30px;
+        }
       }
       >div {
           >p{
@@ -249,7 +254,9 @@ const Mandatess = styled.div`
     margin-top: 0px;
   }
   @media (max-width: 450px) {
+    margin-top: -70px;
       >div {
+        width: 350px;
         margin: 20px;
       }
     }
@@ -297,7 +304,8 @@ const Mandates = styled.div`
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  padding: 100px;
+  width: 40%;
+  //padding: 100px;
 
   >div{
     border-radius: 10px;
@@ -330,6 +338,9 @@ const Mandates = styled.div`
 
   @media screen and (max-width: 600px){
     padding: 2px;
+  }
+  @media screen and (max-width: 400px){
+    padding: 100px;
   }
 `
 

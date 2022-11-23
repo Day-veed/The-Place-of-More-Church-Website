@@ -1,9 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Button, MainHeading, MainHeadingg } from '../globalStyles'
 import video from '../video/video.mp4'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroH2, HeroP, HeroButton, ButtonWrapper } from './HeroElement'
 
 function HeroSection() {
+
+  const navigate = useNavigate();
+
+  const TPM = () => {
+    navigate('/TPM')
+}
   return (
     <HeroContainer>
         <HeroBg>
@@ -16,7 +23,7 @@ function HeroSection() {
                 When you worship with us, you learn more than just the letters of the word.
             </HeroP>
             <ButtonWrapper>
-              <Button>About Us</Button>
+              <Button onClick={() => TPM()}><a href='#'>About Us</a></Button>
             </ButtonWrapper>
             
         </HeroContent>

@@ -35,18 +35,18 @@ function Services() {
             <ServicesP>Check Out The List of Our ministries and their functions.</ServicesP>
           </ServicesCard>
           </motion.div>
-          
+          <motion.div  variants={headerAnimations} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 20, duration: 2}}>
           <ServicesCard onClick={() => Resources()}>
             <ServicesIcon src={Logo}/>
             <ServicesH2>RESOURCES</ServicesH2>
             <ServicesP>You Can Get our Ministry Books, Videos and Audios here.</ServicesP>
           </ServicesCard>
-          
+          </motion.div>
           <motion.div  variants={headerAnimationsss} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 20, duration: 2}}>
           <ServicesCard onClick={() => UpperRoom()}>
             <ServicesIcon src={Logo}/>
-            <ServicesH2>Upper Room</ServicesH2>
-            <ServicesP>Upper Room is the Children's Ministry of The Place of More.</ServicesP>
+            <ServicesH2>More Kids</ServicesH2>
+            <ServicesP>More Kids is the Children's Ministry of The Place of More.</ServicesP>
           </ServicesCard>
           </motion.div>
         </ServicesWrapper>

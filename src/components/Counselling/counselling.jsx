@@ -11,12 +11,12 @@ function Counselling() {
     <div className='bodyy'>
         <Div>
         <CounsellingText>
-            <h4 style={{color: "black"}}>You can access</h4>
-            <h1 style={{color: "skyblue"}}>INDIVIDUAL, COUPLES AND TEEN</h1>
-            <h1 style={{color: "blue"}}>COUNSELLING</h1>
+            <h4 style={{color: "black"}}>Complete the form</h4>
+            <h1 style={{color: "skyblue"}}>To book for an appointment or call </h1>
+            <h3 style={{color: "white"}}>(+234) 8141344044</h3>
             <br/>
             <D>
-            <h3 style={{color: "whitesmoke"}}>Complete the form to book for an appointment or call (+234) 8012345678.</h3>
+            <h3 style={{color: "whitesmoke"}}>  </h3>
             </D>
         </CounsellingText>
         
@@ -26,15 +26,16 @@ function Counselling() {
                 <Input type='text' placeholder="Name"/>
                 <Input type='text' placeholder="Email"/>
                 <Input type='text' placeholder="Phone Number"/>
-                <Input type='text' placeholder="Message"/>
-                <select>
+                <Input type='text' placeholder="Reason"/>
+                {/*<select>
                     
                     <option value="Marriage">Marriage</option>
                     <option value="Finance">Finance</option>
                     <option value="Spiritual">Spiritual</option>
                     <option value="Academic">Academic</option>
+                    <option value="Academic">Others</option>
                     
-                </select>
+  </select>*/}
                 <div>
                 <Button style={{backgroundColor:'skyblue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
                 </div>
@@ -149,12 +150,18 @@ const D = styled.div`
     display: flex;
 
     >h3 {
-        font-weight: bold;
+        font-weight: 700;
         font-family: 'EB Garamond', serif;
         font-size: 28px;
 
         @media (max-width: 750px) {
-            font-size: 24px;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 18px;
+            font-weight: 300;
         }
     }
 
@@ -171,32 +178,52 @@ const D = styled.div`
 const CounsellingText = styled.div`
     padding-right: 25px;
     padding: 10px;
+    margin-left: -50px;
+    margin-right: 70px;
+    margin-top: -50px;
 
     >h1 {
             font-stretch: expanded;
             font-weight: bold;
             font-family: 'EB Garamond', serif;
-            font-size: 50px;
+            font-size: 45px;
 
-            @media (max-width: 750px) {
+            @media (max-width: 950px) {
             font-size: 38px;
         }
         @media (max-width: 600px) {
-            font-size: 27px;
+            font-size: 30px;
+        }
+        @media (max-width: 400px) {
+            font-size: 25px;
+            //margin-bottom: -10px;
         }
     }
 
     >h4{
         font-weight: bold;
         font-family: 'EB Garamond', serif;
-        font-size: 28px;
+        font-size: 50px;
         color: blue;
+        margin-top: -50px;
+        margin-bottom: 30px;
 
-        @media (max-width: 750px) {
-            font-size: 28px;
+        @media (max-width: 1150px) {
+            font-size: 45px;
+            margin-top: 150px;
+        }
+
+        @media (max-width: 950px) {
+            font-size: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
         @media (max-width: 600px) {
-            font-size: 23px;
+            font-size: 35px;
+        }
+        @media (max-width: 400px) {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
     }
     >h3{
@@ -211,11 +238,25 @@ const CounsellingText = styled.div`
         @media (max-width: 600px) {
             font-size: 20px;
         }
-    }
+        @media (max-width: 400px) {
+            //font-size: 28px;
+            //margin-bottom: -20px;
+        }
+    }margin-left: -50px;
+    margin-right: 70px;
 
-    @media (max-width: 750px) {
+    @media (max-width: 1250px) {
         padding-top: 70px;
         padding-bottom: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media (max-width: 950px) {
+        padding-top: 70px;
+        padding-bottom: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
 
         >h1 {
             //font-stretch: expanded;

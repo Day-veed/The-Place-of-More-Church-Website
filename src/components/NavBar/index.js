@@ -150,7 +150,7 @@ function Navbar({ toggle }) {
                         <ul>
                             <li onClick={() => LTC()}><a href='#'>LTC</a></li>
                             <li onClick={() => MTC()}><a href='#'>MTC</a></li>
-                            <li onClick={() => AMTC()}><a href='#'>AMTC</a></li>
+                            {/*<li onClick={() => AMTC()}><a href='#'>AMTC</a></li>*/}
                         </ul>
                     </NavLinksss>
                 </NavItem>
@@ -160,7 +160,7 @@ function Navbar({ toggle }) {
             </NavMenu>
             <IconBtn>
                 <NavIconOption Icon={FacebookIcon} title="Facebook" />
-                <NavIconOption Icon={TwitterIcon} title="Twitter" href='t.me/theeveningchurchTPM'/>
+                {/*<NavIconOption Icon={TwitterIcon} title="Twitter" href='t.me/theeveningchurchTPM'/>*/}
                 <NavIconOption Icon={InstagramIcon}  title="Instagram" />
                 <NavIconOption Icon={ YouTubeIcon} title="Youtube" />
             </IconBtn>

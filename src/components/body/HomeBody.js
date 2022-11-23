@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from "styled-components"
-import TPM from './TPM.jpg';
+import Paps from './Paps.png';
 import PMS from './PMS.png';
 import ow3 from './ow3.jpg';
+import one from './one.jpg';
+import two from './two.jpg';
+import three from './three.jpg';
 import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
 import logo from './logo.jpg';
@@ -58,7 +61,7 @@ function HomeBody() {
   return (
     <>
     <PictureExp ref={element}>
-      <img src={crowd} alt='' />
+      <img src={Paps} alt='' />
       <motion.div  variants={headerAnimation} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 17, duration: 2}}>
       <Text >
         <h2 style={{color: "#722f37"}}>Welcome to The Place of More Church<br/>

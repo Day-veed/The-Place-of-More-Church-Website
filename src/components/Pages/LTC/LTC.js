@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CarouselContainer from '../../carousel/CarouselContainer'
+import CarouselContainerLTC from '../../carousel/CarouselContainerLTC'
 import Promotions from '../../promotions/messages'
 import ReactPlayer from 'react-player'
 import vid from '../../video/vid.mp4'
@@ -42,46 +42,31 @@ function LTC() {
   }
   return (
     <>
-      <CarouselContainer />
+      <CarouselContainerLTC />
       <Promotions />
       <LTCHistory />
-      {/*<Carousel />*/}
+      {/*<Carousel />*
       <H>
       <motion.div initial={{ y: 75 }} animate={{ y: 10}} transition={{ delay: 0.2, type: 'spring', stiffness: 10 }}>
         <T>
           <h1 >Training Experience</h1>
         </T>
         
-        <VideoContainer>
-          <V>
-          <ReactPlayer 
-              width='450px' 
-              height='35' 
-              controls 
-              url={vid}
-              onReady={() => console.log('onready callback')}
-              onStart={() => console.log('onStart callback')}
-              onPause={() => console.log('onPause callback')}
-              onEnded={() => console.log('onEnded callback')}
-              onError={() => console.log('onError callback')} 
-          />
-          </V>
-          <VD>
-          <ReactPlayer 
-              width='450px' 
-              height='35' 
-              controls 
-              url={vid}
-              onReady={() => console.log('onready callback')}
-              onStart={() => console.log('onStart callback')}
-              onPause={() => console.log('onPause callback')}
-              onEnded={() => console.log('onEnded callback')}
-              onError={() => console.log('onError callback')} 
-          />
-          </VD>
-        </VideoContainer>
-      </motion.div>
-      </H>
+        <VideoContainers>
+                <ReactPlayer 
+                    width='850px' 
+                    height='70' 
+                    controls 
+                    url={vid}
+                    onReady={() => console.log('onready callback')}
+                    onStart={() => console.log('onStart callback')}
+                    onPause={() => console.log('onPause callback')}
+                    onEnded={() => console.log('onEnded callback')}
+                    onError={() => console.log('onError callback')} 
+                />
+    </VideoContainers>  
+  </motion.div>
+  </H>*/}
       <Testimonial>
         <Container>
           <h2>Testimonials</h2>
@@ -299,6 +284,18 @@ const T = styled.div`
     }
 `
 
+const VideoContainers = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+
+    > h4{
+        font-family: 'EB Garamond', serif;
+    }
+`
 const VideoContainer = styled.div`
     display: flex;
     justify-content: center;

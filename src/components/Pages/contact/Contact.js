@@ -35,9 +35,9 @@ function Contact() {
                 <ContactOption Icon={AccessTimeIcon} />
                 <FooterLinkTitle>Opening Hours</FooterLinkTitle>
                     <FooterLink >
-                      <h4>Monday – Friday: 4pm – 8pm</h4>
-                      <h4>Saturdays: 12am – 8pm</h4>
-                      <h4>Sunday: 8am – 5pm</h4>
+                      <h4>Mondays, Wednesdays &Friday: 12pm – 8pm</h4>
+                      <h4>Thursdays: 5pm – 8pm</h4>
+                      <h4>Sundays: 4pm – 8pm</h4>
                     </FooterLink>
                     
                 </FooterLinkItems>
@@ -45,15 +45,15 @@ function Contact() {
             <FooterLinksWrapper>
             <FooterLinkItems>
             <ContactOption Icon={PhoneIcon} />
-            <FooterLinkTitle>Address</FooterLinkTitle>
-                    <FooterLink >(+234) 12345670,</FooterLink>
-                    <FooterLink>(+234) 12345679</FooterLink>
+            <FooterLinkTitle>Phone</FooterLinkTitle>
+                    <FooterLink >(+234) 8141344044</FooterLink>
+                    {/*<FooterLink>(+234) 12345679</FooterLink>*/}
                     
                 </FooterLinkItems>
                 <FooterLinkItems>
                 <ContactOption Icon={MailIcon} />
                     <FooterLinkTitle>Mail</FooterLinkTitle>
-                    <FooterLink >theplaceofmore@tpm.org</FooterLink>
+                    <FooterLink >theplaceofmore@gmail.com</FooterLink>
                     
                 </FooterLinkItems>
             </FooterLinksWrapper>
