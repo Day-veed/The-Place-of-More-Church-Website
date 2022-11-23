@@ -19,7 +19,7 @@ function UpperRoom() {
       </h1>
     </D>
     <Div>
-      <h2>We focuse greatly on Raising Kingdom-minded Kids</h2>
+      <h2>We focus greatly on Raising Kingdom-minded Kids</h2>
       <h3>We nuture children spiritually and mentally to grow in Christ, glorify Him and advance His kingdom.</h3>
     </Div>
     <Sgf>

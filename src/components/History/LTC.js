@@ -357,6 +357,10 @@ const Facilitators = styled.div`
   font-style: italic;
   padding-top: 70px;
   background: whitesmoke;
+  font-family: 'Playfair Display', serif;
+  @media screen and (max-width: 400px){
+      font-size: 32px;
+  }
 }
 @media (max-width: 450px) {
       >div {

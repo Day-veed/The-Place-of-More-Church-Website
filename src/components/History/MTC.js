@@ -210,13 +210,12 @@ const Mandatess = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background: whitesmoke;
-  //padding: 25px;
+  padding: 25px;
   margin-top: -100px;
   margin-bottom: 50px;
-
   >div{
     width: 450px;
-    //margin: 70px;
+    margin: 70px;
     >div {
       display: flex;
       justify-content: center;
@@ -231,10 +230,10 @@ const Mandatess = styled.div`
         height: 400px;
         width: 250px;
         margin-top: -50px;
-      }
-      @media (max-width: 450px) {
-        >img {
-          margin: -30px;
+        @media screen and (max-width: 400px){
+          height: 320px;
+          width: 400px;
+        //margin: 0px;
         }
       }
       >div {
@@ -244,8 +243,12 @@ const Mandatess = styled.div`
           }
         }
     }
+    @media screen and (max-width: 400px){
+      width: 350px;
+      margin: 0px;
+      margin-bottom: 20px;
   }
-
+  }
   @media screen and (max-width: 960px){
     flex-direction: column;
     justify-content: center;
@@ -253,13 +256,6 @@ const Mandatess = styled.div`
     padding: 0px;
     margin-top: 0px;
   }
-  @media (max-width: 450px) {
-    margin-top: -70px;
-      >div {
-        width: 350px;
-        margin: 20px;
-      }
-    }
 `
 const Mandatesss = styled.div`
   display: flex;
@@ -268,7 +264,6 @@ const Mandatesss = styled.div`
   background: whitesmoke;
   padding: 25px;
   
-
   >div{
     width: 450px;
     display: flex;
@@ -304,13 +299,10 @@ const Mandates = styled.div`
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  width: 40%;
-  //padding: 100px;
-
+  padding: 100px;
   >div{
     border-radius: 10px;
   }
-
   >h5 {
     //padding: 30px;
     //color: white;
@@ -327,20 +319,14 @@ const Mandates = styled.div`
     padding-left: 150px;
     font-family: 'Playfair Display', serif;
   }
-
   @media screen and (max-width: 960px){
     padding: 90px;
   }
-
   @media screen and (max-width: 800px){
     padding: 10px;
   }
-
   @media screen and (max-width: 600px){
     padding: 2px;
-  }
-  @media screen and (max-width: 400px){
-    padding: 100px;
   }
 `
 
@@ -352,7 +338,6 @@ const Mandate = styled.div`
   background: whitesmoke;
   padding: 15px;
   //padding-bottom: 30px;
-
   >h5 {
     //padding: 30px;
     //color: white;
@@ -379,7 +364,6 @@ const Mandate = styled.div`
     padding-left: 150px;
     font-family: 'Playfair Display', serif;
   }
-
   @media screen and (max-width: 600px){
     padding-bottom: 0px;
     margin-top: -70px;
@@ -417,13 +401,6 @@ const PictureExp = styled.div`
         padding-left: 0px;
       }
     }
-    @media (max-width: 450px) {
-      margin-top: -17px;
-      >img {
-        width: 90%;
-        height: 350px;
-      }  
-    }
 `
 const Text = styled.div`
   padding-left: 50px;
@@ -438,7 +415,6 @@ const Text = styled.div`
         font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
-
         >h5 {
         font-family: 'Playfair Display', serif;
         font-weight: bold;
@@ -455,7 +431,6 @@ const Text = styled.div`
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
     }
-
     @media (max-width: 1000px) {
         padding-left: 15px;
         width: auto;
@@ -502,7 +477,6 @@ const UpcomingPrograms = styled.div`
     @media (max-width: 1000px) {
         width: auto;
         height: auto;
-
         > p {
         padding-top: 25px;
         font-size: 18;
@@ -575,14 +549,10 @@ const Facilitators = styled.div`
   padding-top: 70px;
   background: white;
   font-family: 'Playfair Display', serif;
+  @media screen and (max-width: 400px){
+      font-size: 32px;
+  }
 }
-@media (max-width: 450px) {
-      >div {
-        font-size: 28px;
-        font-weight: bold;
-        margin-top: -50px;
-      }
-    }
 `
 
 const HistoryContainer = styled.div`

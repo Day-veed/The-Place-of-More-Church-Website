@@ -55,8 +55,12 @@ function PSG() {
 
 <Sgf>
 <h1 style={{color: "#722f37"}}>SHENNY GLORY FOUNDATION (SGF)</h1>
+<div>
+  <div>
 <p>Shenny Glory Foundation is the brainchild of Pastor Shenny Glory, the Lead Pastor at The Place of More Church, Mentor and Business Strategist</p>
 <p>It is committed to rewarding Excellence, Restoring Hope and positively adding values to impact the lives of the people.</p>
+</div>
+</div>
 <div>
 <img src={Psg1} alt='' />
 <img src={Psg2} alt='' />
@@ -115,11 +119,7 @@ const Sgf = styled.div`
     font-family: 'Roboto Condensed', sans-serif;
     //color: "#722f37"
   }
-  >p {
-    padding-top: 15px;
-    font-size: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-  }
+  
   > img {
     width: 59%;
       height: 500px;
@@ -130,13 +130,25 @@ const Sgf = styled.div`
 
   >div {
     display: flex;
-    justify-content: center;
+
+    justify-content: space-evenly;
     align-items: center;
     > img {
       width: 59%;
       height: 500px;
       padding: 20px;
       padding-bottom: 40px;    
+    }
+    >div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      >p {
+      padding-top: 15px;
+      font-size: 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+     }
     }
   }
 
