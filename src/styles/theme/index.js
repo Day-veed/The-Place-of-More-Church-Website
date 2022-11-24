@@ -1,7 +1,7 @@
-import { BorderRight } from "@mui/icons-material";
-import { colors } from "@mui/material";
-import { createTheme, lighten } from "@mui/material/styles";
-import { Component } from "react";
+//import { BorderRight } from "@mui/icons-material";
+//import { colors } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+//import { Component } from "react";
 
 export const Colors = {
     primary: '#5f2c3e',

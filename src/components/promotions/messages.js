@@ -1,7 +1,7 @@
 import { Slide } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
-import styled, { useThem } from "styled-components"
+import styled from "styled-components"
 
 
 const messages = [

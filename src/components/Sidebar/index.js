@@ -1,10 +1,10 @@
 import React from 'react'
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SideBtnWrap, SidebarLink, SidebarIconOptions, SidebarMenu, SideLogo } from './SidebarElements'
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SideBtnWrap, SidebarLink, SidebarMenu, SideLogo } from './SidebarElements'
 import { useNavigate } from 'react-router-dom';
 import {IconBtn} from './SidebarElements'
 import SidebarIconOption from './SidebarIconOption';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import logo from '../body/logo.png'
@@ -101,7 +101,7 @@ function Sidebar({ isOpen, toggle }) {
             <SideBtnWrap>
                 <IconBtn>
                     <SidebarIconOption Icon={FacebookIcon} title="Facebook" />
-                    {/*<SidebarIconOption Icon={TwitterIcon} title="Twitter" />*/}
+                    <SidebarIconOption Icon={TelegramIcon} title="Telegram" />
                     <SidebarIconOption Icon={InstagramIcon}  title="Instagram" />
                     <SidebarIconOption Icon={ YouTubeIcon} title="Youtube" />
                 </IconBtn>

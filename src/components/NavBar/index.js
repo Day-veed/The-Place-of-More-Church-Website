@@ -1,27 +1,27 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, IconBtn, NavLinkss, NavLinksss} from './NavBarElements'
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import NavIconOption from './NavIconOption';
-import Dropdown from './Dropdown';
+//import Dropdown from './Dropdown';
 import './index.css';
-import { MenuItems } from './MenuItems';
-import {FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
+//import { MenuItems } from './MenuItems';
+//import {FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import logo from '../body/logo.png'
 //import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
 function Navbar({ toggle }) {
 
-    const [open, setOpen] = useState(false);
+    //const [open, setOpen] = useState(false);
 
     const [scrollNav, setScrollNav] = useState(false)
     const [dropdown, setDropdown] = useState(false);
 
-    const [selectedOption, setSelectedOption] = useState("");
+    //const [selectedOption, setSelectedOption] = useState("");
 
     const [isMenu, setisMenu] = useState(false);
     const [isResponsiveclose, setResponsiveclose] = useState(false);
@@ -160,7 +160,7 @@ function Navbar({ toggle }) {
             </NavMenu>
             <IconBtn>
                 <NavIconOption Icon={FacebookIcon} title="Facebook" />
-                {/*<NavIconOption Icon={TwitterIcon} title="Twitter" href='t.me/theeveningchurchTPM'/>*/}
+                <NavIconOption Icon={TelegramIcon} title="Twitter" href='t.me/theeveningchurchTPM'/>
                 <NavIconOption Icon={InstagramIcon}  title="Instagram" />
                 <NavIconOption Icon={ YouTubeIcon} title="Youtube" />
             </IconBtn>

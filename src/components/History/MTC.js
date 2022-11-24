@@ -5,7 +5,7 @@ import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP
 import Ven4 from '../body/Ven4.png';
 import Ven2 from '../body/Ven2.png';
 import Ven3 from '../body/Ven3.png'; 
-import Ven from '../body/Ven.png'; 
+//import Ven from '../body/Ven.png'; 
 import MTC from '../body/MTC.jpg'; 
 import Power from './Power.jpg';
 import Purpose from './Purpose.jpg';
@@ -16,15 +16,15 @@ import { motion } from 'framer-motion'
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
-import { Button } from "@mui/material";
+//import { Button } from "@mui/material";
 //import Images from './images';
-import images from './images';
+//import images from './images';
 import './MTC.css'
-import Carousel from '../Pages/MTC/Carousel';
+//import Carousel from '../Pages/MTC/Carousel';
 import { headerAnimation } from '../Animations/Animations';
 import { useScroll } from '../useScroll';
 import { useDispatch } from 'react-redux';
-import FormInput from './FormInput';
+//import FormInput from './FormInput';
 import Form from './Form';
 
 function MTCHistory() {
@@ -448,6 +448,9 @@ const PictureExp = styled.div`
         width: 80%;
         padding-left: 0px;
       }
+    }
+    @media (max-width: 400px) {
+      margin-top: -15px;
     }
 `
 const Text = styled.div`

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
 
 function Map() {
@@ -19,4 +19,4 @@ function Map() {
     )
 }
 
-export default Map;
+export default Map;*/

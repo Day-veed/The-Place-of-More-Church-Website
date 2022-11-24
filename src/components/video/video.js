@@ -1,21 +1,21 @@
 import styled from "styled-components"
-import ReactPlayer from 'react-player'
-import vid from './vid.mp4'
-import { motion } from 'framer-motion'
-import ow from '../body/ow.jpg';
-import ow2 from '../body/ow2.jpg';
+//import ReactPlayer from 'react-player'
+//import vid from './vid.mp4'
+//import { motion } from 'framer-motion'
+//import ow from '../body/ow.jpg';
+//import ow2 from '../body/ow2.jpg';
 import { Button } from "@mui/material";
 import YouTube from "react-youtube";
 import './video.css';
-import { headerAnimation, headerAnimationss, headerAnimationsss, imageAnimation } from "../Animations/Animations"
-import { useScroll } from '../useScroll';
+//import { headerAnimation, headerAnimationss, headerAnimationsss, imageAnimation } from "../Animations/Animations"
+//import { useScroll } from '../useScroll';
 
 export default function Video() {
-    const [element, controls] = useScroll();
+    /*const [element, controls] = useScroll();
 
    function videoOnPlay (event) {
         const player = event.target
-    }
+    }*/
 
     const opts = {
         height: 240,
@@ -192,7 +192,7 @@ const FeaturedMessages = styled.div`
     }
 `
 
-const T = styled.div`  
+/*const T = styled.div`  
     //display: block;
     display: flex;
     width: 100%;
@@ -208,4 +208,4 @@ const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-`
+`*/

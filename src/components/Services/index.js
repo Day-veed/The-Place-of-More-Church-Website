@@ -1,10 +1,10 @@
 import React from 'react'
 import Logo from '../body/logo.png';
-import Logo1 from '../body/logo1.jpg';
-import Logo2 from '../body/logo2.jpg'; 
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'
+//import Logo1 from '../body/logo1.jpg';
+//import Logo2 from '../body/logo2.jpg'; 
+import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'
 import { motion } from "framer-motion";
-import { headerAnimations, headerAnimationss, headerAnimationsss, imageAnimation } from "../Animations/Animations"
+import { headerAnimations, headerAnimationsss } from "../Animations/Animations"
 import { useScroll } from '../useScroll';
 import { useNavigate } from 'react-router-dom';
 

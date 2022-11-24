@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import './Partnership.css'
 import Give from './GIve-1.jpg'
-import Tpm from './tp.jpg'
-import UsingHooks from './UsingHooks'
-import UsingComponents from './UsingComponents'
+//import Tpm from './tp.jpg'
+//import UsingHooks from './UsingHooks'
+//import UsingComponents from './UsingComponents'
 
 function Partnership() {
   return (

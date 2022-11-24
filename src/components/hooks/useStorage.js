@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { db, storage, timestamp } from '../../firebase';
-import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
+import { db, timestamp } from '../../firebase';
+//import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 //import { projectStorage } from '../firebase/config';
 import firebase from 'firebase/compat/app';
 

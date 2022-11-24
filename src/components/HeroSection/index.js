@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Button, MainHeading, MainHeadingg } from '../globalStyles'
 import video from '../video/video.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroH2, HeroP, HeroButton, ButtonWrapper } from './HeroElement'
+import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroP, ButtonWrapper } from './HeroElement'
 
 function HeroSection() {
 

@@ -14,7 +14,7 @@ import church from './church.jpg'
 import TPm from './TPM.jpg'
 import Word from './Word.jpg'
 import { motion } from 'framer-motion'
-import { headerAnimation, imageAnimation } from "../../Animations/Animations"
+import { headerAnimation} from "../../Animations/Animations"
 import { useScroll } from '../../useScroll';
 import PictureExpe from './PictureExpe'
 

@@ -4,35 +4,19 @@ import styled from 'styled-components'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import Partnership from '../Pages/partnership/Partnership';
+//import Partnership from '../Pages/partnership/Partnership';
 import { useNavigate } from 'react-router-dom';
 
 function Schedule() {
     const navigate = useNavigate();
 
-    const home = () => {
-        navigate('/')
-    }
-
-    const aboutUs = () => {
-        navigate('/about-us')
-    }
+    
 
     const partnership = () => {
         navigate('/partnership')
     }
 
-    const MTC = () => {
-        navigate('/MTC')
-    }
-
-    const LTC = () => {
-        navigate('/LTC')
-    }
-
-    const AMTC = () => {
-        navigate('/AMTC')
-    }
+    
 
     const TPM = () => {
         navigate('/TPM')
@@ -54,9 +38,7 @@ function Schedule() {
         navigate('/UpperRoom')
     }
 
-    const ContactUs = () => {
-        navigate('/contact-us')
-    }
+    
   return (
     <PreFooter>
         <Img>

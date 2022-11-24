@@ -45,8 +45,62 @@
     flex-direction: column;
     width: 80%;
 }
+@media screen and (max-width: 1149px) {
+    .sendMail {
+        width: 65%;
+    }    
+}
+
+@media screen and (max-width: 1000px) {
+    .sendMail {
+        width: 70%;
+    }    
+}
+
+@media screen and (max-width: 800px) {
+    .sendMail {
+        width: 80%;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .sendMail {
+        width: 100%;
+    }    
+}
+
+.sendMail > form > span {
+    font-size: 13px;
+    padding: 10px;
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: none;
+}
+
+.sendMail > form > input:invalid ~ span {
+    display: block;
+}
+
+.sendMail > form > p > input:invalid ~ .sendMail > form > span {
+    display: block;
+}
+
+.sendMail > form > p > div > input:invalid ~ .sendMail > form > span {
+    display: block;
+}
 
 .sendMail > form > input {
+    height: 45px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+}
+
+.sendMail > form > textarea {
     height: 45px;
     padding: 10px;
     margin: 10px;
@@ -83,6 +137,7 @@
     border: none;
     outline: none;
     font-family: 'EB Garamond', serif;
+    margin: 7px;
 }
 
 .sendMail > form > p > div {

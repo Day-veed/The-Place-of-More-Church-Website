@@ -1,9 +1,9 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap';
-import img from '../Image/img.jpg';
-import img2 from '../Image/img2.jpg';
-import img3 from '../Image/img3.jpg';
-import img4 from '../Image/img4.jpg';
+//import img from '../Image/img.jpg';
+//import img2 from '../Image/img2.jpg';
+//import img3 from '../Image/img3.jpg';
+//import img4 from '../Image/img4.jpg';
 import img8 from '../Image/img8.jpg';
 import img9 from '../Image/img8.jpg';
 import img10 from '../Image/img10.jpg';

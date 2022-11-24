@@ -1,55 +1,196 @@
-import { Button } from '@mui/material'
-import React, { useState } from 'react'
+//import { Button } from '@mui/material'
+import React, { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
 import styled from 'styled-components'
 import './Form.css'
-import { useForm } from "react-hook-form";
+import axios from 'axios';
+//import { useForm } from "react-hook-form";
 
 function Form() {
     const [username, setUsername] = useState("")
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    /*const emailerr = "Please provide a valid email"
+    const nameerr = "Please enter your full name"
+    const numbererr = "This is a required question"
+    const locationerr = "This is a required question"
+    const aboutYouerr = "This is a required question"
+    const radioerr = "This is a required question"
+    const uploaderr = "Please submit your letter of recommendation"*/
+ 
+    //const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [number, setNumber] = useState();
+    const [location, setLocation] = useState();
+    const [Church, setChurch] = useState();
+    const [about, setAbout] = useState();
+    const [select, setSelect] = useState();
+    const [file, setFile] = useState();
+
+    /*const state={
+        email:'',
+        name:'',
+        number:'',
+        location:'',
+        Church:'',
+        message:'',
+        Avail:'',
+        File:'',
+        sent: false
+    }*/
+
+    //handle inputs
+    const handleEmail=(e)=>{
+        this.setState({
+            name:e.target.email
+        })
+    }
+
+    const handleName=(e)=>{
+        this.setState({
+            name:e.target.name
+        })
+    }
+
+    const handleNumber=(e)=>{
+        this.setState({
+            name:e.target.number
+        })
+    }
+
+    const handleLocation=(e)=>{
+        this.setState({
+            name:e.target.location
+        })
+    }
+
+    const handleChurch=(e)=>{
+        this.setState({
+            name:e.target.Church
+        })
+    }
+
+    const handleMessage=(e)=>{
+        this.setState({
+            name:e.target.message
+        })
+    }
+
+    const handleAvail=(e)=>{
+        this.setState({
+            name:e.target.Avail
+        })
+    }
+
+    const handleFile=(e)=>{
+        this.setState({
+            name:e.target.File
+        })
+    }
+    //end of handle inputs
 
     console.log(username)
+
+    const handleRadio = event => {
+
+    }
+    const sent = false
+
+    const formSubmit=(e)=>{
+        e.preventDefault();
+
+        let data = {
+            name: name,
+            email: email,
+            number: number,
+            location : location,
+            Church: Church,
+            about: about,
+            select: select,
+            file: file
+         }
+
+         axios.post('/api/form', data)
+         .then(res=>(
+            this.setState({
+                sent:true,
+            },this.resetForm())
+         )).catch(()=>{
+            console.log('Message not sent')
+         })
+    }
+
+    //for reseting initial data
+    const resetForm=()=>{
+        this.setState({
+            name:'',
+            email: '',
+            number: '',
+            location : '',
+            Church: '',
+            about: '',
+            select: '',
+            file: null
+        })
+
+        setTimeout(()=>{
+            this.setState({
+                sent:false,
+            })
+        }, 3000)
+    }
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_cniyvjp', 'template_czxpl6h', form.current, 'qy6fvb2VC_0YK6x9-')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+  
+
   return (
-    <div className='sendMail'>
+    /*<form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>*/
+    <div className='sendMail' >
         <div className='sendMail__header'>
             <H3>Registration Form</H3>
         </div>
-        <form>
-            <input name='email' placeholder="Email" type="text" ref={register({required:true})}/>
+        <form ref={form} onSubmit={sendEmail}>
+            <input onChange={e=>setEmail(e.target.value)} name="user_email" placeholder="Email" type="text" required  />
+            
 
-            <input name='name' placeholder="Full Name" type="text" ref={register({required:true})}/>
+            <input onChange={e=>setName(e.target.value)} name="user_name" placeholder="Full Name" type="text" required pattern='^[A-Za-z0-9]{3,16}$' />
+            
 
-            <input name='WNumber' placeholder="Whatsapp Number" type="number" ref={register({required:true})}/>
+            <input onChange={e=>setNumber(e.target.value)} name='WNum' placeholder="Whatsapp Number" type="number" required />
+            
 
-            <input name='location' placeholder="Location" type="text" ref={register({required:true})}/>
+            <input onChange={e=>setLocation(e.target.value)} name='Location' placeholder="Location" type="text" required />
+            
 
-            <input name='Church' placeholder="What Church Do You Attend?" type="text" ref={register({required:true})}/>
+            <input onChange={e=>setChurch(e.target.value)} name='Church' placeholder="What Church Do You Attend?" type="text" />
 
-            <input name='aboutYou' placeholder="Tell Us About Yourself Briefly" type="text" className='sendMail__message' ref={register({required:true})}/>
+            <textarea onChange={e=>setAbout(e.target.value)} name="message" placeholder="Tell Us About Yourself Briefly" type="text" className='sendMail__message' required cols="30" rows="5"/>
+            
 
-            <p>
-                <h4>Will You Be Available For All The Trainings?</h4>
-                <div>Yes<input name='yes' type="radio" value="Yes" /></div>
-                <div>No<input name='no' type="radio" value="No"/></div>
-            </p>
-            <p>
-                <h3>UPLOAD YOUR LETTER OF RECOMMENDATION. (If you are not a member of The Place of More Church)</h3>
-                <input name='file' placeholder="Will You Be Available For All The Trainings?" type="file"/>
-            </p>
+           
 
-            <div className='sendMail__options'>
-                <Button
-                    className="sendMail__send"
-                    variant="contained"
-                    color="primary"
-                    background-color= "#722f37"
-                    type="submit"
-                >
-                    Submit
-                </Button>
-            </div>
-
-        </form>
+            
+            <input type="submit" value="Send" />
+  </form>
     </div>
         
     

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocailLogo, WebsiteRights, IconBtn } from './FooterElements';
+import { FooterContainer, FooterWrap,  SocialMedia, SocialMediaWrap, SocailLogo, WebsiteRights, IconBtn } from './FooterElements';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FooterIconOption from './FooterIconOption';
@@ -78,7 +78,7 @@ function Footer() {
                 <WebsiteRights>The Place of More © {new Date().getFullYear()}. All rights reserved.</WebsiteRights>
                 <IconBtn>
                     <FooterIconOption Icon={FacebookIcon} title="Facebook" />
-                    {/*<FooterIconOption Icon={TwitterIcon} title="Twitter" />*/}
+                    <FooterIconOption Icon={TelegramIcon} title="Telegram" />
                     <FooterIconOption Icon={InstagramIcon}  title="Instagram" />
                     <FooterIconOption Icon={ YouTubeIcon} title="Youtube" />
                 </IconBtn>

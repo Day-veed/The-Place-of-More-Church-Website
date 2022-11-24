@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Paps from './Paps.png';
-import PMS from './PMS.png';
+/*import PMS from './PMS.png';
 import ow3 from './ow3.jpg';
 import one from './one.jpg';
 import two from './two.jpg';
@@ -10,18 +10,18 @@ import ow4 from './ow4.jpg';
 import ow5 from './ow5.jpg';
 import logo from './logo.jpg';
 import logo1 from './logo1.jpg';
-import crowd from './crowd.jpg';
+import crowd from './crowd.jpg';*/
 import { motion } from 'framer-motion'
-import { Upcoming } from '@mui/icons-material';
+//import { Upcoming } from '@mui/icons-material';
 import Services from '../Services';
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
-import Counselling from '../Counselling/counselling';
-import { headerAnimation, imageAnimation } from "../Animations/Animations"
+//import Counselling from '../Counselling/counselling';
+import { headerAnimation } from "../Animations/Animations"
 import { useScroll } from '../useScroll';
 import Upcomingp from './upcoming';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function HomeBody() {
 

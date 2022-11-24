@@ -1,22 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import img2 from '../Image/img2.jpg';
+//import img2 from '../Image/img2.jpg';
 import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP, ServicesIcon } from './LtcElements'
 import Ven4 from '../body/Ven4.png';
 import Ven2 from '../body/Ven2.png';
-import Ven3 from '../body/Ven3.png'; 
-import Ven from '../body/Ven.png'; 
+//import Ven3 from '../body/Ven3.png'; 
+//import Ven from '../body/Ven.png'; 
 import MTC from '../body/MTC.jpg'; 
 import { motion } from 'framer-motion'
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
-import { Button } from "@mui/material";
+//import { Button } from "@mui/material";
 //import { useForm } from "react-hook-form";
-import { useDispatch } from 'react-redux';
+//import { useDispatch } from 'react-redux';
 import { db } from "../../firebase";
 import firebase from 'firebase/compat/app';
-import { useForm } from 'react-hook-form';
+//import { useForm } from 'react-hook-form';
 import './LTC.css'
 import { useScroll } from '../useScroll';
 import { headerAnimation } from '../Animations/Animations';
@@ -27,8 +27,8 @@ function LTCHistory() {
     const animation = useAnimation();
     const [element, controls] = useScroll();
 
-    const { register, handleSubmit, watch, errors } = useForm();
-    const dispatch = useDispatch();
+    //const { register, handleSubmit, watch, errors } = useForm();
+    //const dispatch = useDispatch();
 
     const onSubmit = (formData) => {
         console.log(formData);

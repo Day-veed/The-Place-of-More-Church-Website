@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material';
 import React from 'react'
-import styled, { useThem } from "styled-components"
+import styled from "styled-components"
 
 
 function AppbarMobileBanner() {

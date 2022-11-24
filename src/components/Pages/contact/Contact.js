@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import FacebookIcon from '@mui/icons-material/Facebook';
+//import FacebookIcon from '@mui/icons-material/Facebook';
 import MapIcon from '@mui/icons-material/Map';
 import PhoneIcon from '@mui/icons-material/Phone';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MailIcon from '@mui/icons-material/Mail';
 //import "./HeaderOption.css";
 import ContactOption from './ContactOption';
-import Input, { Option } from './Input';
+import Input from './Input';
 import { Button } from '@mui/material';
 import './Form.css'
-import Map from './Map';
+//import Map from './Map';
 
 function Contact() {
   return (
