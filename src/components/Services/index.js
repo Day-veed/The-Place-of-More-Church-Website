@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../body/logo.jpg';
+import Logo from '../body/logo.png';
 import Logo1 from '../body/logo1.jpg';
 import Logo2 from '../body/logo2.jpg'; 
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'

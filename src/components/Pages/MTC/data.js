@@ -1,23 +1,23 @@
 const testimonial = [
     {
         id: 1,
-        name: 'Snr Comrade',
-        title: 'MIC',
-        org: 'Publicity',
+        name: 'Min Momore Falope',
+        title: 'Media',
+        org: 'Ministry',
         desc: 'The training has helped shape the way I view the world',
     },
     {
         id: 2,
-        name: 'Comrade',
-        title: 'MIC',
-        org: 'Facility',
-        desc: 'The training transfromed me from being a spectator to being a participator'
+        name: 'Min Fredrick David',
+        title: 'Protocol',
+        org: 'Ministry',
+        desc: 'The training transfromed me from being just a spectator to being a participator'
     },
     {
         id: 3,
-        name: 'Snr Man',
-        title: 'MIC',
-        org: 'Protocol',
+        name: 'Min Mercy Fatoye',
+        title: 'Revelation Worship',
+        org: 'Ministry',
         desc: 'The traning instilled new disciplines in me that will help change my life forever'
     },
 ]

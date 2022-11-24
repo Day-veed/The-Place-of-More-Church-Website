@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import img2 from '../Image/img2.jpg';
 import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP, ServicesIcon } from './MtcElements'
@@ -23,12 +23,20 @@ import './MTC.css'
 import Carousel from '../Pages/MTC/Carousel';
 import { headerAnimation } from '../Animations/Animations';
 import { useScroll } from '../useScroll';
+import { useDispatch } from 'react-redux';
+import FormInput from './FormInput';
+import Form from './Form';
 
 function MTCHistory() {
 
-  const {ref, inView} = useInView({threshold: 0.2});
+    const {ref, inView} = useInView({threshold: 0.2});
     const animation = useAnimation();
     const [element, controls] = useScroll();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [profilePic, setProfile] = useState("");
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if(inView){
@@ -116,13 +124,10 @@ function MTCHistory() {
           
         </Set>
         {/*<Carousel />*/}
-
-        
-
-        
       </HistoryContainer>
 
     </Div>
+    
 
     <Mandate>
           <h1>MTC is divided into five teams during the training with Pastor in Charge and Team Leads. </h1>
@@ -173,6 +178,10 @@ function MTCHistory() {
             
             </Mandates>
             </Mandate>
+            <Center>
+              <h1>To register for the Ministerial Training Course(MTC), fill the form.</h1>
+            <Form />
+            </Center>
     <Facilitators>
       <div>Training Facilitators</div>
       <ServicesContainer>
@@ -203,6 +212,40 @@ function MTCHistory() {
 }
 
 export default MTCHistory
+
+const Center = styled.div`
+  //margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 100px;
+  >h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: grey;
+    margin-top: -200px;
+    @media screen and (max-width: 400px){
+      font-size: 23px;
+      //margin-top: 150px;
+    }
+  }
+  @media screen and (max-width: 1150px){
+    flex-direction: column;
+    >h1{
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 400px){
+      padding: 20px;
+      >h1 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
+`
 
 const Mandatess = styled.div`
   display: flex;
@@ -368,6 +411,11 @@ const Mandate = styled.div`
     padding-bottom: 0px;
     margin-top: -70px;
   }
+  @media screen and (max-width: 400px){
+    >h1{
+      font-size: 20px;
+    }
+    }
 `
 
 const D = styled.div`
@@ -547,7 +595,7 @@ const Facilitators = styled.div`
   color: #722f37;
   font-style: italic;
   padding-top: 70px;
-  background: white;
+  background: whitesmoke;
   font-family: 'Playfair Display', serif;
   @media screen and (max-width: 400px){
       font-size: 32px;

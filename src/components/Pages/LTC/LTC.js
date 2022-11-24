@@ -70,7 +70,7 @@ function LTC() {
       <Testimonial>
         <Container>
           <h2>Testimonials</h2>
-          <p>See what our trainees have to say about us</p>
+          <p>See what our trainees have to say about the training</p>
         <TestimonialWrapper>
           <SwitchTransition>
             <CSSTransition

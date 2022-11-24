@@ -5,8 +5,14 @@ import excellence from './excellence.jpg'
 import value from './value.jpg'
 import purpose from './purpose.jpg'
 import king from './king.jpg'
-import crowd from '../../body/crowd.jpg';
+import commision from './commision.jpeg';
+import Leadership from './Leadership.jpeg';
+import reachout from './reachout.jpeg';
+import family from './family.jpeg';
+import family2 from './family2.jpeg';
+import church from './church.jpg'
 import TPm from './TPM.jpg'
+import Word from './Word.jpg'
 import { motion } from 'framer-motion'
 import { headerAnimation, imageAnimation } from "../../Animations/Animations"
 import { useScroll } from '../../useScroll';
@@ -118,7 +124,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 1</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={commision} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -129,7 +135,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 2</h3>
-                <img src={purpose} className='w-100 border-bottom' alt='Mandate' />
+                <img src={church} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -142,7 +148,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 3</h3>
-                <img src={excellence} className='w-100 border-bottom' alt='Mandate' />
+                <img src={family2} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -153,7 +159,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 4</h3>
-                <img src={value} className='w-100 border-bottom' alt='Mandate' />
+                <img src={Leadership} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -166,7 +172,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 5</h3>
-                <img src={king} className='w-100 border-bottom' alt='Mandate' />
+                <img src={Word} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -177,7 +183,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 6</h3>
-                <img src={excellence} className='w-100 border-bottom' alt='Mandate' />
+                <img src={reachout} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>
@@ -190,7 +196,7 @@ function TPM() {
             <div className='col-md-4'>
               <div className='card shadow'>
               <h3>Mandate 7</h3>
-                <img src={Spiritual} className='w-100 border-bottom' alt='Mandate' />
+                <img src={family} className='w-100 border-bottom' alt='Mandate' />
                 <div className='card-body'>
                   
                   <div className='underline'></div>

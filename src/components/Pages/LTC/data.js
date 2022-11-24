@@ -1,24 +1,24 @@
 const testimonial = [
     {
         id: 1,
-        name: 'Snr Comrade',
-        title: 'MIC',
-        org: 'Publicity',
-        desc: 'The training has helped shape the way I view the world',
+        name: 'Garba Mohammed',
+        title: 'Media',
+        org: 'Ministry',
+        desc: 'The training has positively helped in changing my perception of myself.',
     },
     {
         id: 2,
-        name: 'Comrade',
-        title: 'MIC',
-        org: 'Facility',
-        desc: 'The training transfromed me from being a spectator to being a participator'
+        name: `God's Plan David`,
+        title: 'Care',
+        org: 'Ministry',
+        desc: 'The training helped me realise that many lives are connected to mine, and ultimately changed my way of life'
     },
     {
         id: 3,
-        name: 'Snr Man',
-        title: 'MIC',
-        org: 'Protocol',
-        desc: 'The traning instilled new disciplines in me that will help change my life forever'
+        name: 'Great',
+        title: 'Revelation Worship',
+        org: 'Ministry',
+        desc: 'The traning has gotten me passionate about the things of God and the work He has committed to my hands'
     },
 ]
 

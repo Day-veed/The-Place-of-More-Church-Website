@@ -37,3 +37,7 @@
     background: whitesmoke;
     padding-bottom: 15px;
 }
+
+.expand{
+    flex: 1;
+}

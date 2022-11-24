@@ -1,0 +1,123 @@
+.sendMail{
+    /*position: absolute;
+    bottom: 0px;
+    center: 50px;*/
+    background-color: #404040;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid whitesmoke;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+    justify-content: center;
+    align-items: center;
+}
+
+.sendMail__header {
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+}
+
+.sendMail__header >h3 {
+    color: lightblue;
+    font-size: 33px;
+    font-family: 'Playfair Display', serif;
+}
+
+.sendMail__send {
+    background-color: #722f37;
+    text-transform: capitalize !important;
+    margin: 15px !important;
+    width: 90%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.sendMail > form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 80%;
+}
+
+.sendMail > form > input {
+    height: 45px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+}
+
+.sendMail > form > p {
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sendMail > form > p > input{
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
+    height: 45px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+}
+.sendMail > form > p > div > input{
+    background: white;
+    border: none;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+}
+
+.sendMail > form > p > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 25px;
+    font-family: 'EB Garamond', serif;
+}
+
+.sendMail > form > p > h3{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+}
+.sendMail > form > p > h4{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+}
+
+.sendMail > form > div > input{
+    
+}
+
+.sendMail__message{
+    flex: 1;
+}

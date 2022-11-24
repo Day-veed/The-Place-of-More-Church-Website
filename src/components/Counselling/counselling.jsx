@@ -22,11 +22,11 @@ function Counselling() {
         
         <form>
             <WelcomeText>Appointment Form</WelcomeText>
-            <InputContainer>
+            <InputContainer className='in'>
                 <Input type='text' placeholder="Name"/>
                 <Input type='text' placeholder="Email"/>
                 <Input type='text' placeholder="Phone Number"/>
-                <Input type='text' placeholder="Reason"/>
+                <Input type='text' placeholder="Reason" className="expand"/>
                 {/*<select>
                     
                     <option value="Marriage">Marriage</option>
