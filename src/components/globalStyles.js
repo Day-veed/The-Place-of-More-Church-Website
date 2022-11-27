@@ -131,6 +131,7 @@ border-radius: 4px;
 	>a{
 		color: #fff;
 		outline: none;
+		text-decoration: none;
 		&:before {
 			background: #fff;
 			content: '';

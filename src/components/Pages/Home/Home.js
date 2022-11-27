@@ -12,6 +12,7 @@ import HomeBody from '../../body/HomeBody';
 import Counselling from '../../Counselling/counselling';
 //import VideoCarousel from '../../carousel/VideoCarousel'
 import HeroSection from '../../HeroSection/index'
+import Gallery from './Gallery';
 //import ImageGrid from '../../body/imageGrid'
 //import Modal from '../../body/modal'
 
@@ -27,6 +28,7 @@ function Home() {
         {/*<VideoCarousel />*/}
         <HomeBody />
         <Video />
+        <Gallery />
         {/*<ImageGrid setSelectedImg={setSelectedImg}/>
         {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}*/}
         <Counselling />

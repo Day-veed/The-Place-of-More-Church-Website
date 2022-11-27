@@ -100,10 +100,18 @@ function Sidebar({ isOpen, toggle }) {
             </SidebarMenu>
             <SideBtnWrap>
                 <IconBtn>
-                    <SidebarIconOption Icon={FacebookIcon} title="Facebook" />
-                    <SidebarIconOption Icon={TelegramIcon} title="Telegram" />
+                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                        <SidebarIconOption Icon={FacebookIcon} title="Facebook" />
+                    </a>
+                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                        <SidebarIconOption Icon={TelegramIcon} title="Telegram" />
+                    </a>
+                        <a href="https://forms.gle/wmWi1CKKPiE2znd89">
                     <SidebarIconOption Icon={InstagramIcon}  title="Instagram" />
+                    </a>
+                        <a href="https://forms.gle/wmWi1CKKPiE2znd89">
                     <SidebarIconOption Icon={ YouTubeIcon} title="Youtube" />
+                    </a>
                 </IconBtn>
             </SideBtnWrap>
         </SidebarWrapper>

@@ -24,6 +24,7 @@ import './MTC.css'
 import { headerAnimation } from '../Animations/Animations';
 import { useScroll } from '../useScroll';
 import { useDispatch } from 'react-redux';
+import Leadership from './Leadership.jpeg'
 //import FormInput from './FormInput';
 import Form from './Form';
 
@@ -179,7 +180,10 @@ function MTCHistory() {
             </Mandates>
             </Mandate>
             <Center>
-              <h1>To register for the Ministerial Training Course(MTC), fill the form.</h1>
+              <div>
+                <img src={Leadership} alt='' />
+                <h1>To register for the Ministerial Training Course(MTC), fill the form.</h1>
+              </div>
             <Form />
             </Center>
     <Facilitators>
@@ -220,6 +224,29 @@ const Center = styled.div`
   align-items: center;
   background: white;
   padding: 100px;
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    >h1{
+      margin-top: 70px;
+      font-size: 27px;
+      font-family: 'EB Garamond', serif;
+      color: red;
+    }
+  }
+  @media screen and (max-width: 400px){
+      //padding: 20px;
+      >img {
+        width: 100%;
+        
+      }
+    }
+
   >h1{
     font-family: 'Playfair Display', serif;
     font-size: 40px;
@@ -275,7 +302,7 @@ const Mandatess = styled.div`
         margin-top: -50px;
         @media screen and (max-width: 400px){
           height: 320px;
-          width: 400px;
+          width: 500px;
         //margin: 0px;
         }
       }
@@ -484,6 +511,13 @@ const Text = styled.div`
     }
     @media (max-width: 1000px) {
         padding-left: 15px;
+        width: auto;
+      > p {
+        width: 98%;
+      }
+    }
+    @media (max-width: 400px) {
+        padding-left: 0px;
         width: auto;
       > p {
         width: 98%;

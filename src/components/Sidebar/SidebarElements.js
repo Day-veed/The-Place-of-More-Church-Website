@@ -127,6 +127,10 @@ export const SideBtnWrap = styled.div`
 export const IconBtn = styled.div`
     display: flex;
     align-items: center;
+
+    >a {
+        text-decoration: none;
+    }
 `
 export const SidebarIconOptions = styled.div`
     display: flex;

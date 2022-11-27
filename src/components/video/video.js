@@ -159,6 +159,9 @@ const VideoContainers = styled.div`
     align-items: center;
     margin-bottom: 5px;
     padding: 10px 20px;
+    @media (max-width: 400px) {
+        padding: 10px 10px;
+    }
 
     > h4{
         font-family: 'EB Garamond', serif;

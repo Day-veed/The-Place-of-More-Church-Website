@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 //import img2 from '../Image/img2.jpg';
 import { ServicesContainer, ServicesWrapper, ServicesCard, ServicesH2, ServicesP, ServicesIcon } from './LtcElements'
@@ -20,6 +20,8 @@ import firebase from 'firebase/compat/app';
 import './LTC.css'
 import { useScroll } from '../useScroll';
 import { headerAnimation } from '../Animations/Animations';
+import LTCSignUP from './LTCSignUP';
+import FormSuccess from './FormSuccess'
 
 function LTCHistory() {
 
@@ -57,6 +59,12 @@ function LTCHistory() {
         }
         console.log("use effect hook, inView = ", inView);
     }, [inView])
+
+    const [isSubmitted, SetIsSubmitted] = useState(false)
+
+    function submitForm(){
+      SetIsSubmitted(true);
+    }
     
 
   return (
@@ -75,6 +83,7 @@ function LTCHistory() {
       </Text>
       </motion.div>
     </PictureExp>
+    {!isSubmitted ? (<LTCSignUP submitForm={submitForm} />) : (<FormSuccess />)}
        {/*<HistoryContainer>
         {/*<div>MTC is divided into five teams during the training with Pastor in Charge and Team Leads.</div>*/}
         <ServicesContainer>

@@ -7,6 +7,7 @@
   import Path from './02.jpg';
   import img5 from '../Image/img6.jpg';
   import img7 from '../Image/img7.jpg';
+  import Leadership from './Leadership.jpeg';
   import "./CarouselContainer.css"
   
   function carouselContainer() {
@@ -16,7 +17,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={Path}
+                src={Leadership}
                 alt="First slide"
                 />
                 <Carousel.Caption>
@@ -27,7 +28,7 @@
             <Carousel.Item interval={4000}>
                 <img
                 className="d-block w-100"
-                src={img3} 
+                src={Path} 
                 alt="Second slide"
                 />
                 <Carousel.Caption>

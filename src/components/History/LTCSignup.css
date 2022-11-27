@@ -1,0 +1,45 @@
+.form-inputs p {
+    color: red;
+    font-size: 14px;
+}
+
+.in > textarea{
+    background: white;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 80%;
+    padding: 2.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0.7rem;
+    border: none;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.in > input {
+    background: white;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 2rem;
+    width: 80%;
+    height: 3rem;
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+    border: none;
+    outline: none;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.sendMail__error {
+    color: red;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: -10px;
+}

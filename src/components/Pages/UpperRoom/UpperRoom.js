@@ -189,7 +189,7 @@ width: 100%;
     }
   }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 400px) {
     padding: 0px;
     >h1{
       margin-top: 20px;

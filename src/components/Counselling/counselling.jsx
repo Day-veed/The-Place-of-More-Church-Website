@@ -1,12 +1,47 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './Form.css'
 import styled from 'styled-components';
 import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 import Input, { Option } from './Input';
 import { Button } from '@mui/material';
+import emailjs from '@emailjs/browser';
+import {useForm} from "react-hook-form"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function Counselling() {
     //#00FFFF
+    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
+    const [modal, setModal] = useState(false);
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    //e.preventDefault();
+
+    emailjs.sendForm('service_nr2usqi', 'template_15kuww4', form.current, 'qy6fvb2VC_0YK6x9-')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      notify()
+      reset()
+  };
+  const notify = () => {
+    toast.success('🦄 Sent!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+  }
+
   return (
     <div className='bodyy'>
         <Div>
@@ -20,13 +55,17 @@ function Counselling() {
             </D>
         </CounsellingText>
         
-        <form>
+        <form ref={form} onSubmit={handleSubmit(sendEmail)}>
             <WelcomeText>Appointment Form</WelcomeText>
             <InputContainer className='in'>
-                <Input type='text' placeholder="Name"/>
-                <Input type='text' placeholder="Email"/>
-                <Input type='text' placeholder="Phone Number"/>
-                <Input type='text' placeholder="Reason" className="expand"/>
+                <input id='name' name='name' type='text' placeholder="Name" {...register('name', { required: true})}/>
+                {errors.name && <p className='sendMail__error'>Name is Required!</p>}
+                <input id='email' name='email' type='text' placeholder="Email" {...register('email', { required: true})}/>
+                {errors.email && <p className='sendMail__error'>Email is Required!</p>}
+                <input id='phone_number' name='phone_number' type='number' placeholder="Phone Number" {...register('phone_number', { required: true})}/>
+                {errors.phone_number && <p className='sendMail__error'>Phone Number is Required!</p>}
+                <textarea id='message' name='message' type='text' placeholder="Reason" className="expand" cols="30" rows="5" {...register('message', { required: true})}/>
+                {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
                 {/*<select>
                     
                     <option value="Marriage">Marriage</option>
@@ -37,9 +76,34 @@ function Counselling() {
                     
   </select>*/}
                 <div>
-                <Button style={{backgroundColor:'skyblue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} href='https://forms.gle/4HsCLbvZTRWE6rMQ7'>Book Appointment</Button>
+                <Button style={{backgroundColor:'skyblue', color: 'white', borderRadius:'25px', width: '70%',padding: '10px'}} /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/ type='submit'>Book Appointment</Button>
                 </div>
+                
             </InputContainer>
+            <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+            {/* Same as */}
+            <ToastContainer />
+            {/*modal && (
+                <div className='modal'>
+                <div onClick={toggleModal} className='overlay'></div>
+                <div className='modal-content'>
+                    <h2>Submitted Request</h2>
+                    <button className='close-modal' onClick={toggleModal}>CLOSE</button>
+                </div>
+            </div>
+            )*/}
+            
             
         </form>
         </Div>
@@ -120,28 +184,29 @@ const Div = styled.div`
         height: 80vh;
     }
     @media (max-width: 1100px) {
-        width: 55%;
+        width: 70%;
         height: 80vh;
+        margin-bottom: 55px;
     }
     @media (max-width: 900px) {
-        width: 70%;
-        height: 72vh;
+        width: 80%;
+        height: 80vh;
     }
     @media (max-width: 700px) {
         width: 80%;
-        height: 75vh;
+        height: 80vh;
     }
     @media (max-width: 600px) {
         width: 95%;
-        height: 75vh;
+        height: 80vh;
     }
     @media (max-width: 500px) {
         width: 95%;
-        height: 70vh;
+        height: 80vh;
     }
     @media (max-width: 360px) {
         width: 95%;
-        height: 72vh;
+        height: 90vh;
     }
     }
 `
@@ -182,6 +247,10 @@ const CounsellingText = styled.div`
     margin-right: 70px;
     margin-top: -50px;
 
+    @media (max-width: 400px) {
+        margin-top: 20px;
+    }
+
     >h1 {
             font-stretch: expanded;
             font-weight: bold;
@@ -207,6 +276,7 @@ const CounsellingText = styled.div`
         color: blue;
         margin-top: -50px;
         margin-bottom: 30px;
+
 
         @media (max-width: 1150px) {
             font-size: 45px;
@@ -302,12 +372,13 @@ const WelcomeText = styled.h2`
     margin-top: 3rem;
     margin-bottom: 5rem ;
     font-family: 'Playfair Display', serif;
+    padding: 5px;
     @media (max-width: 360px) {
         //width: 80%;
         //height: 75vh;
         margin-top: 2rem;
         font-size: 25px;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 `
 const InputContainer = styled.div`

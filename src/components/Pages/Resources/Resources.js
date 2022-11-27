@@ -34,9 +34,9 @@ import React, { Component } from 'react';
 }*/
 import styled from 'styled-components'
 import {useState, useEffect} from "react";
-import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes, listAll, getDownloadURL, uploadBytesResumable, list } from "firebase/storage";
 import {v4} from "uuid";
-import { storage } from '../../../firebase';
+import { storage, storageRef } from '../../../firebase';
 import ProgressBar from '../../hooks/progressBar';
 // { ProgressBar } from 'react-bootstrap';
 
@@ -44,7 +44,12 @@ function Resources() {
   const [imageList, setImageList] = useState([]);
   const [imageUpload, setImageUpload] = useState(null);
   const [file, setFile] = useState(null);
+  const [filee, setFilee] = useState(null);
   const [error, setError] = useState(null);
+  const [progress, setProgress] = useState(0);
+
+  const [data, setData] = useState([]);
+  const [image, setImage] = useState('');
   
   const imageListRef = ref(storage, "image/")
   const uploadImage = () => {
@@ -76,7 +81,46 @@ function Resources() {
       setError('Please select an image file (png or jpeg)');
     }
   }
+
+  const formHandler = (e) => {
+    e.preventDefault();
+    const file = e.target[0].files[0];
+    uploadFiles(file)
+  }
   
+  const uploadFiles = (file) => {
+    if (!file) return;
+    const storageRef = ref(storage, `/files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    
+
+    uploadTask.on("state_changed", (snapshot) => {
+      const prog = Math.round(
+        (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+      );
+
+      setProgress(prog);
+    }, 
+    (err) => console.log(err),
+    () => {
+      getDownloadURL(uploadTask.snapshot.ref).then((url) => setFilee(url));
+      console.log(filee)
+      listItem()
+    }
+    );
+  }
+  const listItem = () => {
+    storageRef.child('files/').listAll()
+      .then(res => {
+        res.items.forEach((item) => {
+          setData(arr => [...arr, item.name]);
+        })
+      })
+      .catch(err => {
+        alert(err.message);
+      })
+  }
   return (
     <>
     <D>
@@ -85,6 +129,20 @@ function Resources() {
       </h1>
     </D>
     <Div>
+      <form onSubmit={formHandler}>
+        <input type="file" className="input" />
+        <button type='submit'>upload</button>
+      </form>
+      <hr />
+
+      <h3>Uploaded {progress} % </h3>
+
+
+      {
+          data.map((val) => (
+            <h2>{val}</h2>
+          ))
+        }
       {/*<input 
       type="file" 
       onChange={changeHandler}

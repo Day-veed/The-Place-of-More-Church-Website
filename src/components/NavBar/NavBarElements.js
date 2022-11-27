@@ -392,6 +392,10 @@ export const IconBtn = styled.div`
     justify-content: flex-end;
     align-items: center;
     padding-left: 20px;
+
+    >a{
+        text-decoration: none;
+    }
     
 
     @media screen and (max-width: 1100px) {

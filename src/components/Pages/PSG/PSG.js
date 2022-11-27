@@ -67,15 +67,13 @@ function PSG() {
 </div>
 <div>
 <img src={Psg3} alt='' />
-<img src={Psg4} alt='' />
-</div>
-<div>
 <img src={Psg5} alt='' />
-<img src={Psg6} alt='' />
 </div>
 <div>
 <img src={Psg7} alt='' />
+<img src={Psg6} alt='' />
 </div>
+
 
 </Sgf>
     </About>
@@ -214,7 +212,7 @@ const Sgf = styled.div`
       }
     }
     }
-    @media (max-width: 360px) {
+    @media (max-width: 400px) {
       padding: 0px;
       >h1{
         margin-top: 20px;

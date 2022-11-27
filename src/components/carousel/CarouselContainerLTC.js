@@ -4,7 +4,6 @@ import img from '../Image/img.jpg';
 import TPM1 from './TPM-9.jpg';
 import TPM2 from './TPM-17.jpg';
 import TPM3 from './TPM-18.jpg';
-import img3 from '../Image/img3.jpg';
 import img7 from '../Image/img7.jpg';
 import MTC from '../body/MTC.jpg'; 
 import "./CarouselContainerLTC.css"

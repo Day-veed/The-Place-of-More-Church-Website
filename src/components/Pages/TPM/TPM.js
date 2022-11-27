@@ -316,6 +316,7 @@ const Container = styled.div`
 const Content = styled.div`
   width: 100%;
   background: white;
+  //margin: 70px;
 `
 const Purpose = styled.div`
   padding: 20px;
@@ -355,6 +356,10 @@ const Mandatess = styled.div`
     border-radius: 10px;
     @media screen and (max-width: 960px){
       margin-top: -40px;
+    }
+    @media screen and (max-width: 400px){
+      margin: 0px;
+      margin-bottom: 30px;
     }
     >div {
       display: flex;
@@ -408,11 +413,15 @@ const Mandatesss = styled.div`
   background: white;
   padding: 25px;
 
+  @media screen and (max-width: 400px){
+      padding: 0px;
+    }
+
   >div{
     width: 450px;
     display: flex;
     margin-bottom: -100px;
-    margin-top: -15%;
+    margin-top: -15px;
     @media screen and (max-width: 960px){
       margin-bottom: 0px;
       padding-bottom: 25px;

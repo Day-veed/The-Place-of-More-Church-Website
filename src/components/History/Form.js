@@ -1,21 +1,22 @@
-//import { Button } from '@mui/material'
+import { Button } from '@mui/material'
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser';
 
 import styled from 'styled-components'
 import './Form.css'
 import axios from 'axios';
-//import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 function Form() {
     const [username, setUsername] = useState("")
-    /*const emailerr = "Please provide a valid email"
+    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
+    const emailerr = "Please provide a valid email"
     const nameerr = "Please enter your full name"
     const numbererr = "This is a required question"
     const locationerr = "This is a required question"
     const aboutYouerr = "This is a required question"
     const radioerr = "This is a required question"
-    const uploaderr = "Please submit your letter of recommendation"*/
+    const uploaderr = "Please submit your letter of recommendation"
  
     //const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [name, setName] = useState();
@@ -27,7 +28,7 @@ function Form() {
     const [select, setSelect] = useState();
     const [file, setFile] = useState();
 
-    /*const state={
+    const state={
         email:'',
         name:'',
         number:'',
@@ -37,7 +38,7 @@ function Form() {
         Avail:'',
         File:'',
         sent: false
-    }*/
+    }
 
     //handle inputs
     const handleEmail=(e)=>{
@@ -164,32 +165,55 @@ function Form() {
       <textarea name="message" />
       <input type="submit" value="Send" />
     </form>*/
-    <div className='sendMail' >
+    <div className='sendMail' ref={form} onSubmit={reset}>
         <div className='sendMail__header'>
             <H3>Registration Form</H3>
         </div>
         <form ref={form} onSubmit={sendEmail}>
             <input onChange={e=>setEmail(e.target.value)} name="user_email" placeholder="Email" type="text" required  />
-            
+            <span>{/*emailerr*/}</span>
 
             <input onChange={e=>setName(e.target.value)} name="user_name" placeholder="Full Name" type="text" required pattern='^[A-Za-z0-9]{3,16}$' />
-            
+            <span>{/*nameerr/*}</span>
 
             <input onChange={e=>setNumber(e.target.value)} name='WNum' placeholder="Whatsapp Number" type="number" required />
-            
+            <span>{/*numbererr*/}</span>
 
             <input onChange={e=>setLocation(e.target.value)} name='Location' placeholder="Location" type="text" required />
-            
+            <span>{/*locationerr*/}</span>
 
             <input onChange={e=>setChurch(e.target.value)} name='Church' placeholder="What Church Do You Attend?" type="text" />
 
             <textarea onChange={e=>setAbout(e.target.value)} name="message" placeholder="Tell Us About Yourself Briefly" type="text" className='sendMail__message' required cols="30" rows="5"/>
-            
+            <span>{/*aboutYouerr*/}</span>
 
-           
+            <p>
+                <h4>Will You Be Available For All The Trainings?</h4>
+                <div>
+                    Yes<input onChange={e=>setSelect(e.target.value)} name={select} type="radio" value="Yes" />
+                    No<input onChange={e=>setSelect(e.target.value)} name={select} type="radio" value="No"/>
+                </div>
+            </p>
+            <span>{/*radioerr*/}</span>
+            <p>
+                <h3>UPLOAD YOUR LETTER OF RECOMMENDATION. (If you are not a member of The Place of More Church)</h3>
+                <input name="File" onChange={e=>setFile(e.target.value)} placeholder="Will You Be Available For All The Trainings?" type="file"/>
+            </p>
+            <span>{/*uploaderr*/}</span>
 
-            
-            <input type="submit" value="Send" />
+            <div className='sendMail__options'>
+                <Button
+                    className="sendMail__send"
+                    variant="contained"
+                    color="primary"
+                    background-color= "#722f37"
+                    type="submit"
+                    value="Send"
+                >
+                    Submit
+                </Button>
+            </div>
+
   </form>
     </div>
         

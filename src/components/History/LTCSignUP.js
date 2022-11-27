@@ -1,116 +1,102 @@
-import React, { useRef } from 'react'
-import styled from 'styled-components'
-import './Contact.css'
-//import FacebookIcon from '@mui/icons-material/Facebook';
-import MapIcon from '@mui/icons-material/Map';
-import PhoneIcon from '@mui/icons-material/Phone';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import MailIcon from '@mui/icons-material/Mail';
-//import "./HeaderOption.css";
-import ContactOption from './ContactOption';
-import Input from './Input';
-import { Button } from '@mui/material';
-import './Form.css'
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react'
+import useFormm from './useForm'
+import validate from './validation'
+import emailjs, { sendForm } from '@emailjs/browser';
+import './LTCSignup.css'
 import {useForm} from "react-hook-form"
+import styled from 'styled-components';
+import { Button } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-//import Map from './Map';
 
-function Contact() {
-    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
+function LTCSignUP({submitForm}) {
+    const { handleChange, values, handleSubmitt, errorss, onChange } = useFormm(submitForm, validate);
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const [available, setAvailable] = useState('');
+    const [message, setMessage] = useState('');
+    const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
+
 
     const form = useRef();
 
-  const sendEmail = (e) => {
-    //e.preventDefault();
-    
-
-    emailjs.sendForm('service_nr2usqi', 'template_15kuww4', form.current, 'qy6fvb2VC_0YK6x9-')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-
-      notify()
-      reset()
-  };
-  const notify = () => {
-    toast.success('🦄 Sent!', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
+    const sendEmail = (e) => {
+      //e.preventDefault();
+        const parameters = {
+            email,
+            name,
+            number,
+            available,
+            message
+        }
+        console.log({parameters})
+      
+        emailjs.send('service_cniyvjp', 'template_czxpl6h', parameters, 'qy6fvb2VC_0YK6x9-')
+        .then((result) => {
+            notify()
+            setEmail('')
+            setName('')
+            setNumber('')
+            setAvailable('')
+            setMessage('')
+            console.log(result.text);
+        }, (error) => {
+            toast.error('something went wrong')
+            console.log(error.text);
         });
-  }
+
+    };
+    
+    const notify = () => {
+        toast.success('🦄 Sent!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+      }
+    
   return (
     <>
-    <D>
-      <h1>
-        Contact Us
-      </h1>
-    </D>
-    <FooterContainer>
+        <FooterContainer>
       <FooterWrap>
-      <h1>Get in touch</h1>
+      <h4>Leadership is an important function of management which helps to maximize efficiency and to achieve goals.</h4>
+      <h1>Fill the form to register</h1>
         <FooterLinksContainer>
-            <FooterLinksWrapper>
-                <FooterLinkItems>
-                <ContactOption Icon={MapIcon} />
-                    <FooterLinkTitle>Address</FooterLinkTitle>
-                    <FooterLink >Plot 17 Gondola Street, Angwa Rukuba,</FooterLink> 
-                        <FooterLink>Jos, Plateau State, Nigeria.</FooterLink>
-                </FooterLinkItems>
-                <FooterLinkItems>
-                <ContactOption Icon={AccessTimeIcon} />
-                <FooterLinkTitle>Opening Hours</FooterLinkTitle>
-                    <FooterLink >
-                      <h4>Mondays, Wednesdays &Friday: 12pm – 8pm</h4>
-                      <h4>Thursdays: 5pm – 8pm</h4>
-                      <h4>Sundays: 4pm – 8pm</h4>
-                    </FooterLink>
-                    
-                </FooterLinkItems>
-            </FooterLinksWrapper>
-            <FooterLinksWrapper>
-            <FooterLinkItems>
-            <ContactOption Icon={PhoneIcon} />
-            <FooterLinkTitle>Phone</FooterLinkTitle>
-                    <FooterLink >(+234) 8141344044</FooterLink>
-                    {/*<FooterLink>(+234) 12345679</FooterLink>*/}
-                    
-                </FooterLinkItems>
-                <FooterLinkItems>
-                <ContactOption Icon={MailIcon} />
-                    <FooterLinkTitle>Mail</FooterLinkTitle>
-                    <FooterLink >theplaceofmore@gmail.com</FooterLink>
-                    
-                </FooterLinkItems>
-            </FooterLinksWrapper>
+            
         </FooterLinksContainer>
         
       </FooterWrap>
       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-            <WelcomeText>Contact Us</WelcomeText>
+            <WelcomeText>Registration Form</WelcomeText>
             <InputContainer className='in'>
-                <input id='name' name='name' type='text' placeholder="Name" {...register('name', { required: true})}/>
-                {errors.name && <p className='sendMail__error'>Name is Required!</p>}
-                <input id='email' name='email' type='text' placeholder="Email" {...register('email', { required: true})}/>
+            <input id='email' name='email' type='text' value={email} placeholder="EMAIL" onChange={(e)=>setEmail(e.target.value)} />
                 {errors.email && <p className='sendMail__error'>Email is Required!</p>}
-                <input id='phone_number' name='phone_number' type='number' placeholder="Phone Number" {...register('phone_number', { required: true})}/>
-                {errors.phone_number && <p className='sendMail__error'>Phone Number is Required!</p>}
-                <input id='city' name='city' type='text' placeholder="City of Residence" {...register('city', { required: true})}/>
-                {errors.city && <p className='sendMail__error'>City of Residence is Required!</p>}
-                <textarea id='message' name='message' type='text' placeholder="Message" className="expand" cols="30" rows="5" {...register('message', { required: true})}/>
+
+                <input id='name' name='name' type='text' value={name} placeholder=" FULL NAME" onChange={(e)=>setName(e.target.value)} />
+                {errors.name && <p className='sendMail__error'>Name is Required!</p>}
+
+                <input id='phone_number' name='phone_number' value={number} type='tel' placeholder="WHATSAPP Number" onChange={(e)=>setNumber(e.target.value)} />
+                {errors.phone_number && <p className='sendMail__error'>Whatsapp Number is Required!</p>}
+                
+                <textarea id='message' name='message' type='text' value={message} placeholder="Message" className="expand" cols="30" rows="5" onChange={(e)=>setMessage(e.target.value)} />
                 {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
 
+                <p>
+                <h4>Will You Be Available For All The Trainings?</h4>
                 <div>
-                <Button style={{backgroundColor:'gold', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} type='submit' /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/>Send</Button>
+                    Yes<input  name='radio' type="radio"  value={available} onChange={(e)=>setAvailable('Yes')}/>
+                    No<input  name='radio' type="radio" value={available} onChange={(e)=>setAvailable('No')}/>
+                    </div>
+                </p>
+
+                <div>
+                <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} type='submit' /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/>Send</Button>
                 </div>
             </InputContainer>
             
@@ -130,14 +116,11 @@ function Contact() {
                 />
             {/* Same as */}
             <ToastContainer />
-    {/*<section className='hidden xl:inline-flex xl:min-w-[600px]'>
-        <Map />
-  </section>*/}
     </>
   )
 }
 
-export default Contact
+export default LTCSignUP
 
 const MainContainer = styled.div`
     display: flex;
@@ -174,7 +157,7 @@ const MainContainer = styled.div`
 const WelcomeText = styled.h2`
     margin-top: 3rem;
     margin-bottom: 3rem;
-    color: gold;
+    color: #722f37;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,7 +182,7 @@ const InputContainer = styled.div`
     //margin-top: 30px;
 
     @media (max-width: 360px) {
-        margin-top: 75px;
+        margin-top: 40px;
     }
 
     >div{
@@ -280,17 +263,20 @@ padding-top: 80px;
 
 
 export const FooterContainer = styled.footer`
-    background-color: white;
+    background-color: darkgrey;
     padding-top: 80px;
+    padding-bottom: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    padding: 20px;
+    width: 100%;
     >form {
-        background: grey;
+        border-radius: 20px;
+        background: black;
         height: 83vh;
-        width: 30%;
+        width: 50%;
         //margin-top: -50px;
         margin-left: 100px;
     }
@@ -343,8 +329,8 @@ export const FooterContainer = styled.footer`
     }
     @media (max-width: 450px) {
       >form {
-        height: 90vh;
-        width: 100%;
+        height: 95vh;
+        width: 90%;
       }  
     }
 `
@@ -354,18 +340,27 @@ export const FooterWrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    //padding: 30px;
     //max-width: 1100px;
     //margin: 0 auto;
     >h1{
+        font-family: 'Roboto Condensed', sans-serif;
+      font-weight: bold;
+      color: #722f37;
+      font-size: 40px;
+      padding: 20px;
+    }
+    >h4{
       font-family: 'Playfair Display', serif;
       font-weight: bold;
-      color: grey;
-      font-size: 40px;
+      color: black;
+      font-size: 20px;
+      padding: 20px;
     }
     @media (max-width: 450px) {
       >h1 {
         font-size: 35px;
-        //margin-top: -10px;
+        margin-top: -30px;
         margin-bottom: -30px;
       }  
     }
