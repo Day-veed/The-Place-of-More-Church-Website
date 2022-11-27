@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {addDoc, collection} from "firebase/firestore";
 
 /*class ImageUpload extends Component {
   constructor(props) {
@@ -36,29 +37,48 @@ import styled from 'styled-components'
 import {useState, useEffect} from "react";
 import { ref, uploadBytes, listAll, getDownloadURL, uploadBytesResumable, list } from "firebase/storage";
 import {v4} from "uuid";
-import { storage, storageRef } from '../../../firebase';
-import ProgressBar from '../../hooks/progressBar';
+import {db, storage, storageRef} from '../../../firebase';
+import Books from "./Books";
 // { ProgressBar } from 'react-bootstrap';
 
 function Resources() {
   const [imageList, setImageList] = useState([]);
-  const [imageUpload, setImageUpload] = useState(null);
-  const [file, setFile] = useState(null);
-  const [filee, setFilee] = useState(null);
-  const [error, setError] = useState(null);
   const [progress, setProgress] = useState(0);
 
   const [data, setData] = useState([]);
-  const [image, setImage] = useState('');
-  
+
+
+  const [imageUploading, setImageUploading] = useState(false);
+  const [bookUploading, setBookUploading] = useState(false);
+  // book image and pdf
+
+  const [imageUrl, setImageUrl] = useState(null);
+  const [bookUrl, setBookUrl] = useState(null);
+  const [name, setName] = useState('');
+
   const imageListRef = ref(storage, "image/")
-  const uploadImage = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then(() => {
-      alert("Image Uploaded");
-    })
-  };
+
+  const isUploadingData = imageUploading || bookUploading;
+
+  const uploadImageToStorage = (file) => {
+    setImageUploading(true);
+    const imageName = v4();
+    const uploadTask = uploadBytesResumable(ref(storage, `image/${imageName}`), file);
+    console.log({uploadTask});
+    uploadTask.on('state_changed', (snapshot) => {
+      console.log({snapshot})
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log({progress})
+      setProgress(progress);
+    }, (error) => {
+      console.log(error);
+      setImageUploading(false);
+    }, async () => {
+     const url = await getDownloadURL(uploadTask.snapshot.ref)
+      setImageUrl(url);
+      setImageUploading(false);
+    });
+  }
 
   useEffect (() => {
     listAll(imageListRef).then((response)=>{
@@ -69,27 +89,10 @@ function Resources() {
       })
     })
   }, []);
-
-  const changeHandler = (e) => {
-    let selected = e.target.files[0];
-
-    if (selected) {
-      setFile(selected);
-      setError('');
-    } else {
-      setFile(null);
-      setError('Please select an image file (png or jpeg)');
-    }
-  }
-
-  const formHandler = (e) => {
-    e.preventDefault();
-    const file = e.target[0].files[0];
-    uploadFiles(file)
-  }
   
   const uploadFiles = (file) => {
     if (!file) return;
+    setBookUploading(true);
     const storageRef = ref(storage, `/files/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -99,28 +102,38 @@ function Resources() {
       const prog = Math.round(
         (snapshot.bytesTransferred / snapshot.totalBytes) * 100
       );
+          console.log({prog})
 
       setProgress(prog);
     }, 
-    (err) => console.log(err),
-    () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((url) => setFilee(url));
-      console.log(filee)
-      listItem()
+    (err) => {
+      console.log(err)
+      setBookUploading(false);
+    },
+    async () => {
+     const url =  await getDownloadURL(uploadTask.snapshot.ref);
+      console.log({url})
+      setBookUrl(url);
+      setBookUploading(false);
     }
     );
   }
-  const listItem = () => {
-    storageRef.child('files/').listAll()
-      .then(res => {
-        res.items.forEach((item) => {
-          setData(arr => [...arr, item.name]);
-        })
-      })
-      .catch(err => {
-        alert(err.message);
-      })
+
+  const saveDocumentToFirestore = async () => {
+
+    if(!imageUrl || !bookUrl) return alert('Please upload image and book');
+
+    console.log({imageUrl, bookUrl})
+    const docRef = await addDoc(collection(db, "files"), {
+      bookName: name,
+      bookUrl,
+      imageUrl,
+      downloads : 0,
+      createdAt: new Date()
+    });
+    console.log("Document written with ID: ", docRef.id);
   }
+
   return (
     <>
     <D>
@@ -129,20 +142,21 @@ function Resources() {
       </h1>
     </D>
     <Div>
-      <form onSubmit={formHandler}>
-        <input type="file" className="input" />
-        <button type='submit'>upload</button>
+      <form>
+        <input type="text" placeholder={'enter name of your book'} onChange={(e)=>setName(e.target.value)} value={name} name="name" id="name"/>
+        <label htmlFor="cover-image" >Upload cover image</label>
+        <input onChange={(e)=>uploadImageToStorage(e.target.files[0])} accept="image/*" name={'cover-image'} type="file" className="input" />
+        <input onChange={(e)=>uploadFiles(e.target.files[0])} name={'book'} type="file" className="input" />
+        <button disabled={isUploadingData} onClick={saveDocumentToFirestore} type='button'>{isUploadingData ? 'Uploading data' : 'Save'}</button>
       </form>
       <hr />
 
       <h3>Uploaded {progress} % </h3>
 
 
-      {
-          data.map((val) => (
-            <h2>{val}</h2>
-          ))
-        }
+      <Books />
+
+
       {/*<input 
       type="file" 
       onChange={changeHandler}
