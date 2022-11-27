@@ -2,7 +2,7 @@ const testimonial = [
     {
         id: 1,
         name: 'Garba Mohammed',
-        title: 'Media',
+        title: 'Facility',
         org: 'Ministry',
         desc: 'The training has positively helped in changing my perception of myself.',
     },
