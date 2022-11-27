@@ -65,7 +65,6 @@ function LTCSignUP({submitForm}) {
     <>
         <FooterContainer>
       <FooterWrap>
-      <h4>Leadership is an important function of management which helps to maximize efficiency and to achieve goals.</h4>
       <h1>Fill the form to register</h1>
         <FooterLinksContainer>
             
@@ -211,6 +210,13 @@ const InputContainer = styled.div`
         color: black;
         font-size: 20px;
     }
+    >p{
+        background: white;
+        margin: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 `
 const Select = styled.div`
     display: flex;
@@ -263,22 +269,24 @@ padding-top: 80px;
 
 
 export const FooterContainer = styled.footer`
-    background-color: darkgrey;
+    background-color: whitesmoke;
     padding-top: 80px;
     padding-bottom: 30px;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
     width: 100%;
     >form {
         border-radius: 20px;
-        background: black;
+        background: white;
         height: 83vh;
         width: 50%;
         //margin-top: -50px;
         margin-left: 100px;
+        border: 1px solid #722f37;
     }
 
     @media (max-width: 1150px) {
@@ -344,7 +352,7 @@ export const FooterWrap = styled.div`
     //max-width: 1100px;
     //margin: 0 auto;
     >h1{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Playfair Display', serif;
       font-weight: bold;
       color: #722f37;
       font-size: 40px;
@@ -359,9 +367,10 @@ export const FooterWrap = styled.div`
     }
     @media (max-width: 450px) {
       >h1 {
-        font-size: 35px;
-        margin-top: -30px;
-        margin-bottom: -30px;
+        font-size: 27px;
+        margin-top: 30px;
+        margin-bottom: -20px;
+        padding: 0px;
       }  
     }
 `

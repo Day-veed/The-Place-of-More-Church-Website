@@ -142,6 +142,10 @@ function Resources() {
       </h1>
     </D>
     <Div>
+      
+
+
+      <Books />
       <form>
 
         <input type="text" placeholder={'enter name of your book'} onChange={(e)=>setName(e.target.value)} value={name} name="name" id="name"/>
@@ -153,7 +157,6 @@ function Resources() {
       <hr />
 
       <h3>Uploaded {progress} % </h3>
-
 
       <Books />
 

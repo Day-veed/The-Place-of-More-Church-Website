@@ -43,7 +43,26 @@
 }
 
 .in > textarea{
-    background: white;
+    width: 80%;
+    height: 39px;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    resize: none;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: #bfbfbf;
+}
+
+.in > textarea:is(:focus, :valid){
+    border-color: #4671EA;
+}
+.in > textarea::-webkit-scrollbar{
+    width: 0px;
+}
+/*
+background: white;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
@@ -56,7 +75,8 @@
     font-weight: bold;
     color: black;
     font-size: 20px;
-}
+    resize: vertical;
+*/
 
 .in > input {
     background: white;

@@ -181,8 +181,7 @@ function MTCHistory() {
             </Mandate>
             <Center>
               <div>
-                <img src={Leadership} alt='' />
-                <h1>To register for the Ministerial Training Course(MTC), fill the form.</h1>
+                <h1>To register for the Ministerial Training Course(MTC), fill the form below.</h1>
               </div>
             <Form />
             </Center>
@@ -220,6 +219,7 @@ export default MTCHistory
 const Center = styled.div`
   //margin-top: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: white;
@@ -234,13 +234,33 @@ const Center = styled.div`
 
     >h1{
       margin-top: 70px;
-      font-size: 27px;
+      font-size: 37px;
       font-family: 'EB Garamond', serif;
       color: red;
+      @media screen and (max-width: 900px){
+        font-size: 32px;
+    }
+      @media screen and (max-width: 600px){
+        font-size: 27px;
+    }
     }
   }
-  @media screen and (max-width: 400px){
-      //padding: 20px;
+  @media screen and (max-width: 1150px){
+      padding: 40px;
+      >img {
+        width: 100%;
+        
+      }
+    }
+  @media screen and (max-width: 900px){
+      padding: 40px;
+      >img {
+        width: 100%;
+        
+      }
+    }
+  @media screen and (max-width: 600px){
+      padding: 20px;
       >img {
         width: 100%;
         

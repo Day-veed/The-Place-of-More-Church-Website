@@ -64,7 +64,7 @@ function Counselling() {
                 {errors.email && <p className='sendMail__error'>Email is Required!</p>}
                 <input id='phone_number' name='phone_number' type='number' placeholder="Phone Number" {...register('phone_number', { required: true})}/>
                 {errors.phone_number && <p className='sendMail__error'>Phone Number is Required!</p>}
-                <textarea id='message' name='message' type='text' placeholder="Reason" className="expand" cols="30" rows="5" {...register('message', { required: true})}/>
+                <textarea id='message' name='message' type='text' placeholder="Reason" className="expand" {...register('message', { required: true})}/>
                 {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
                 {/*<select>
                     

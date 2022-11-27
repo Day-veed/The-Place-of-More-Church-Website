@@ -112,8 +112,8 @@ const Images = styled.div`
     }
 `
 const Img1 = styled.div`
-    width: 32%;
-    height: 400px;
+    width: 50%;
+    height: 450px;
     
     @media (max-width: 750px) {
         width: 97%;
@@ -121,8 +121,8 @@ const Img1 = styled.div`
     }
 `
 const Img2 = styled.div`
-    width: 32%;
-    height: 400px;
+    width: 50%;
+    height: 450px;
     padding-left: 20px;
     @media (max-width: 750px) {
         width: 97%;
@@ -130,8 +130,8 @@ const Img2 = styled.div`
     }
 `
 const Img3 = styled.div`
-    width: 32%;
-    height: 400px;
+    width: 50%;
+    height: 450px;
     padding-left: 20px;
     @media (max-width: 750px) {
         width: 97%;

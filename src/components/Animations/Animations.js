@@ -1,5 +1,5 @@
 export const headerAnimation = {
-    hidden: {y: 30, opacity: 0},
+    hidden: {y: 200, opacity: 0},
     show: {y:1, opacity: 1}
 }
 
@@ -13,8 +13,8 @@ export const headerAnimations = {
     show: {y:1, opacity: 1}
 }
 export const headerAnimationss = {
-    hidden: {x: -150, opacity: 0},
-    show: {x:1, opacity: 1}
+    hidden: {y: -200, opacity: 0},
+    show: {y:1, opacity: 1}
 }
 export const headerAnimationsss = {
     hidden: {y: 200, opacity: 0},

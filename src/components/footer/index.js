@@ -77,16 +77,16 @@ function Footer() {
                 </SocailLogo>
                 <WebsiteRights>The Place of More © {new Date().getFullYear()}. All rights reserved.</WebsiteRights>
                 <IconBtn>
-                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                    <a href="https://www.facebook.com/Theplaceofmore/">
                         <FooterIconOption Icon={FacebookIcon} title="Facebook" />
                     </a>
-                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                    <a href="https://t.me/theeveningchurchTPM">
                         <FooterIconOption Icon={TelegramIcon} title="Telegram" />
                     </a>
-                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                    <a href="https://instagram.com/theeveningchurch_tpm?igshid=YmMyMTA2M2Y=">
                         <FooterIconOption Icon={InstagramIcon}  title="Instagram" />
                     </a>
-                    <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                    <a href="https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw">
                         <FooterIconOption Icon={ YouTubeIcon} title="Youtube" />
                     </a>
                 </IconBtn>

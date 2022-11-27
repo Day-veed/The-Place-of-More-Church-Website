@@ -159,13 +159,13 @@ function Navbar({ toggle }) {
                 </NavItem>
             </NavMenu>
             <IconBtn>
-                <a href="https://forms.gle/wmWi1CKKPiE2znd89">
+                <a href="https://www.facebook.com/Theplaceofmore/">
                 <NavIconOption Icon={FacebookIcon} title="Facebook" />
                 </a>
                 <a href="https://t.me/theeveningchurchTPM">
                 <NavIconOption Icon={TelegramIcon} title="Telegram" />
                 </a>
-                <a href="">
+                <a href="https://instagram.com/theeveningchurch_tpm?igshid=YmMyMTA2M2Y=">
                 <NavIconOption Icon={InstagramIcon}  title="Instagram" />
                 </a>
                 <a href="https://www.youtube.com/channel/UCVm83thLs-WavYc5ANXitFw">

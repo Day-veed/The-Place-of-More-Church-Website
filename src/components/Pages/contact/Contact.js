@@ -106,7 +106,7 @@ function Contact() {
                 {errors.phone_number && <p className='sendMail__error'>Phone Number is Required!</p>}
                 <input id='city' name='city' type='text' placeholder="City of Residence" {...register('city', { required: true})}/>
                 {errors.city && <p className='sendMail__error'>City of Residence is Required!</p>}
-                <textarea id='message' name='message' type='text' placeholder="Message" className="expand" cols="30" rows="5" {...register('message', { required: true})}/>
+                <textarea id='message' name='message' type='text' placeholder="Message" className="expand"  {...register('message', { required: true})}/>
                 {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
 
                 <div>
@@ -392,6 +392,8 @@ export const FooterLinksWrapper = styled.div`
 
     @media screen and (max-width: 820px){
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 `
 export const FooterLinkItems = styled.div`

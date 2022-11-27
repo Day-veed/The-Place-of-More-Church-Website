@@ -8,6 +8,7 @@ import img8 from '../Image/img8.jpg';
 import img9 from '../Image/img8.jpg';
 import img10 from '../Image/img10.jpg';
 import styled from "styled-components"
+
 //import "./CarouselContainer.css"
 import './testimony.css'
 
@@ -51,6 +52,74 @@ function TestimonyContainer() {
             <p></p>
             </Carousel.Caption>
           </Carousel.Item>
+
+          {/*
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={four}
+            alt="Seventh slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={five}
+            alt="Eight slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={six}
+            alt="Ninth slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={seven}
+            alt="Tenth slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={eight}
+            alt="Eleven slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item interval={4000}>
+            <img
+            className="d-block w-100"
+            src={nine}
+            alt="Twelve slide"
+            />
+            <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>*/}
         </Carousel></Di>
       </Div>
       </div>

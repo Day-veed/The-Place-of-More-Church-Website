@@ -31,6 +31,7 @@ import AMTC from './components/Pages/AMTC/AMTC';
 import Ministries from './components/Pages/Ministries/Ministries';
 import Resources from './components/Pages/Resources/Resources';
 import UpperRoom from './components/Pages/UpperRoom/UpperRoom';
+import Books from './components/Pages/Resources/Books';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,7 +62,8 @@ function App() {
             <Route path='/LTC' element={<LTC />} />
             <Route path='/AMTC' element={<AMTC />} /> 
             <Route path='/Ministries' element={<Ministries />} /> 
-            <Route path='/Resources' element={<Resources />} /> 
+            <Route path='/Resources' element={<Resources />} />
+            <Route path='/Books' element={<Books />} /> 
             <Route path='/UpperRoom' element={<UpperRoom />} />      
           </Routes>
           <Schedule />

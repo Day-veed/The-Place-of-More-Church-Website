@@ -13,8 +13,8 @@ function Services() {
 
   const navigate = useNavigate();
 
-    const Resources = () => {
-        navigate('/Resources')
+    const Books = () => {
+        navigate('/Books')//'/Resources' '/Books'
     }
 
     const Ministries = () => {
@@ -36,7 +36,7 @@ function Services() {
           </ServicesCard>
           </motion.div>
           <motion.div  variants={headerAnimations} animate={controls} transition={{delay: 0.3, type: 'spring', stiffness: 20, duration: 2}}>
-          <ServicesCard onClick={() => Resources()}>
+          <ServicesCard onClick={() => Books()}>
             <ServicesIcon src={Logo}/>
             <ServicesH2>RESOURCES</ServicesH2>
             <ServicesP>You Can Get our Ministry Books, Videos and Audios here.</ServicesP>
