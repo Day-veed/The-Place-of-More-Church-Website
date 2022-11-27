@@ -6,6 +6,7 @@ import Senses from './Spiritual_Senses.jpg';
 import intelligence from './Spiritual_Intelligence.jpg';
 import Technologies from './Spiritual_Technologies.jpg';
 import Warfare from './Spiritual_Warfare.jpg';
+import Ranking from './Spiritual_Ranking.jpg';
 import Cow from './COW.jpg';
 import WoW from './Waiting_or_Wasting.jpg';
 import NavIconOption from "./NavIconOption";
@@ -62,6 +63,7 @@ const Books = () => {
             </div>
             <div className="images">
                 <img src={Senses} alt='' />
+                <img src={Ranking} alt='' />
                 <img src={intelligence} alt='' />
                 <img src={Technologies} alt='' />
                 <img src={Warfare} alt='' />
