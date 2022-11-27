@@ -136,7 +136,7 @@ function Ministries(props) {
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
-          <motion.h2 layout="position">Publicity & Publication Ministry </motion.h2>
+          <motion.h2 layout="position">Publicity & Publication and Social Media Ministry </motion.h2>
           {isOpennnnnn && (
           <motion.div className='expand'>
             <p>
@@ -306,7 +306,7 @@ function Ministries(props) {
           className="card"
           style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)",}}
         >
-          <motion.h2 layout="position">Creativity Ministry. </motion.h2>
+          <motion.h2 layout="position">Creativity Media Ministry. </motion.h2>
           {isOpennnnnnnnnnnnnnnnn && (
           <motion.div className='expand'>
             <p>
