@@ -32,6 +32,7 @@ import Ministries from './components/Pages/Ministries/Ministries';
 import Resources from './components/Pages/Resources/Resources';
 import UpperRoom from './components/Pages/UpperRoom/UpperRoom';
 import Books from './components/Pages/Resources/Books';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -45,6 +46,12 @@ function App() {
   }, []);
   return (
     <Router>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="description" content="TPM" />
+            </Helmet>
     <ThemeProvider theme={theme}>
       
         <UIProvider>
