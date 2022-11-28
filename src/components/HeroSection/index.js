@@ -14,7 +14,7 @@ function HeroSection() {
   return (
     <HeroContainer>
         <HeroBg>
-            <VideoBg autoPlay loop muted src={video} type='video/mp4' />
+            <VideoBg autoPlay loop muted playsInline src={video} type='video/mp4' />
         </HeroBg>
         <HeroContent>
             <MainHeading>Welcome To</MainHeading>
