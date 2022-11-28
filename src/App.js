@@ -48,7 +48,7 @@ function App() {
     <Router>
       <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
+                <title>TPM</title>
                 <link rel="canonical" href="http://mysite.com/example" />
                 <meta name="description" content="TPM" />
             </Helmet>
