@@ -8,7 +8,7 @@ import ow5 from './ow5.jpg';*/
 import one from './one.jpg';
 import two from './two.jpg';
 import three from './three.jpg';
-//import logo from './logo.jpg';
+//import logo from './logo.jpg';;
 //import logo1 from './logo1.jpg';
 //import crowd from './crowd.jpg';
 import { motion } from 'framer-motion'
