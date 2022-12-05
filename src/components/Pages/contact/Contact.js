@@ -497,4 +497,4 @@ export const FooterIconOption = styled.a`
 `
 //pk.eyJ1IjoiZGF5LXZlZWQiLCJhIjoiY2w5NGUzcXNlMDd4YjN2bXMxb2FmZ21oaSJ9.d07RWwAqysZyFyYxLqzXYA
 //Style: mapbox://styles/day-veed/cl94ejyij004215o46urqlreu
-//Access Token: pk.eyJ1IjoiZGF5LXZlZWQiLCJhIjoiY2w5NGUzcXNlMDd4YjN2bXMxb2FmZ21oaSJ9.d07RWwAqysZyFyYxLqzXYA
+///Access Token: pk.eyJ1IjoiZGF5LXZlZWQiLCJhIjoiY2w5NGUzcXNlMDd4YjN2bXMxb2FmZ21oaSJ9.d07RWwAqysZyFyYxLqzXYA
