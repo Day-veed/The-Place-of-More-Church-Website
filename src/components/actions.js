@@ -1,4 +1,4 @@
-import { Divider, ListItemButton, ListItemIcon } from "@mui/material";
+import { ListItemButton,} from "@mui/material";
 import matchers from "@testing-library/jest-dom/matchers";
 import { MyList, ActionIconsContainerDesktop, ActionIconsContainerMobile } from "../styles/appbar";
 
