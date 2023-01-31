@@ -33,6 +33,8 @@ import Resources from './components/Pages/Resources/Resources';
 import UpperRoom from './components/Pages/UpperRoom/UpperRoom';
 import Books from './components/Pages/Resources/Books';
 import { Helmet } from 'react-helmet';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,6 +57,20 @@ function App() {
     <ThemeProvider theme={theme}>
       
         <UIProvider>
+        <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+            {/* Same as */}
+            <ToastContainer />
           <Sidebar isOpen={isOpen} toggle={toggle}/>
           <Navbar toggle={toggle} />
           {/*<Appbar />*/}

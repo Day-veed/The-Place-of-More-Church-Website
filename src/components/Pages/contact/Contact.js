@@ -13,7 +13,7 @@ import { Button } from '@mui/material';
 import './Form.css'
 import emailjs from '@emailjs/browser';
 import {useForm} from "react-hook-form"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 //import Map from './Map';
 
@@ -113,23 +113,10 @@ function Contact() {
                 <Button style={{backgroundColor:'gold', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} type='submit' /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/>Send</Button>
                 </div>
             </InputContainer>
-            
+        
         </form>
     </FooterContainer>
-    <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
-                />
-            {/* Same as */}
-            <ToastContainer />
+
     {/*<section className='hidden xl:inline-flex xl:min-w-[600px]'>
         <Map />
   </section>*/}

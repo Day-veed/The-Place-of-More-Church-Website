@@ -6,15 +6,14 @@ import './LTCSignup.css'
 import {useForm} from "react-hook-form"
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import {  toast } from 'react-toastify';
 
 function LTCSignUP({submitForm}) {
     const { handleChange, values, handleSubmitt, errorss, onChange } = useFormm(submitForm, validate);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
-    const [available, setAvailable] = useState('');
+    const [available, setAvailable] = useState('Yes');
     const [message, setMessage] = useState('');
     const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
 
@@ -27,8 +26,7 @@ function LTCSignUP({submitForm}) {
             email,
             name,
             number,
-            available,
-            message
+            available
         }
         console.log({parameters})
       
@@ -83,8 +81,7 @@ function LTCSignUP({submitForm}) {
                 <input id='phone_number' name='phone_number' value={number} type='tel' placeholder="WHATSAPP Number" onChange={(e)=>setNumber(e.target.value)} />
                 {errors.phone_number && <p className='sendMail__error'>Whatsapp Number is Required!</p>}
                 
-                <textarea id='message' name='message' type='text' value={message} placeholder="Message" className="expand" cols="30" rows="5" onChange={(e)=>setMessage(e.target.value)} />
-                {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
+                
 
                 <p>
                 <h4>Will You Be Available For All The Trainings?</h4>
@@ -95,26 +92,13 @@ function LTCSignUP({submitForm}) {
                 </p>
 
                 <div>
-                <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} type='submit' /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/>Send</Button>
+                <Button style={{backgroundColor:'#722f37', color: 'white', borderRadius:'25px', width: '50%',padding: '10px'}} type='submit' /*href='https://forms.gle/4HsCLbvZTRWE6rMQ7'*/>Submit</Button>
                 </div>
             </InputContainer>
             
         </form>
     </FooterContainer>
-    <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
-                />
-            {/* Same as */}
-            <ToastContainer />
+  
     </>
   )
 }

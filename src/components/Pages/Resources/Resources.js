@@ -147,7 +147,6 @@ function Resources() {
 
       <Books />
       <form>
-
         <input type="text" placeholder={'enter name of your book'} onChange={(e)=>setName(e.target.value)} value={name} name="name" id="name"/>
         <label htmlFor="cover-image" >Upload cover image</label>
         <input onChange={(e)=>uploadImageToStorage(e.target.files[0])} accept="image/*" name={'cover-image'} type="file" className="input" />

@@ -6,8 +6,7 @@ import Input, { Option } from './Input';
 import { Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import {useForm} from "react-hook-form"
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 function Counselling() {
     //#00FFFF
@@ -64,7 +63,7 @@ function Counselling() {
                 {errors.email && <p className='sendMail__error'>Email is Required!</p>}
                 <input id='phone_number' name='phone_number' type='number' placeholder="Phone Number" {...register('phone_number', { required: true})}/>
                 {errors.phone_number && <p className='sendMail__error'>Phone Number is Required!</p>}
-                <textarea id='message' name='message' type='text' placeholder="Reason" className="expand" {...register('message', { required: true})}/>
+                <textarea id='message' name='message' type='text' rows={30} placeholder="Reason" className="expand" {...register('message', { required: true})}/>
                 {errors.message && <p className='sendMail__error'> Reason is Required! </p>}
                 {/*<select>
                     
@@ -80,20 +79,7 @@ function Counselling() {
                 </div>
                 
             </InputContainer>
-            <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
-                />
-            {/* Same as */}
-            <ToastContainer />
+           
             {/*modal && (
                 <div className='modal'>
                 <div onClick={toggleModal} className='overlay'></div>

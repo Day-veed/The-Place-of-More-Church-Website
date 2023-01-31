@@ -6,17 +6,14 @@ import styled from 'styled-components'
 import './Form.css'
 import axios from 'axios';
 import { useForm } from "react-hook-form";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+import {v4} from "uuid";
+import {storage} from '../../firebase.js';
+import { toast } from 'react-toastify';
+
 
 function Form() {
-    const [username, setUsername] = useState("")
     const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
-    const emailerr = "Please provide a valid email"
-    const nameerr = "Please enter your full name"
-    const numbererr = "This is a required question"
-    const locationerr = "This is a required question"
-    const aboutYouerr = "This is a required question"
-    const radioerr = "This is a required question"
-    const uploaderr = "Please submit your letter of recommendation"
  
     //const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [name, setName] = useState();
@@ -24,78 +21,14 @@ function Form() {
     const [number, setNumber] = useState();
     const [location, setLocation] = useState();
     const [Church, setChurch] = useState();
-    const [about, setAbout] = useState();
-    const [select, setSelect] = useState();
-    const [file, setFile] = useState();
+    //const [about, setAbout] = useState();
+    //const [select, setSelect] = useState();
+    const [file, setFile] = useState(null);
+    const [available, setAvailable] = useState('Yes');
+    
+    const [attachmentUploading, setAtttachmentUploading] = useState(false);
 
-    const state={
-        email:'',
-        name:'',
-        number:'',
-        location:'',
-        Church:'',
-        message:'',
-        Avail:'',
-        File:'',
-        sent: false
-    }
 
-    //handle inputs
-    const handleEmail=(e)=>{
-        this.setState({
-            name:e.target.email
-        })
-    }
-
-    const handleName=(e)=>{
-        this.setState({
-            name:e.target.name
-        })
-    }
-
-    const handleNumber=(e)=>{
-        this.setState({
-            name:e.target.number
-        })
-    }
-
-    const handleLocation=(e)=>{
-        this.setState({
-            name:e.target.location
-        })
-    }
-
-    const handleChurch=(e)=>{
-        this.setState({
-            name:e.target.Church
-        })
-    }
-
-    const handleMessage=(e)=>{
-        this.setState({
-            name:e.target.message
-        })
-    }
-
-    const handleAvail=(e)=>{
-        this.setState({
-            name:e.target.Avail
-        })
-    }
-
-    const handleFile=(e)=>{
-        this.setState({
-            name:e.target.File
-        })
-    }
-    //end of handle inputs
-
-    console.log(username)
-
-    const handleRadio = event => {
-
-    }
-    const sent = false
 
     const formSubmit=(e)=>{
         e.preventDefault();
@@ -106,8 +39,8 @@ function Form() {
             number: number,
             location : location,
             Church: Church,
-            about: about,
-            select: select,
+            //about: about,
+            //select: select,
             file: file
          }
 
@@ -121,39 +54,76 @@ function Form() {
          })
     }
 
-    //for reseting initial data
-    const resetForm=()=>{
-        this.setState({
-            name:'',
-            email: '',
-            number: '',
-            location : '',
-            Church: '',
-            about: '',
-            select: '',
-            file: null
-        })
-
-        setTimeout(()=>{
-            this.setState({
-                sent:false,
-            })
-        }, 3000)
-    }
 
     const form = useRef();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
+    const sendEmail = async (e) => {
+   try {
+    toast.promise(async()=>{
+        e.preventDefault();
+        const attachmentUrl = await uploadFiles(file)
+        console.log({attachmentUrl})
+        const templateParams = {
+          email,
+          name,
+          Church,
+          number,
+          location,
+          available,
+          attachment: attachmentUrl
+        }
+    
+        await emailjs.send('service_94g7caf', 'template_4zphgem', templateParams, '8acUK6-l_MoCYn9p0')
+        setEmail('')
+        setName('')
+        setChurch('')
+        setNumber('')
+        setLocation('')
+        setAvailable('')
+        setFile(null)
+          
+    }, {
+        pending: "Sending Email...",
+        success: "Email sent successfully",
+        error: "Failed to send Email. Please try again"
+    })
   
-      emailjs.sendForm('service_cniyvjp', 'template_czxpl6h', form.current, 'qy6fvb2VC_0YK6x9-')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+   } catch (error) {
+    console.log((error))
+   }
+
     };
   
+    const uploadFiles = async (file) => {
+        if (!file) return;
+        return new Promise((resolve, reject) => {
+        setAtttachmentUploading(true);
+        const storageRef =  ref(storage, `/files/${file.name}`);
+        const uploadTask =  uploadBytesResumable(storageRef, file);
+    
+        
+    
+        uploadTask.on("state_changed", (snapshot) => {
+          const prog = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+              console.log({prog})
+
+        }, 
+        (err) => {
+          console.log(err)
+          setAtttachmentUploading(false);
+          reject(err)
+        },
+        async () => {
+         const url =  await getDownloadURL(uploadTask.snapshot.ref);
+        
+        console.log({url})
+         resolve(url)
+        }
+        );
+        })
+      }
 
   return (
     /*<form ref={form} onSubmit={sendEmail}>
@@ -170,36 +140,36 @@ function Form() {
             <H3>Registration Form</H3>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-            <input onChange={e=>setEmail(e.target.value)} name="user_email" placeholder="Email" type="text" required  />
-            <span>{/*emailerr*/}</span>
+            <input onChange={e=>setEmail(e.target.value)} name="user_email" value={email}placeholder="Email" type="text" required  />
+            
 
-            <input onChange={e=>setName(e.target.value)} name="user_name" placeholder="Full Name" type="text" required pattern='^[A-Za-z0-9]{3,16}$' />
-            <span>{/*nameerr/*}</span>
+            <input onChange={e=>setName(e.target.value)} value={name} placeholder="Full Name" type="text"  />
+           
 
-            <input onChange={e=>setNumber(e.target.value)} name='WNum' placeholder="Whatsapp Number" type="number" required />
-            <span>{/*numbererr*/}</span>
+            
+            
+            <input id='phone_number' name='phone_number' value={number} type='tel' placeholder="Whatsapp Number" onChange={(e)=>setNumber(e.target.value)} />
 
-            <input onChange={e=>setLocation(e.target.value)} name='Location' placeholder="Location" type="text" required />
-            <span>{/*locationerr*/}</span>
+            <input onChange={e=>setLocation(e.target.value)} name='location' value={location}placeholder="location" type="text" required />
+            
+            <input onChange={e=>setChurch(e.target.value)} name='Church' value={Church}placeholder="What Church Do You Attend?" type="text" />
 
-            <input onChange={e=>setChurch(e.target.value)} name='Church' placeholder="What Church Do You Attend?" type="text" />
-
-            <textarea onChange={e=>setAbout(e.target.value)} name="message" placeholder="Tell Us About Yourself Briefly" type="text" className='sendMail__message' required cols="30" rows="5"/>
-            <span>{/*aboutYouerr*/}</span>
+            {/*<textarea onChange={e=>setAbout(e.target.value)} name="message" placeholder="Tell Us About Yourself Briefly" type="text" className='sendMail__message' required cols="30" rows="5"/>*/}
+            
 
             <p>
                 <h4>Will You Be Available For All The Trainings?</h4>
                 <div>
-                    Yes<input onChange={e=>setSelect(e.target.value)} name={select} type="radio" value="Yes" />
-                    No<input onChange={e=>setSelect(e.target.value)} name={select} type="radio" value="No"/>
-                </div>
-            </p>
-            <span>{/*radioerr*/}</span>
+                    Yes<input  name='radio' type="radio"  value={available} onChange={(e)=>setAvailable('Yes')}/>
+                    No<input  name='radio' type="radio" value={available} onChange={(e)=>setAvailable('No')}/>
+                    </div>
+                </p>
+            
             <p>
                 <h3>UPLOAD YOUR LETTER OF RECOMMENDATION. (If you are not a member of The Place of More Church)</h3>
-                <input name="File" onChange={e=>setFile(e.target.value)} placeholder="Will You Be Available For All The Trainings?" type="file"/>
+                <input name="File" value={null} onChange={(e)=>setFile(e.target.files[0])} placeholder="Will You Be Available For All The Trainings?" type="file"/>
             </p>
-            <span>{/*uploaderr*/}</span>
+           
 
             <div className='sendMail__options'>
                 <Button
