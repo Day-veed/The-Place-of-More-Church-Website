@@ -6,8 +6,8 @@ import styled from "styled-components"
 
 const messages = [
     "You are welcome to the TPM family",
-    "It has been 9 years of God's faithfulness",
-    "Join us as we Celebrate and Glorify God"
+    "It's Our Year of ADVANCEMENT!!!",
+    "Fellowship with us through our transfo"
 ];
 
 export default function Promotions() {

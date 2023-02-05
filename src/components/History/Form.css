@@ -150,11 +150,55 @@
     margin-bottom: 10px;
 }
 
+.sendMail > form > p > div > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 25px;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .sendMail > form > p > div > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-evenly;
+        padding: -10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sendMail > form > p > div > div > div {
+        justify-content: center;
+        align-items: space-evenly;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sendMail > form > p > div > div > div> span {
+        padding-left: 10px;
+    }
+}
+
+
+
 .sendMail > form > p > div > span {
     margin-left: 30px;
 }
 
+.sendMail > form > p > div > div > span {
+    margin-left: 30px;
+}
+
 .sendMail > form > p > div > p {
+    margin-right: 7px;
+}
+
+.sendMail > form > p > div > div > p {
     margin-right: 7px;
 }
 

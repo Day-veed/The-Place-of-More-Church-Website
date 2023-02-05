@@ -182,7 +182,8 @@ function Form() {
             <p>
                 <h4>If you have taken our Leadership Training Course(LTC), What month and year did you take the course?</h4>
                 <div>
-                    Month<p/><select value={month} onChange={e=>setMonth(e.target.value)}>
+                    <div>
+                    <div>Month<span/><select value={month} onChange={e=>setMonth(e.target.value)}>
                         <option></option>
                         <option>January</option>
                         <option>February</option>
@@ -196,9 +197,9 @@ function Form() {
                         <option>Octorber</option>
                         <option>November</option>
                         <option>December</option>
-                    </select>
+                    </select></div>
                     <span> </span>
-                    Year<p/><select value={year} onChange={e=>setYear(e.target.value)}>
+                    <div>Year<span/><select value={year} onChange={e=>setYear(e.target.value)}>
                         <option></option>
                         <option>2022</option>
                         <option>2021</option>
@@ -209,7 +210,8 @@ function Form() {
                         <option>2016</option>
                         <option>2015</option>
                         <option>2014</option>
-                    </select>
+                    </select></div>
+                    </div>
                 </div>
             </p>
 
