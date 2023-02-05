@@ -164,8 +164,8 @@
 @media screen and (max-width: 600px) {
     .sendMail > form > p > div > div {
         flex-direction: column;
-        justify-content: center;
-        align-items: space-evenly;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: -10px;
     }
 }
