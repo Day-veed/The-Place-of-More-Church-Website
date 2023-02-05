@@ -147,6 +147,15 @@
     align-items: center;
     padding-left: 25px;
     font-family: 'EB Garamond', serif;
+    margin-bottom: 10px;
+}
+
+.sendMail > form > p > div > span {
+    margin-left: 30px;
+}
+
+.sendMail > form > p > div > p {
+    margin-right: 7px;
 }
 
 .sendMail > form > p > h3{
