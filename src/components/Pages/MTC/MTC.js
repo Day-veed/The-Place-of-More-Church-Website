@@ -412,7 +412,7 @@ import React, { useState } from 'react'
 import CarouselContainer from '../../carousel/CarouselContainer'
 import Promotions from '../../promotions/messages'
 import ReactPlayer from 'react-player'
-import vid from '../../video/vid.mp4'
+//import vid from '../../video/vid.mp4'
 import { motion } from 'framer-motion'
 import styled from "styled-components"
 import MTCHistory from '../../History/MTC'
