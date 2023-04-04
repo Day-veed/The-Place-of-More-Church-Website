@@ -85,7 +85,7 @@ function PSG() {
 export default PSG
 
 const D = styled.div`
-  margin-top: 80px;
+  //margin-top: 80px;
   height: 80px;
   background: #722f37;
   display: flex;
@@ -95,6 +95,9 @@ const D = styled.div`
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     color: gold;
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 10px;
   }
   @media (max-width: 450px) {
       >h1 {
@@ -354,7 +357,7 @@ const PictureExp = styled.div`
       height: 700px;
       padding-left: 100px;
       padding-bottom: 40px;
-      
+      margin-top: 30px;
     }
     
     @media (max-width: 1150px) {
@@ -367,6 +370,7 @@ const PictureExp = styled.div`
         width: 70%;
         height: 700px;
         padding-left: 0px;
+        margin-top: 20px;
       }
     }
 
@@ -380,6 +384,7 @@ const PictureExp = styled.div`
         width: 85%;
         height: 599px;
         padding-left: 0px;
+        margin-top: 20px;
       }
     }
 
@@ -393,12 +398,13 @@ const PictureExp = styled.div`
         width: 100%;
         height: 599px;
         padding-left: 0px;
+        margin-top: 10px;
       }
     }
 
     @media (max-width: 450px) {
       >img {
-        margin-top: -50px;
+        margin-top: 10px;
       }
     }
 `
@@ -468,7 +474,7 @@ const PictureExpe = styled.div`
       > img {
         width: 100%;
         height: 599px;
-        margin-top: -80px;
+        margin-top: -50px;
         padding-right: 0px;
       }
     }

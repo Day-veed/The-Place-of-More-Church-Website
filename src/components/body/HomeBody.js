@@ -205,26 +205,34 @@ const PictureExp = styled.div`
     background-color: white;
     padding-bottom: 70px;
     > img {
-      width: 70%;
+      width: 90%;
       height: 490px;
-      padding-left: 110px;
+      padding-left: 70px;
+      margin-top: 40px;
     }
     
+    @media (max-width: 1400px) {
+        > img {
+            width: 50%;
+        }
+    }
+
     @media (max-width: 1000px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-bottom: 50px;
       > img {
-        width: 90%;
+        width: 70%;
         height: 400px;
         padding-left: 0px;
+        margin-top: 0px;
       }
     }
 
     @media screen and (max-width: 360px) {
         > img {
-            margin-top: -75px;
+            margin-top: -10px;
             height: 350px;
         }
     }
@@ -232,7 +240,7 @@ const PictureExp = styled.div`
 const Text = styled.div`
   padding-left: 50px;
   padding-top: 40px;
-  width: 80%;
+  width: 85%;
   
     > h2 {
         display: flex;
@@ -242,7 +250,7 @@ const Text = styled.div`
         font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 27px;
 
         >h5 {
         font-family: 'Playfair Display', serif;

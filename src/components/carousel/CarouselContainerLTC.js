@@ -10,7 +10,7 @@ import "./CarouselContainerLTC.css"
 
 function CarouselContainerLTC() {
   return (
-      <div className='img'>
+      
       <Carousel controls={false} fade={true} pause={false}>
           
         {/*<Carousel.Item interval={4000}>
@@ -70,7 +70,7 @@ function CarouselContainerLTC() {
               </Carousel.Caption>
           </Carousel.Item>
       </Carousel>
-      </div>
+    
   )
 }
 

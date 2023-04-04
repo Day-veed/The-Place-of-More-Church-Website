@@ -497,7 +497,11 @@ const PictureExp = styled.div`
       }
     }
     @media (max-width: 400px) {
-      margin-top: -15px;
+      margin-top: -5px;
+      > img {
+        width: 90%;
+        padding-left: 0px;
+      }
     }
 `
 const Text = styled.div`

@@ -234,7 +234,7 @@ function TPM() {
 export default TPM
 
 const D = styled.div`
-  margin-top: 80px;
+  //margin-top: 80px;
   height: 80px;
   background: #722f37;
   display: flex;
@@ -549,7 +549,7 @@ const PictureExp = styled.div`
       width: 45%;
       height: 450px;
       padding-left: 100px;
-      
+      margin-top: 30px;
     }
     @media (max-width: 1000px) {
       flex-direction: column;
@@ -560,6 +560,15 @@ const PictureExp = styled.div`
         width: 90%;
         height: 400px;
         padding-left: 0px;
+      }
+    }
+    @media (max-width: 1000px) {
+      
+      > img {
+        width: 90%;
+        height: 400px;
+        padding-left: 0px;
+        margin-top: 20px;
       }
     }
 `

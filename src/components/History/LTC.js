@@ -218,11 +218,11 @@ const PictureExp = styled.div`
       > img {
         width: 90%;
         padding-left: 0px;
-        margin-top: -50px;
+        margin-top: -10px;
       }
     }
     @media (max-width: 450px) {
-      margin-top: -7px;
+      margin-top: 50px;
       >img {
         height: 350px;
       }  

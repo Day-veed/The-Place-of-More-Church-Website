@@ -27,7 +27,7 @@ function Partnership() {
 export default Partnership
 
 const D = styled.div`
-  margin-top: 80px;
+  //margin-top: 80px;
   height: 80px;
   background: #722f37;
   display: flex;

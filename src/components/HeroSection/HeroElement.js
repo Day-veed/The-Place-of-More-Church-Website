@@ -2,12 +2,13 @@ import styled from 'styled-components'
 import {Button} from '../globalStyles'
 
 export const HeroContainer = styled.div`
-    background: #0c0c0c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-    height: 650px;
+    //background: #0c0c0c;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //padding: 0 30px;
+    padding-bottom: 50.25%;
+    height: 0;
     position: relative;
     z-index: 1;
 
@@ -16,7 +17,7 @@ export const HeroContainer = styled.div`
     }
 
     @media screen and (max-width: 360px) {
-        height: 525px;
+        padding-bottom: 60.25%;
     }
 
     /** Add :before styles */
@@ -37,6 +38,9 @@ export const VideoBg = styled.video`
     //-0-object-fit: cover;
     object-fit: cover;
     background: #232a34;
+    position: absolute;
+    top: 0;
+    left: 0;
 `
 export const HeroContent = styled.div`
     z-index: 3;

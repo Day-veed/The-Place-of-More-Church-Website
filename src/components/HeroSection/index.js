@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Button, MainHeading, MainHeadingg } from '../globalStyles'
-import video from '../video/video.mp4'
+import video from '../video/videoo.mp4'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroP, ButtonWrapper } from './HeroElement'
 
 function HeroSection() {
@@ -13,10 +13,10 @@ function HeroSection() {
 }
   return (
     <HeroContainer>
-        <HeroBg>
+        {/*<HeroBg>*/}
             <VideoBg autoPlay loop muted playsInline src={video} type='video/mp4' />
-        </HeroBg>
-        <HeroContent>
+        {/*</HeroBg>*/}
+        {/*<HeroContent>
             <MainHeading>Welcome To</MainHeading>
             <MainHeadingg>The Place of More Church</MainHeadingg>
             <HeroP>
@@ -26,7 +26,7 @@ function HeroSection() {
               <Button onClick={() => TPM()}><a href='#'>About Us</a></Button>
             </ButtonWrapper>
             
-        </HeroContent>
+  </HeroContent>*/}
     </HeroContainer>
   )
 }
