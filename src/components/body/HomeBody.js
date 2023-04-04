@@ -263,7 +263,7 @@ const Text = styled.div`
         justify-content: center;
         align-items: center;
         padding-left: 25px;
-        font-size: 16px;
+        font-size: 17px;
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
     }
@@ -274,6 +274,7 @@ const Text = styled.div`
         width: auto;
       > p {
         width: 98%;
+        font-size: 18px;
       }
       >h2{
         font-size: 24px;
@@ -285,7 +286,8 @@ const Text = styled.div`
         width: auto;
       > p {
         width: 98%;
-        font-weight: 100;
+        font-size: 18px;
+        font-weight: normal;
       }
       >h2{
         font-size: 19px;
