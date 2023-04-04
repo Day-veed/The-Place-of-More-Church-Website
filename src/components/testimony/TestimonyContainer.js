@@ -166,6 +166,6 @@ const Di = styled.div`
     }
 
     @media (max-width: 750px) {
-        width: 55vh;
+        width: 49vh;
     }
 `
