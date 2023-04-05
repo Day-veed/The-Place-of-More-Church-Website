@@ -138,7 +138,7 @@ const Div = styled.div`
     @media screen and (max-width: 360px) {
         margin-bottom: 40px;
     }
-    //background: whitesmoke;
+    //background: whitesmoke;;
 `
 
 const Di = styled.div`
@@ -166,6 +166,6 @@ const Di = styled.div`
     }
 
     @media (max-width: 750px) {
-        width: 49vh;
+        width: 48vh;
     }
 `
