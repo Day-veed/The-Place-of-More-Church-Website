@@ -129,15 +129,15 @@ function TestimonyContainer() {
 export default TestimonyContainer
 
 const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
 
-    @media screen and (max-width: 360px) {
-        margin-bottom: 40px;
-    }
+  @media screen and (max-width: 360px) {
+      margin-bottom: 40px;
+  }
     //background: whitesmoke;
 `
 
