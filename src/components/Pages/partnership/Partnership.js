@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import './Partnership.css'
 import Give from './GIve-1.jpg'
+import Pledge from './Pledge.jpeg'
+import { Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
 //import Tpm from './tp.jpg'
 //import UsingHooks from './UsingHooks'
 //import UsingComponents from './UsingComponents'
@@ -20,6 +22,9 @@ function Partnership() {
         
         {/*<img src={Tpm} alt='' />*/}
       </Div>
+
+      
+
     </>
   )
 }

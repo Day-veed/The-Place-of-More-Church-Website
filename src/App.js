@@ -32,6 +32,7 @@ import Ministries from './components/Pages/Ministries/Ministries';
 import Resources from './components/Pages/Resources/Resources';
 import UpperRoom from './components/Pages/UpperRoom/UpperRoom';
 import Books from './components/Pages/Resources/Books';
+import { ChakraProvider } from '@chakra-ui/react'
 import { Helmet } from 'react-helmet';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,6 +48,7 @@ function App() {
     document.title = "The Place of More - Home";
   }, []);
   return (
+    <ChakraProvider>
     <Router>
       <Helmet>
                 <meta charSet="utf-8" />
@@ -117,6 +119,7 @@ function App() {
     </ThemeProvider>
     
     </Router>
+    </ChakraProvider>
   );
 }
 
