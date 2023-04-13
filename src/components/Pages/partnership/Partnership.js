@@ -43,7 +43,7 @@ function Partnership() {
               3.₦100,000
             </p>
             <h3>To make a Pledge, kindly click the button below</h3>
-            <Button variant='contained' borderRadius='3' href='https://forms.gle/3CLc6ypmRNZyssyx6' >
+            <Button variant='contained' borderRadius='3' href='https://forms.gle/3CLc6ypmRNZyssyx6'>
               Click
             </Button>
       </Textt>
@@ -231,6 +231,12 @@ const D = styled.div`
     font-size: 50px;
     color: gold;
   }
+
+  @media (max-width: 450px) {
+      >h1 {
+        font-size: 35px;
+      }  
+    }
 `
 
 const Div = styled.div`
@@ -244,7 +250,7 @@ const Div = styled.div`
   > img {
       width: 100%;
       height: auto;
-      margin-top: -162px;
+      //margin-top: -162px;
     }
 
     @media (max-width: 1000px) {
