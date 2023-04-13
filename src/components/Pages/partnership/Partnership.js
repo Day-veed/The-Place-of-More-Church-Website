@@ -110,7 +110,7 @@ const Textt = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
         font-size: 27px;
@@ -125,7 +125,7 @@ const Textt = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-style: inherit;
         font-weight: bold;
         font-size: 18px;
@@ -144,7 +144,7 @@ const Textt = styled.div`
         align-items: center;
         padding-left: 25px;
         font-size: 17px;
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
     }
 
