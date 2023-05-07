@@ -7,7 +7,7 @@ import { ButtonGroup, Card, CardBody, CardFooter, Divider, Heading, Image, Stack
 import { Button } from "@mui/material";
 //import Tpm from './tp.jpg'
 //import UsingHooks from './UsingHooks'
-//import UsingComponents from './UsingComponents'
+///import UsingComponents from './UsingComponents'
 
 function Partnership() {
   return (
