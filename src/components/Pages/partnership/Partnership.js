@@ -23,7 +23,7 @@ function Partnership() {
         
         {/*<img src={Tpm} alt='' />*/}
       </Div>
-      <PictureExp>
+      {/*<PictureExp>
       <img src={Pledge} alt='' />
       <div>
       <Textt >
@@ -48,7 +48,7 @@ function Partnership() {
             </Button>
       </Textt>
       </div>
-    </PictureExp>
+  </PictureExp>*/}
     
     </>
   )

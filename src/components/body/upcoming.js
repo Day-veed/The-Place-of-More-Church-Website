@@ -50,8 +50,16 @@ const Set = styled.div`
     justify-content: center;
     align-items: center;
     background-color: white;
+    @media (max-width: 950px) {
+        //flex-direction: column;
+        margin-bottom: -230px;
+    }
     @media (max-width: 750px) {
         flex-direction: column;
+        margin-bottom: 120px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: -50px;
     }
 
     >div {
@@ -79,13 +87,13 @@ const UpcomingPrograms = styled.div`
         padding-top: 75px;
         font-family: 'Playfair Display', serif;
         font-weight: bold;
-        margin-top: -50px;
+        //margin-top: -50px;
     }
     >h1{
         font-weight: bold;
         font-family: 'Playfair Display', serif;
         padding-top: 5px;
-        margin-bottom: -50px;
+        //margin-bottom: -50px;
     }
     @media (max-width: 1000px) {
         width: auto;
@@ -118,6 +126,7 @@ const Img1 = styled.div`
     @media (max-width: 750px) {
         width: 97%;
         height: 400px;
+        margin-bottom: -100px;
     }
 `
 const Img2 = styled.div`
@@ -127,6 +136,7 @@ const Img2 = styled.div`
     @media (max-width: 750px) {
         width: 97%;
         padding-left: 0px;
+        margin-bottom: -100px;
     }
 `
 const Img3 = styled.div`
@@ -136,6 +146,7 @@ const Img3 = styled.div`
     @media (max-width: 750px) {
         width: 97%;
         padding-left: 0px;
+        margin-bottom: -10px;
     }
 `
 
