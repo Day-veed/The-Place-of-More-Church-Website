@@ -126,7 +126,7 @@ const Img1 = styled.div`
     @media (max-width: 750px) {
         width: 97%;
         height: 400px;
-        margin-bottom: -100px;
+        margin-bottom: -30px;
     }
 `
 const Img2 = styled.div`
@@ -136,7 +136,7 @@ const Img2 = styled.div`
     @media (max-width: 750px) {
         width: 97%;
         padding-left: 0px;
-        margin-bottom: -100px;
+        margin-bottom: -150px;
     }
 `
 const Img3 = styled.div`

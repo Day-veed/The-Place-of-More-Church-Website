@@ -21,6 +21,7 @@ import {useAnimation} from 'framer-motion';
 import { headerAnimation } from "../Animations/Animations"
 import { useScroll } from '../useScroll';
 import Upcomingp from './upcoming';
+import Alignment from './alignment';
 import { useNavigate } from 'react-router-dom';
 
 function HomeBody() {
@@ -94,7 +95,7 @@ function HomeBody() {
   </Sections>*/}
     </motion.Motion>
     <Upcomingp />
-    
+    <Alignment />
     </>
   )
 }

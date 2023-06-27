@@ -14,7 +14,7 @@ function Services() {
   const navigate = useNavigate();
 
     const Books = () => {
-        navigate('/Books')//'/Resources' '/Books'
+        //navigate('/Books')//'/Resources' '/Books'
     }
 
     const Ministries = () => {
