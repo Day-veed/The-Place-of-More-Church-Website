@@ -95,7 +95,7 @@ function HomeBody() {
   </Sections>*/}
     </motion.Motion>
     <Upcomingp />
-    <Alignment />
+    {/*<Alignment />*/}
     </>
   )
 }
